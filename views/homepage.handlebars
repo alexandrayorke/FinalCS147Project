@@ -10,7 +10,11 @@
 		<div class="toolbar">	
 			<div class ="row">
 				<div class="col-md-8"><a href="/editProfile"><p id ="userName">Alex</p></a></div>
-				<div class="col-md-4"><button type="button" method = "get" action = "/sell">Sell Something</button></div>
+				<form id="sellSomethingForm" role="form" method="get" action="/sell">
+					<div class="col-md-4">
+						<input type ="submit" id="sellSomethingButton" class="btn btn-default" value = "Sell Something"></input>
+					</div>
+				</form>
 			</div>
 			<div class="row">
 				<div class="col-md-8"></div>
@@ -27,9 +31,9 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Price <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">low price</a></li>
-									<li><a href="#">medium price</a></li>
-									<li><a href="#">high price</a></li>
+									<li><a href="#">0-50</a></li>
+									<li><a href="#">50-100</a></li>
+									<li><a href="#">100+</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -38,9 +42,14 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Clothing</a></li>
 									<li><a href="#">Books</a></li>
 									<li><a href="#">Crafts</a></li>
+									<li><a href="#">Electronics</a></li>
+									<li><a href="#">Entertainment</a></li>
+									<li><a href="#">Fashion</a></li>
+									<li><a href="#">Home and Garden</a></li>
+									<li><a href="#">Sports and Recreational Equipment</a></li>
+									<li><a href="#">Other Goods</a></li>
 									<li class="divider"></li>
 									<li><a href="#">Services</a></li>
 								</ul>
@@ -61,7 +70,7 @@
 
 
 			<div class="items">
-				<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGZ7t-u9hbz3yaO3yMnbrT3Ia2P9WCgXERxAi407WgJzituTpKrg" class="img-thumbnail">
+				<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGZ7t-u9hbz3yaO3yMnbrT3Ia2P9WCgXERxAi407WgJzituTpKrg" class="img-thumbnail" width = "500px">
 				<p> Men's Red Shirt, Medium</p>
 				<p> 20 </p>
 
@@ -71,6 +80,6 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.js"></script>
 	</body>
 	</html>
