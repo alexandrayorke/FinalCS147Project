@@ -1,76 +1,31 @@
 <html>
+
 <head>
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<title> Welcome </title>
 </head>
 <body>
-
-	<div class="container">
-		<div class="toolbar">	
-			<div class ="row">
-				<div class="col-md-8"><a href="editProfile.html"><p id ="userName">Alex</p></a></div>
-				<div class="col-md-4"><button type="button">Sell Something</button></div>
-			</div>
-			<div class="row">
-				<div class="col-md-8"></div>
-				<div class="col-md-4"><p> Balance: 120</p></div>
-			</div>
-
-			
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="container-fluid">
-
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Price <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">low price</a></li>
-									<li><a href="#">medium price</a></li>
-									<li><a href="#">high price</a></li>
-								</ul>
-							</li>
-						</ul>
-
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Clothing</a></li>
-									<li><a href="#">Books</a></li>
-									<li><a href="#">Crafts</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Services</a></li>
-								</ul>
-							</li>
-						</ul>
-
-
-						<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="item name">
-							</div>
-							<button type="submit" class="btn btn-default">Search</button>
-						</form>
-
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
-
-
-			<div class="items">
-				<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGZ7t-u9hbz3yaO3yMnbrT3Ia2P9WCgXERxAi407WgJzituTpKrg" class="img-thumbnail">
-				<p> Men's Red Shirt, Medium</p>
-				<p> 20 </p>
-
-			</div>
-
+	<div class="container"
+	<!-- Need to make a form for login -->
+	<h1> Welcome </h1>
+	<p id="loginInstructions">Please log in. Note, usernames and passwords are case sensitive</p>
+	<form id="loginForm" role="form" method="get" action="/login">
+		<div class="form-group">
+			<p> User Name: <input type = "text" id="username" placeholder="Enter username" class="form-control"/></p>
 		</div>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
-	</body>
-	</html>
+		<div class="form-group">
+			<p> Password: <input type = "text" id="password" placeholder="Enter password" class="form-control"/></p>
+		</div>
+		<input type ="submit" id="loginBtn" class="btn btn-default" value = "Login"></input>
+	</form> 
+	<p><a href="createAccount.html">Create New Account</a></p>
+</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>
