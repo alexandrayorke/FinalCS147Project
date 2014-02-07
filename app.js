@@ -13,6 +13,7 @@ var index = require('./routes/index');
 var login = require('./routes/login');
 var createaccount = require('./routes/createaccount');
 var editProfile = require('./routes/editProfile');
+var sell = require('./routes/sell');
 
 // Example route
 // var user = require('./routes/user');
@@ -45,6 +46,7 @@ app.get('/', index.view);
 app.get('/login', login.loginFunction);
 app.get('/createaccount', createaccount.view);
 app.get('/editProfile', editProfile.view);
+app.get('/sell', sell.view);
 //app.get('/homepage', homepage.view);
 
 // Example route
