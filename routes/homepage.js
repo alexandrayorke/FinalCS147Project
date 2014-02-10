@@ -1,5 +1,4 @@
-// Get all of our friend data
-
+'use strict';
 
 
 // Call this function when the page loads (the "ready" event)
