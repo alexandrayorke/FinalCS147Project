@@ -1,34 +1,98 @@
 {
-	"friends": [
+	"users": [
 		{
-			"name": "Doug Engelbart",
-			"description": "Has awesome pet mice",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+			"firstName": "Ariel",
+			"lastName": "Posner",
+			"password": "Ariel",
+			"email": "arielhp@stanford.edu",
+			"address": "184 Fisher Ave",
+			"city": "Brookline",
+			"state": "MA",
+			"zip": "02445"
 		},
 		{
-			"name": "Ivan Sutherland",
-			"description": "Great at sketching",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"			
+			"firstName": "Alex",
+			"lastName": "Yorke",
+			"password": "Alex",
+			"email": "ayorke@stanford.edu",
+			"address": "25 Edgewood Dr",
+			"city": "Greenwich",
+			"state": "CT",
+			"zip": "11111"
 		},
 		{
-			"name": "Lucy Suchman",
-			"description": "Loves Trukese navigators",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"			
+			"firstName": "Lily",
+			"lastName": "Sierra",
+			"password": "Lily",
+			"email": "lilys@stanford.edu",
+			"address": "1 Magical Kingdom",
+			"city": "Disney Land",
+			"state": "CA",
+			"zip": "00000"
 		},
 		{
-			"name": "Vannevar Bush",
-			"description": "Has stellar associative memory",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg"			
+			"firstName": "Muffin",
+			"lastName": "Man",
+			"password": "Muffin",
+			"email": "muffinman@gmail.com",
+			"address": "1 Drury Lane",
+			"city": "Palo Alto",
+			"state": "CA",
+			"zip": "94306"
 		},
 		{
-			"name": "Grace Hopper",
-			"description": "Only friend with a Navy ship named after them",
-			"imageURL": "http://www.personal.psu.edu/djd5202/gHop.jpg"
+			"firstName": "Barack",
+			"lastName": "Obama",
+			"password": "Barack",
+			"email": "obama@president.gov",
+			"address": "1600 Pennsylvania Ave",
+			"city": "Washington",
+			"state": "DC",
+			"zip": "20500"
+		}
+	],
+
+
+	"items": [
+		{
+			"image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGZ7t-u9hbz3yaO3yMnbrT3Ia2P9WCgXERxAi407WgJzituTpKrg",
+			"description": "Men's Red Shirt, Medium",
+			"price": "20"
 		},
 		{
-			"name": "Allen Newell",
-			"description": "Really into psychology",
-			"imageURL": "http://www.nap.edu/html/biomems/photo/anewell.JPG"
+			"image": "http://images.efollett.com/spirit/v4/670/13400-114435.jpg",
+			"description": "Football Onesie",
+			"price": "15"
+		},
+		{
+			"image": "http://travelblor.com/wp-content/uploads/2013/11/travelmug-1385815318kg48n.jpg",
+			"description": "Travel Mug",
+			"price": "3"
+		},
+		{
+			"image": "http://www.harborfreight.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/image_21352.jpg",
+			"description": "Shovel",
+			"price": "5"
+		},
+		{
+			"image": "http://4.bp.blogspot.com/_9VTJFx7ps_8/TTC0TFNRflI/AAAAAAAAAPQ/knezjLSgMjM/s1600/aunt+mary%2527s+choc+chip+banana+bread.JPG",
+			"description": "Banana Bread",
+			"price": "7"
+		},
+		{
+			"image": "http://baseballheritagemuseum.org/wp-content/uploads/2013/08/baseball_bat.jpg",
+			"description": "Baseball Bat",
+			"price": "4"
+		},
+		{
+			"image": "http://upload.wikimedia.org/wikipedia/en/b/b0/Gatsby_1925_jacket.gif",
+			"description": "The Great Gatsby",
+			"price": "2"
+		},
+		{
+			"image": "http://upload.wikimedia.org/wikipedia/en/b/b0/Gatsby_1925_jacket.gif",
+			"description": "The Great Gatsby",
+			"price": "2"
 		}
 	]
 }
