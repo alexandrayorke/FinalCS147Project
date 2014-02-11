@@ -1,9 +1,9 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
-	console.log(data);
 	res.render('homepage', data);
 };
+
 
 // // Call this function when the page loads (the "ready" event)
 // $(document).ready(function() {

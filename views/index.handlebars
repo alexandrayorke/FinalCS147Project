@@ -7,25 +7,25 @@
 	<title> Welcome </title>
 </head>
 <body>
-	<div class="container"
-	<!-- Need to make a form for login -->
-	<h1> Welcome </h1>
-	<p id="loginInstructions">Please log in. Note, usernames and passwords are case sensitive</p>
-	<form id="loginForm" role="form" method="get" action="/homepage">
-		<div class="form-group">
-			<p> User Name: <input type = "text" id="username" placeholder="Enter username" class="form-control"/></p>
-		</div>
-		<div class="form-group">
-			<p> Password: <input type = "text" id="password" placeholder="Enter password" class="form-control"/></p>
-		</div>
-		<input type ="submit" id="loginBtn" class="btn btn-default" value = "Login"></input>
-	</form> 
-	<p><a href="/createaccount">Create New Account</a></p>
-</div>
+	<div class="container">
+		<!-- Need to make a form for login -->
+		<h1> Welcome </h1>
+		<p id="loginInstructions">Please log in. Note, usernames and passwords are case sensitive</p>
+		<form id="loginForm" role="form" method="get" action="/homepage" onsubmit="return loginListener()">
+			<div class="form-group">
+				<p> User Name: <input type = "text" id="username" placeholder="Enter username" class="form-control"/></p>
+			</div>
+			<div class="form-group">
+				<p> Password: <input type = "text" id="password" placeholder="Enter password" class="form-control"/></p>
+			</div>
+			<input type ="submit" id="loginBtn" class="btn btn-default" value = "Login"></input>
+		</form> 
+		<p><a href="/createaccount">Create New Account</a></p>
+	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/login.js"></script>
+	<script src="js/credentials.js"></script>
 </body>
 </html>

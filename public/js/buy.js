@@ -9,15 +9,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	console.log("Javascript connected!");
 	$(".item button").click(buyListener);
-}
-
-
-
-
-function buyListener(itemName) {
-	return "You clicked buy" + itemName;
 }
 
 function buyListener(e) {
