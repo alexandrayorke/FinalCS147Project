@@ -14,6 +14,7 @@ var login = require('./routes/login');
 var createaccount = require('./routes/createaccount');
 var editProfile = require('./routes/editProfile');
 var sell = require('./routes/sell');
+var itemforsale = require('./routes/itemforsale');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,6 +47,7 @@ app.get('/createaccount', createaccount.view);
 app.get('/editProfile', editProfile.view);
 app.get('/sell', sell.view);
 app.get('/homepage', homepage.view);
+app.get('/itemforsale', itemforsale.view);
 
 // Example route
 // app.get('/users', user.list);

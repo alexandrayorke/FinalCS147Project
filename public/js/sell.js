@@ -18,14 +18,14 @@ function sellItem(e) {
 		$("#instructions").text("You must an image url");
 	} else {
 
-	var newItem={
+	var newItem ={
 	 	"image": image,
 	 	"description": title,
 	 	"price": price		
 	 };
 
-	 //data.items.push(newItem); HOW TO DO THIS?
-	window.location.href = ("/homepage");
+	 //isnt passing the item!
+	window.location = "/itemforsale?newItem=" + newItem;
 
 	}
 }
