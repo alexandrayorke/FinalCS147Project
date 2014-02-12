@@ -1,31 +1,41 @@
+'use strict';
+
 $(document).ready(function() {
 	initializePage();
 })
 
+
 function initializePage() {
-	$("#sellBtn").click(sellItem);
+	$("#sellForm").submit(sellItem);
 }
 
 function sellItem(e) {
-	var title = $('#title').val();
-	var price = $('#price').val();
-	var image = $('#imageUrl').val();
-	if (title.length == 0) {
+	//e.preventDefault();
+	console.log("inside sellitem");
+	var title = document.forms["sellForm"]["title"].value;
+	var price = document.forms["sellForm"]["price"].value;
+	var image = document.forms["sellForm"]["imageUrl"].value;
+	if (title.length === 0) {
 		$("#instructions").text("You must a title");
-	} else if (price.length == 0){
+		return false;
+	} else if (price.length === 0){
 		$("#instructions").text("You must price");
-	} else if (image.length==0) {
+		return false;
+	} else if (image.length===0) {
 		$("#instructions").text("You must an image url");
+		return false;
 	} else {
+		return true;
+	// var newItem = {
+	//  	"image": image,
+	//  	"description": title,
+	//  	"price": price		
+	//  };
 
-	var newItem ={
-	 	"image": image,
-	 	"description": title,
-	 	"price": price		
-	 };
-
-	 //isnt passing the item!
-	window.location = "/itemforsale?newItem=" + newItem;
+	//  console.log("title" + title);
+	//  console.log("newItem:" + newItem);
+	//  console.log("newItem:" + newItem.description);
+	//  window.location = ("/itemforsale?newItem=" + newItem);
 
 	}
 }
