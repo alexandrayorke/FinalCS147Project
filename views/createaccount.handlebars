@@ -12,23 +12,23 @@
 		<p id="createInstructions">Please enter the following information:</p>
 
 		<!-- Create form to create an account -->
-		<form id="createAccountForm" role="form" method="get" action="/homepage">
+		<form id="createAccountForm" role="form" method="get" action="/addUser" onsubmit="return createAccountListener()">
 			<div class="form-group">
-				<p> Email: <input type = "text" id="username" class="form-control" placeholder="name@mailprovider.com"/></p>
+				<p> Email: <input type = "text" id="email" name="email" class="form-control" placeholder="name@mailprovider.com"/></p>
 			</div>
 			<div class="form-group">
-				<p> Password: <input type = "text" id="password" class="form-control" placeholder="password"/></p>
+				<p> Password: <input type = "text" id="password" name="password" class="form-control" placeholder="password"/></p>
 			</div>
 			<div class="form-group">
-				<p> First Name: <input type = "text" id="firstName" class="form-control" placeholder="John"/></p>
+				<p> First Name: <input type = "text" id="firstName" name="firstName" class="form-control" placeholder="John"/></p>
 			</div>
 			<div class="form-group">
-				<p> Last Name: <input type = "text" id="lastName" class="form-control" placeholder="Smith"/></p>
+				<p> Last Name: <input type = "text" id="lastName" name="lastName"class="form-control" placeholder="Smith"/></p>
 			</div>
 			<div class="form-group">
-				<p> Street Address: <input type = "text" id="streetAddress" class="form-control" placeholder="100 Street Name"/></p>
+				<p> Street Address: <input type = "text" id="streetAddress" name="streetAddress" class="form-control" placeholder="100 Street Name"/></p>
 			</div>
-				<p> Zip-code: <input type = "text" id="password" class="form-control" placeholder="00000"/></p>
+				<p> Zip-code: <input type = "text" id="zipCode" name="zipCode" class="form-control" placeholder="00000"/></p>
 			</div>
 			<input type ="submit" id="loginBtn" class="btn btn-default" value = "Create Account"></input>
 		</form> 
@@ -40,6 +40,7 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
 	<script src="js/bootstrap.js"></script>
-	<script src="js/createAccount.js"></script>
+	<script src="js/createCredentials.js"></script>
+
 </body>
 </html>

@@ -14,7 +14,10 @@ function initializePage() {
 
 function buyListener(e) {
 	e.preventDefault();
-	//var itemName = $(this).attr();
 	var newText = "You clicked buy";
 	$(this).text(newText);
+	var c = confirm("Are you sure you want to buy this item?");
+	if (c) {
+
+	}
 }

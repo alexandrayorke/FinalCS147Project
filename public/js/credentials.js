@@ -15,12 +15,11 @@ function initializePage() {
 
 function loginListener(e) {
 
-	console.log("in loginListener");
 
 	var email = document.forms["loginForm"]["email"].value;
 	var password = document.forms["loginForm"]["password"].value;
-	console.log("email = " + email);
-	console.log("password = " + password);
+	console.log("credentials.js email = " + email);
+	console.log("credentials.js password = " + password);
 
 	if (email.length == 0 || password.length == 0) {
 		console.log("Please enter both email and password.");
@@ -28,7 +27,6 @@ function loginListener(e) {
 		//alert("This is an alert");
 		return false;
 	} else {
-		//return true;
 		this.submit();
 	}
 // do checks here

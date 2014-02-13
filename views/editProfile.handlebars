@@ -7,6 +7,33 @@
 	<title> Edit Your Profile</title>
 </head>
 <body>
-<h3><a href = "/login">Home</a></h3>
+	<form id="editAccountForm" role="form" method="get" action="/homepage" onsubmit="return editAccountListener()">
+		<div class="container">
+			<h3><a href = "/homepage">Home</a></h3>
+			<h4>Account Information</h4>
+			<div name="account">
+				<div class="form-group">
+					<p>Email: <input readonly placeholder="Current Email" ></input></p>
+				</div>
+				<div class="form-group">
+					<p>Password: <input readonly placeholder="Current Password" ></input></p>
+				</div>
+				<input type ="submit" id="editAcctBtn" class="btn btn-default" value = "Edit Account Info"></input>
+			</div>
+		</form>
+		<hr>
+		<h4>Address Information</h4>
+		<form id="editAddressForm" role="form" method="get" action="/homepage" onsubmit="return editAddressListener()">
+			<div name="address">
+				<div class="form-group">
+					<p>Street Address: <input readonly placeholder="Current Address" ></input></p>
+				</div>
+				<div class="form-group">
+					<p>Zip Code: <input readonly placeholder="Current Zip Code"></input></p>
+				</div>
+				<input type ="submit" id="editAddrBtn" class="btn btn-default" value = "Edit Address Info"></input>
+			</div>
+		</form>
+	</div>
 </body>
 </html>

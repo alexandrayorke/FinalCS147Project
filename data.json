@@ -8,7 +8,8 @@
 			"address": "184 Fisher Ave",
 			"city": "Brookline",
 			"state": "MA",
-			"zip": "02445"
+			"zip": "02445",
+			"credits": "50"
 		},
 		{
 			"firstName": "Alex",
@@ -18,7 +19,8 @@
 			"address": "25 Edgewood Dr",
 			"city": "Greenwich",
 			"state": "CT",
-			"zip": "11111"
+			"zip": "11111",
+			"credits": "50"
 		},
 		{
 			"firstName": "Lily",
@@ -28,7 +30,8 @@
 			"address": "1 Magical Kingdom",
 			"city": "Disney Land",
 			"state": "CA",
-			"zip": "00000"
+			"zip": "00000",
+			"credits": "50"
 		},
 		{
 			"firstName": "Muffin",
@@ -38,7 +41,8 @@
 			"address": "1 Drury Lane",
 			"city": "Palo Alto",
 			"state": "CA",
-			"zip": "94306"
+			"zip": "94306",
+			"credits": "50"
 		},
 		{
 			"firstName": "Barack",
@@ -48,7 +52,8 @@
 			"address": "1600 Pennsylvania Ave",
 			"city": "Washington",
 			"state": "DC",
-			"zip": "20500"
+			"zip": "20500",
+			"credits": "50"
 		}
 	],
 
