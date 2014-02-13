@@ -7,33 +7,38 @@
 	<title> Edit Your Profile</title>
 </head>
 <body>
-	<form id="editAccountForm" role="form" method="get" action="/homepage" onsubmit="return editAccountListener()">
-		<div class="container">
+	<div class="container">
+		<form id="editAccountForm" role="form" method="get" action="/editProfile" >
 			<h3><a href = "/homepage">Home</a></h3>
 			<h4>Account Information</h4>
 			<div name="account">
 				<div class="form-group">
-					<p>Email: <input readonly placeholder="Current Email" ></input></p>
+					<p>Email: <input readonly id="accountEmail" placeholder="{{user.email}}" ></input></p>
 				</div>
 				<div class="form-group">
-					<p>Password: <input readonly placeholder="Current Password" ></input></p>
+					<p>Password: <input readonly id="accountPassword" placeholder="{{user.password}}" ></input></p>
 				</div>
-				<input type ="submit" id="editAcctBtn" class="btn btn-default" value = "Edit Account Info"></input>
+				<input type ="submit" id="editAcctBtn" class="btn btn-default" value="Edit Account Info"></input>
 			</div>
 		</form>
 		<hr>
 		<h4>Address Information</h4>
-		<form id="editAddressForm" role="form" method="get" action="/homepage" onsubmit="return editAddressListener()">
+		<form id="editAddressForm" role="form" method="get" action="/editProfile">
 			<div name="address">
 				<div class="form-group">
-					<p>Street Address: <input readonly placeholder="Current Address" ></input></p>
+					<p>Street Address: <input readonly id="accountAddress" placeholder="{{user.address}}" ></input></p>
 				</div>
 				<div class="form-group">
-					<p>Zip Code: <input readonly placeholder="Current Zip Code"></input></p>
+					<p>Zip Code: <input readonly id="accountZipCode" placeholder="{{user.zip}}"></input></p>
 				</div>
-				<input type ="submit" id="editAddrBtn" class="btn btn-default" value = "Edit Address Info"></input>
+				<input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit Address Info"></input>
 			</div>
 		</form>
 	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+	<script src="js/bootstrap.js"></script>
+	<script src="js/editProfileFields.js"></script>
 </body>
 </html>

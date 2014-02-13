@@ -10,13 +10,14 @@ exports.view = function(req, res) {
 		console.log("login.js curEmail: " + curEmail);
 		if (curEmail === loginEmail && curPassword === loginPassword) {
 			req.session.user = data["users"][i];
+			var pageInfo = {'user': req.session.user, 'data': data};
 			console.log("login.js logged in as:" + req.session.user["lastName"]);
 			foundUser = true;
 			break;
 		}
 	}
 	if (foundUser) {
-		res.render('homepage', data);
+		res.render('homepage', pageInfo);
 	} else {
 		res.render('loginTryAgain');
 	}

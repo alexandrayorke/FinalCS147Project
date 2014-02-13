@@ -2,7 +2,8 @@ var data = require('../data.json');
 
 exports.view = function(req, res){
 	console.log(data);
-	res.render('homepage', data);
+	var pageInfo = {'user': req.session.user, 'data': data};
+	res.render('homepage', pageInfo);
 };
 
 
