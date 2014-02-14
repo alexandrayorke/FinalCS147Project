@@ -29,5 +29,5 @@ function buyListener(e) {
 function callback(result) {
 	console.log("buy.js removed itemID = " + result["id"]);
 	var elem = document.getElementById(result["id"]);
-	return elem.parentNode.removeChild(elem);
+	elem.parentNode.removeChild(elem);
 }
