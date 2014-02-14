@@ -14,10 +14,11 @@ exports.itemPurchased = function(req, res) { 
 					data["users"][j]["credits"] = newBalance;
 					console.log("json balance = " + data["users"][j]["credits"]);
 					req.session.user = data["users"][j];
+					var userItemInfo = {'user': req.session.user, 'item': data["items"][i]};
 				}
 			}
 			console.log("session balance = " + req.session.user.credits);
-			res.json(data["items"][i]);
+			res.json(userItemInfo);
 			data.items.splice(i, 1);
 			break;
 		}
