@@ -17,4 +17,8 @@ function buyListener(e) {
 	//var itemName = $(this).attr();
 	var newText = "You clicked buy";
 	$(this).text(newText);
+	var c = confirm("Are you sure you want to buy this item?");
+	if (c) {
+		
+	}
 }
