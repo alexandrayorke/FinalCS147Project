@@ -15,6 +15,7 @@ function sellItem(e) {
 	var title = document.forms["sellForm"]["title"].value;
 	var price = document.forms["sellForm"]["price"].value;
 	var image = document.forms["sellForm"]["imageUrl"].value;
+	var category = document.forms["sellForm"]["category"].value;
 	if (title.length === 0) {
 		$("#instructions").text("You must a title");
 		return false;

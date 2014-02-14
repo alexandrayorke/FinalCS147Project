@@ -113,5 +113,20 @@
 			"category": "Books",
 			"id": "6"
 		}
+	],
+
+
+	"notifications": [
+		{
+		"message": "Lily Sierra bought the 'Medium Womens Red Shirt'. Please mail the item to her at: 1 Magical Kingom Disney Land, CA 00000.",
+		"to": "arielhp@stanford.edu",
+		"seen": "false"
+		},
+		{
+		"message": "Alex Yorke bought the 'banana bread'. Please plan a meet up with Alex by sending her an email today. Her email is: alexy@stanford.edu",
+		"to": "arielhp@stanford.edu",
+		"seen": "false"
+
+		}
 	]
 }
