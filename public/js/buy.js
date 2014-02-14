@@ -14,6 +14,7 @@ function initializePage() {
 
 function buyListener(e) {
 	e.preventDefault();
+
 	var itemID = $(this).closest('.item').attr('id');
 	var itemDescription = $('#' + itemID + ' #description').text();
 	console.log("buy.js item description = " + itemDescription)
