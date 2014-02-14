@@ -15,6 +15,12 @@ var createaccount = require('./routes/createaccount');
 var editProfile = require('./routes/editProfile');
 var sell = require('./routes/sell');
 var itemforsale = require('./routes/itemforsale');
+var addUser = require('./routes/addUser');
+var buyItem = require('./routes/buyItem');
+var editAccount = require('./routes/editAccount');
+var editAddress = require('./routes/editAddress');
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -48,6 +54,10 @@ app.get('/editProfile', editProfile.view);
 app.get('/sell', sell.view);
 app.get('/homepage', homepage.view);
 app.get('/itemforsale', itemforsale.view);
+app.get('/addUser', addUser.view);
+app.get('/buyItem/:id', buyItem.itemPurchased);
+app.get('/editAccount/:newEmail/:newPassword', editAccount.editAccountInfo);
+app.get('/editAddress/:newAddress/:newZipCode', editAddress.editAddressInfo);
 
 // Example route
 // app.get('/users', user.list);

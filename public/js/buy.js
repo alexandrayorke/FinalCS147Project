@@ -14,11 +14,23 @@ function initializePage() {
 
 function buyListener(e) {
 	e.preventDefault();
-	//var itemName = $(this).attr();
-	var newText = "You clicked buy";
-	$(this).text(newText);
-	var c = confirm("Are you sure you want to buy this item?");
+
+	var itemID = $(this).closest('.item').attr('id');
+	var itemDescription = $('#' + itemID + ' #description').text();
+	console.log("buy.js item description = " + itemDescription)
+	var c = confirm("Are you sure you want to buy\n" + itemDescription + "?");
 	if (c) {
-		
+		var path = "/buyItem/" + itemID;
+		console.log("buy.js itemID: " + itemID);
+		console.log("buy.js url: " + path);
+		$.get(path, callback);
 	}
+}
+
+function callback(result) {
+	console.log("buy.js removed itemID = " + result["item"]["id"]);
+	console.log("buy.js new user bal = " + result["user"]["credits"]);
+	$('#balance').text("Balance: " + result["user"]["credits"]);
+	var elem = document.getElementById(result["item"]["id"]);
+	elem.parentNode.removeChild(elem);
 }

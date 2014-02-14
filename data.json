@@ -8,7 +8,8 @@
 			"address": "184 Fisher Ave",
 			"city": "Brookline",
 			"state": "MA",
-			"zip": "02445"
+			"zip": "02445",
+			"credits": "100"
 		},
 		{
 			"firstName": "Alex",
@@ -18,7 +19,8 @@
 			"address": "25 Edgewood Dr",
 			"city": "Greenwich",
 			"state": "CT",
-			"zip": "11111"
+			"zip": "11111",
+			"credits": "50"
 		},
 		{
 			"firstName": "Lily",
@@ -28,7 +30,8 @@
 			"address": "1 Magical Kingdom",
 			"city": "Disney Land",
 			"state": "CA",
-			"zip": "00000"
+			"zip": "00000",
+			"credits": "50"
 		},
 		{
 			"firstName": "Muffin",
@@ -38,7 +41,8 @@
 			"address": "1 Drury Lane",
 			"city": "Palo Alto",
 			"state": "CA",
-			"zip": "94306"
+			"zip": "94306",
+			"credits": "50"
 		},
 		{
 			"firstName": "Barack",
@@ -48,7 +52,8 @@
 			"address": "1600 Pennsylvania Ave",
 			"city": "Washington",
 			"state": "DC",
-			"zip": "20500"
+			"zip": "20500",
+			"credits": "50"
 		}
 	],
 
@@ -58,48 +63,69 @@
 			"image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGZ7t-u9hbz3yaO3yMnbrT3Ia2P9WCgXERxAi407WgJzituTpKrg",
 			"description": "Men's Red Shirt, Medium",
 			"price": "20",
-			"category": "Fashion"
+			"category": "Fashion",
+			"id": "0"
 		},
 		{
 			"image": "http://funfamilycrafts.com/wp-content/uploads/2011/07/football-costume-onesie-400x266.jpg",
 			"description": "Football Onesie",
 			"price": "15",
-			"category": "Fashion"
+			"category": "Fashion",
+			"id": "1"
 
 		},
 		{
 			"image": "http://travelblor.com/wp-content/uploads/2013/11/travelmug-1385815318kg48n.jpg",
 			"description": "Travel Mug",
 			"price": "3",
-			"category": "Home and Garden"
+			"category": "Home and Garden",
+			"id": "2"
 
 		},
 		{
 			"image": "http://www.harborfreight.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/image_21352.jpg",
 			"description": "Shovel",
 			"price": "5",
-			"category": "Home and Garden"
+			"category": "Home and Garden",
+			"id": "3"
 
 		},
 		{
 			"image": "http://4.bp.blogspot.com/_9VTJFx7ps_8/TTC0TFNRflI/AAAAAAAAAPQ/knezjLSgMjM/s1600/aunt+mary%2527s+choc+chip+banana+bread.JPG",
 			"description": "Banana Bread",
 			"price": "7",
-			"category": "Home and Garden"
+			"category": "Home and Garden",
+			"id": "4"
 
 		},
 		{
 			"image": "http://baseballheritagemuseum.org/wp-content/uploads/2013/08/baseball_bat.jpg",
 			"description": "Baseball Bat",
 			"price": "4",
-			"category": "Sports and Recreational Equipment"
+			"category": "Sports and Recreational Equipment",
+			"id": "5"
 
 		},
 		{
 			"image": "http://upload.wikimedia.org/wikipedia/en/b/b0/Gatsby_1925_jacket.gif",
 			"description": "The Great Gatsby",
 			"price": "2",
-			"category": "Books"
+			"category": "Books",
+			"id": "6"
+		}
+	],
+
+
+	"notifications": [
+		{
+		"message": "Lily Sierra bought the 'Medium Womens Red Shirt'. Please mail the item to her at: 1 Magical Kingom Disney Land, CA 00000.",
+		"to": "arielhp@stanford.edu",
+		"seen": "false"
+		},
+		{
+		"message": "Alex Yorke bought the 'banana bread'. Please plan a meet up with Alex by sending her an email today. Her email is: alexy@stanford.edu",
+		"to": "arielhp@stanford.edu",
+		"seen": "false"
 
 		}
 	]
