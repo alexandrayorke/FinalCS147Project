@@ -2,9 +2,13 @@ var data = require('../data.json');
 
 exports.itemPurchased = function(req, res) { 
 	var itemID = req.params.id;
+	console.log("in item purchased: " +itemID);
+	console.log("items:"+ data["items"].length);
 	for (var i = 0; i < data["items"].length; i++) {
 		var curID = data["items"][i]["id"];
-		if (curID === itemID) {
+		console.log("curId:" + curID);
+		if (curID == itemID) {
+			console.log("inside curr ids are equal");
 			var price = parseInt(data["items"][i]["price"]);
 			var newBalance = parseInt(req.session.user.credits) - parseInt(price);
 

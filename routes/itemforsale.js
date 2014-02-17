@@ -7,11 +7,14 @@ exports.view = function(req, res) { 
 	var category = req.query.category;
 	console.log("desc:" + desc);
 	console.log("cat:" + category);
+	var dataSz= data["items"].length;
+
 	var newItem = {
 	 	"image": image,
 	  	"description": desc,
 	  	"price": price,	
-	  	"category": category	
+	  	"category": category,
+	  	"id": dataSz	
 	  };
 
 	
