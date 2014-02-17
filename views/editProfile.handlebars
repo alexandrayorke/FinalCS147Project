@@ -2,12 +2,15 @@
 
 <head>
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/project.css" rel="stylesheet">
+
 	<title> Edit Your Profile</title>
 </head>
 <body>
 	<div class="container">
+<<<<<<< HEAD
 		<h3><a href = "/homepage">Home</a></h3>
 		<form id="editEmailForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
@@ -20,6 +23,24 @@
 			<div class="form-group">
 				<p>Password: <input readonly id="accountPassword" placeholder="{{user.password}}" ></input>
 					<input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></p>
+=======
+		<form id="editAccountForm" role="form" method="get" action="/editProfile" >
+		<button type="button" class="btn btn-default btn-lg" id="homeBtn" onclick=" window.location = 'homepage';">
+  		<span class="glyphicon glyphicon-home"></span>
+		</button>
+		<h2> Edit Your Information</h2>
+
+			
+			<h4>Account Information</h4>
+			<div name="account">
+				<div class="form-group">
+					<p>Email: <input readonly id="accountEmail" placeholder="{{user.email}}" ></input></p>
+				</div>
+				<div class="form-group">
+					<p>Password: <input readonly id="accountPassword" placeholder="{{user.password}}" ></input></p>
+				</div>
+				<input type ="submit" id="editAcctBtn" class="btn btn-default" value="Edit Account Info"></input>
+>>>>>>> aaa1e4bdaf813ca057e9136f997b40b2fd0b2c5f
 			</div>
 		</form>
 		<hr>

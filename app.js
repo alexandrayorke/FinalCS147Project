@@ -22,8 +22,7 @@ var editEmail = require('./routes/editEmail');
 var editPassword = require('./routes/editPassword');
 var editAddress = require('./routes/editAddress');
 var editZipCode = require('./routes/editZipCode');
-//var editAddress = require('./routes/editAddress');
-
+var logout = require('./routes/logout');
 
 // Example route
 // var user = require('./routes/user');
@@ -60,12 +59,11 @@ app.get('/homepage', homepage.view);
 app.get('/itemforsale', itemforsale.view);
 app.get('/addUser', addUser.view);
 app.get('/buyItem/:id', buyItem.itemPurchased);
-
 app.get('/editEmail/:newEmail', editEmail.editEmailInfo);
 app.get('/editPassword/:newPassword', editPassword.editPasswordInfo);
 app.get('/editAddress/:newAddress', editAddress.editAddressInfo);
 app.get('/editZipCode/:newZipCode', editZipCode.editZipInfo);
-
+app.get('/logout', logout.view);
 // Example route
 // app.get('/users', user.list);
 
