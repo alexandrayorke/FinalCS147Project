@@ -9,6 +9,12 @@ exports.view = function(req, res) {
 		var curPassword = data["users"][i]["password"];
 		console.log("login.js curEmail: " + curEmail);
 		if (curEmail === loginEmail && curPassword === loginPassword) {
+			// for (var i=0; i < data["notifications"].length; i++){
+			// 	var curMessageTo = data["notifications"][i]["to"];
+			// 	if (curMessageTo === curEmail){
+
+			// 	}
+			// }
 			req.session.user = data["users"][i];
 			var pageInfo = {'user': req.session.user, 'data': data};
 			console.log("login.js logged in as:" + req.session.user["lastName"]);

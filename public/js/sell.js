@@ -17,13 +17,13 @@ function sellItem(e) {
 	var image = document.forms["sellForm"]["imageUrl"].value;
 	var category = document.forms["sellForm"]["category"].value;
 	if (title.length === 0) {
-		$("#instructions").text("You must a title");
+		$("#instructions").text("You must provide a title");
 		return false;
-	} else if (price.length === 0){
-		$("#instructions").text("You must price");
+	} else if (price.length === 0 || price < 0){
+		$("#instructions").text("You must provide a positive price");
 		return false;
 	} else if (image.length===0) {
-		$("#instructions").text("You must an image url");
+		$("#instructions").text("You must provide an image url");
 		return false;
 	} else {
 		return true;

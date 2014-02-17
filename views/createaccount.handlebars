@@ -17,7 +17,7 @@
 				<p> Email: <input type = "text" id="email" name="email" class="form-control" placeholder="name@mailprovider.com"/></p>
 			</div>
 			<div class="form-group">
-				<p> Password: <input type = "text" id="password" name="password" class="form-control" placeholder="password"/></p>
+				<p> Password: <input type = "password" id="password" name="password" class="form-control" placeholder="password"/></p>
 			</div>
 			<div class="form-group">
 				<p> First Name: <input type = "text" id="firstName" name="firstName" class="form-control" placeholder="John"/></p>
@@ -38,9 +38,15 @@
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+	<!-- Include all compiled plugins (blelow), or include individual files as needed 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script> -->
 	<script src="js/bootstrap.js"></script>
 	<script src="js/createCredentials.js"></script>
+	<div id="map_canvas" style="height: 354px; width:713px;"></div>
+	
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
 
 </body>
 </html>

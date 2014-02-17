@@ -15,11 +15,13 @@ exports.view = function(req, res) { 
 		"password": password,
 		"firstName": firstName,
 		"lastName": lastName,
-		"streetAddress": streetAddress,
-		"zipCode": zipCode,
+		"address": streetAddress,
+		"zip": zipCode,
 		"credits": "20"
 	};
 	data["users"].push(newUser);
 	console.log("addUser\n" + data["users"]);
-	res.render('homepage', data);
+	req.session.user = newUser;
+	var pageInfo = {'user': req.session.user, 'data': data};
+	res.render('homepage', pageInfo);
 }
