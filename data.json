@@ -9,8 +9,19 @@
 			"city": "Brookline",
 			"state": "MA",
 			"zip": "02445",
-			"credits": "100"
+			"credits": "100",
+			"notifications": [
+				{
+					"message": "Lily Sierra bought the 'Medium Womens Red Shirt'. Please mail the item to her at: 1 Magical Kingom Disney Land, CA 00000.",
+					"seen": false
+				},
+				{
+					"message": "You bought 'Driving Tour of San Francisco, 40 min.' Please contact Alex for more info at ayorke@stanford.edu.",
+					"seen": true
+				}
+			]
 		},
+
 		{
 			"firstName": "Alex",
 			"lastName": "Yorke",
@@ -20,7 +31,17 @@
 			"city": "Greenwich",
 			"state": "CT",
 			"zip": "11111",
-			"credits": "50"
+			"credits": "50",
+			"notifications": [
+				{
+					"message": "Ariel Posner bought the 'Driving Tour of San Francisco, 40 min.' Please contact Ariel to arrange this at arielhp@stanford.edu",
+					"seen": false
+				},
+				{
+					"message": "Banana Bread.' Please contact Lily for more info at lilys@stanford.edu.",
+					"seen": true
+				}
+			]
 		},
 		{
 			"firstName": "Lily",
@@ -31,7 +52,13 @@
 			"city": "Disney Land",
 			"state": "CA",
 			"zip": "00000",
-			"credits": "50"
+			"credits": "50",
+			"notifications": [
+				{
+					"message": "Alex Yorke bought the 'Banana Bread.' Please contact Alex to arrange this at ayorke@stanford.edu",
+					"seen": false
+				}
+			]
 		},
 		{
 			"firstName": "Muffin",
