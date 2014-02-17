@@ -91,6 +91,8 @@
 			"description": "Men's Red Shirt, Medium",
 			"price": "20",
 			"category": "Fashion",
+			"sellerEmail": "arielhp@stanford.edu",
+			"sellerName" : "Ariel Posner",
 			"id": 0
 		},
 		{
@@ -98,6 +100,8 @@
 			"description": "Football Onesie",
 			"price": "15",
 			"category": "Fashion",
+			"sellerEmail": "lilys@stanford.edu",
+			"sellerName" : "Lily Sierra",
 			"id": 1
 
 		},
@@ -106,6 +110,8 @@
 			"description": "Travel Mug",
 			"price": "3",
 			"category": "Home and Garden",
+			"sellerEmail": "arielhp@stanford.edu",
+			"sellerName" : "Ariel Posner",
 			"id": 2
 
 		},
@@ -114,6 +120,8 @@
 			"description": "Shovel",
 			"price": "5",
 			"category": "Home and Garden",
+			"sellerEmail": "lilys@stanford.edu",
+			"sellerName" : "Lily Sierra",
 			"id": 3
 
 		},
@@ -122,6 +130,8 @@
 			"description": "Banana Bread",
 			"price": "7",
 			"category": "Home and Garden",
+			"sellerEmail": "lilys@stanford.edu",
+			"sellerName" : "Lily Sierra",
 			"id": 4
 
 		},
@@ -130,6 +140,8 @@
 			"description": "Baseball Bat",
 			"price": "4",
 			"category": "Sports and Recreational Equipment",
+			"sellerEmail": "ayorke@stanford.edu",
+			"sellerName" : "Alex Yorke",
 			"id": 5
 
 		},
@@ -138,6 +150,8 @@
 			"description": "The Great Gatsby",
 			"price": "2",
 			"category": "Books",
+			"sellerEmail" : "arielhp@stanford.edu",
+			"sellerName" : "Ariel Posner",
 			"id": 6
 		}
 	],

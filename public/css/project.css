@@ -4,3 +4,21 @@
    	color: #4169E1 !important;
 }
 
+/* trying to change color of placeholders
+
+
+::-webkit-input-placeholder {
+   color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- 
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ 
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}*/
