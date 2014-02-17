@@ -16,7 +16,9 @@ exports.view = function(req, res) {
 			// 	}
 			// }
 			req.session.user = data["users"][i];
-			var pageInfo = {'user': req.session.user, 'data': data};
+			var itemsLen = data["items"].length;
+			req.session.nextID = itemsLen;
+			var pageInfo = {'user': req.session.user, 'data': data, 'nextID': req.session.nextID};
 			console.log("login.js logged in as:" + req.session.user["lastName"]);
 			foundUser = true;
 			break;

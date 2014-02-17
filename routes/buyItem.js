@@ -1,29 +1,40 @@
 var data = require('../data.json');
 
 exports.itemPurchased = function(req, res) { 
-	var itemID = req.params.id;
-	console.log("in item purchased: " +itemID);
-	console.log("items:"+ data["items"].length);
+	var itemID = parseInt(req.params.id);
+	console.log("buyItem.js itemID = " + itemID);
+
+	//for each JSON item
 	for (var i = 0; i < data["items"].length; i++) {
 		var curID = data["items"][i]["id"];
-		console.log("curId:" + curID);
+		console.log("buyItem.js curID = " + curID);
+
+		//if this item is the item that was clicked on
 		if (curID == itemID) {
-			console.log("inside curr ids are equal");
 			var price = parseInt(data["items"][i]["price"]);
 			var newBalance = parseInt(req.session.user.credits) - parseInt(price);
+			var userItemInfo = null;
 
-			for (var j = 0; j < data["users"].length; j++) {
-				var curEmail = data["users"][j]["email"];
-				if (curEmail === req.session.user.email) {
-					data["users"][j]["credits"] = newBalance;
-					console.log("json balance = " + data["users"][j]["credits"]);
-					req.session.user = data["users"][j];
-					var userItemInfo = {'user': req.session.user, 'item': data["items"][i]};
+			//if the user cannot afford the item
+			if (newBalance < 0) {
+				console.log("buyItem.js newBalance is negative: " + newBalance);
+				userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': false};
+			} else {
+				for (var j = 0; j < data["users"].length; j++) {
+					var curEmail = data["users"][j]["email"];
+					//found current user JSON object
+					if (curEmail === req.session.user.email) {
+						data["users"][j]["credits"] = newBalance; //reset JSON balance
+						console.log("buyItem.js json balance = " + data["users"][j]["credits"]);
+						req.session.user = data["users"][j]; //reset session user
+						userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': true};
+						data.items.splice(i, 1); //remove item from JSON
+						break;
+					}
 				}
 			}
-			console.log("session balance = " + req.session.user.credits);
+			console.log("buyItem.js session balance = " + req.session.user.credits);
 			res.json(userItemInfo);
-			data.items.splice(i, 1);
 			break;
 		}
 	}
