@@ -19,7 +19,7 @@ var addUser = require('./routes/addUser');
 var buyItem = require('./routes/buyItem');
 var editAccount = require('./routes/editAccount');
 var editAddress = require('./routes/editAddress');
-
+var logout = require('./routes/logout');
 
 // Example route
 // var user = require('./routes/user');
@@ -58,7 +58,7 @@ app.get('/addUser', addUser.view);
 app.get('/buyItem/:id', buyItem.itemPurchased);
 app.get('/editAccount/:newEmail/:newPassword', editAccount.editAccountInfo);
 app.get('/editAddress/:newAddress/:newZipCode', editAddress.editAddressInfo);
-
+app.get('/logout', logout.view);
 // Example route
 // app.get('/users', user.list);
 
