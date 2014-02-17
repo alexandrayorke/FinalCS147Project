@@ -31,7 +31,12 @@
 						<span class="glyphicon glyphicon-envelope"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li>hi</li>
+						{{#each user.notifications}}
+							<div class="notification">
+								<li><p>{{message}}</p>
+								<p>{{seen}}</p></li>
+							</div>
+							{{/each}}
 					</ul>
 				</div>
 
@@ -99,14 +104,7 @@
 		</div>
 		<br>
 		{{/each}}
- 
-		{{#each user.notifications}}
-		<div class="notification">
-			<p>{{message}}</p>
-			<p>{{seen}}</p>
-			</div>
-		{{/each}}
-		
+
 
 		
 
