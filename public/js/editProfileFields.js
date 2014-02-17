@@ -20,11 +20,11 @@ function editAccountListener(e) {
 		document.getElementById("accountPassword").readOnly=false;
 		document.getElementById("editAcctBtn").value="Save";
 	} else {
-		document.getElementById("accountEmail").readOnly=true;
-		document.getElementById("accountPassword").readOnly=true;
-		document.getElementById("editAcctBtn").value="Edit Account Info";
+		var newEmail = document.forms["editAccountForm"]["accountEmail"].value;
+		var newPassword = document.forms["editAccountForm"]["accountPassword"].value;
+		var path = "/editAccount/" + newEmail + "/" + newPassword;
+		$.get(path, accountCallback);
 	}
-
 }
 
 function editAddressListener(e) {
@@ -34,13 +34,26 @@ function editAddressListener(e) {
 		document.getElementById("accountZipCode").readOnly=false;
 		document.getElementById("editAddrBtn").value="Save";
 	} else {
-		document.getElementById("accountAddress").readOnly=true;
-		document.getElementById("accountZipCode").readOnly=true;
-		document.getElementById("editAddrBtn").value="Edit Address Info";
+		var newAddress = document.forms["editAddressForm"]["accountAddress"].value;
+		var newZipCode = document.forms["editAddressForm"]["accountZipCode"].value;
+		var path = "/editAddress/" + newAddress + "/" + newZipCode;
+		$.get(path, addressCallback);
 	}
 }
 
-// var path = "/editUserData/" + email;
+function accountCallback(result) {
+	document.getElementById("accountEmail").readOnly=true;
+	document.getElementById("accountPassword").readOnly=true;
+	document.getElementById("editAcctBtn").value="Edit Account Info";
+}
+
+function addressCallback(result) {
+	document.getElementById("accountAddress").readOnly=true;
+	document.getElementById("accountZipCode").readOnly=true;
+	document.getElementById("editAddrBtn").value="Edit Address Info";
+}
+
+// var path = "/editUserDa	ta/" + email;
 // 		console.log("buy.js itemID: " + itemID);
 // 		console.log("buy.js url: " + path);
 // 		$.get(path, callback);

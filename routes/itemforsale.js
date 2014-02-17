@@ -20,6 +20,7 @@ exports.view = function(req, res) { 
 	console.log("new item price:" + newItem.price);
 	console.log("new item cat:" + newItem.category);
 	data["items"].push(newItem); 
-	res.render('homepage', data);
+	var pageInfo = {'user': req.session.user, 'data': data};
+	res.render('homepage', pageInfo);
 
  }

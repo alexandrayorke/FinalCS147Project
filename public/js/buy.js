@@ -14,6 +14,7 @@ function initializePage() {
 
 function buyListener(e) {
 	e.preventDefault();
+
 	var itemID = $(this).closest('.item').attr('id');
 	var itemDescription = $('#' + itemID + ' #description').text();
 	console.log("buy.js item description = " + itemDescription)
@@ -27,7 +28,9 @@ function buyListener(e) {
 }
 
 function callback(result) {
-	console.log("buy.js removed itemID = " + result["id"]);
-	var elem = document.getElementById(result["id"]);
+	console.log("buy.js removed itemID = " + result["item"]["id"]);
+	console.log("buy.js new user bal = " + result["user"]["credits"]);
+	$('#balance').text("Balance: " + result["user"]["credits"]);
+	var elem = document.getElementById(result["item"]["id"]);
 	elem.parentNode.removeChild(elem);
 }
