@@ -8,33 +8,35 @@
 </head>
 <body>
 	<div class="container">
-		<form id="editAccountForm" role="form" method="get" action="/editProfile" >
-			<h3><a href = "/homepage">Home</a></h3>
-			<h4>Account Information</h4>
-			<div name="account">
-				<div class="form-group">
-					<p>Email: <input readonly id="accountEmail" placeholder="{{user.email}}" ></input></p>
-				</div>
-				<div class="form-group">
-					<p>Password: <input readonly id="accountPassword" placeholder="{{user.password}}" ></input></p>
-				</div>
-				<input type ="submit" id="editAcctBtn" class="btn btn-default" value="Edit Account Info"></input>
+		<h3><a href = "/homepage">Home</a></h3>
+		<form id="editEmailForm" role="form" method="get" action="/editProfile" >
+			<div class="form-group">
+				<p>Email: <input readonly id="accountEmail" placeholder="{{user.email}}" ></input>
+					<input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></p>
+			</div>
+		</form>
+		
+		<form id="editPasswordForm" role="form" method="get" action="/editProfile" >
+			<div class="form-group">
+				<p>Password: <input readonly id="accountPassword" placeholder="{{user.password}}" ></input>
+					<input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></p>
 			</div>
 		</form>
 		<hr>
-		<h4>Address Information</h4>
 		<form id="editAddressForm" role="form" method="get" action="/editProfile">
-			<div name="address">
-				<div class="form-group">
-					<p>Street Address: <input readonly id="accountAddress" placeholder="{{user.address}}" ></input></p>
-				</div>
-				<div class="form-group">
-					<p>Zip Code: <input readonly id="accountZipCode" placeholder="{{user.zip}}"></input></p>
-				</div>
-				<input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit Address Info"></input>
+			<div class="form-group">
+				<p>Street Address: <input readonly id="accountAddress" placeholder="{{user.address}}" ></input>
+				<input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></p>
 			</div>
 		</form>
-	</div>
+
+		<form id="editZipForm" role="form" method="get" action="/editProfile">
+			<div class="form-group">
+				<p>Zip Code: <input readonly id="accountZipCode" placeholder="{{user.zip}}"></input>
+					<input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>
+			</div>
+		</form>
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
