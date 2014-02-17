@@ -18,9 +18,13 @@ function loginListener(e) {
 	var password = document.forms["loginForm"]["password"].value;
 	console.log("credentials.js email = " + email);
 	console.log("credentials.js password = " + password);
-	if (email.length == 0 || password.length == 0) {
-		console.log("Please enter both email and password.");
-		$("#loginInstructions").text("Please enter both email and password."); //just testing this out, we can get rid of it.
+	if (email.length == 0) {
+		console.log("Please enter an email.");
+		$("#loginInstructions").text("Please provide an email."); //just testing this out, we can get rid of it.
+		return false;
+	} else if(password.length == 0){
+		console.log("Please enter a password.");
+		$("#loginInstructions").text("Please provide a password."); //just testing this out, we can get rid of it.
 		return false;
 	} else {
 		this.submit();

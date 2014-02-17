@@ -10,13 +10,13 @@
 	<div class="container">
 		<!-- Need to make a form for login -->
 		<h1> Welcome </h1>
-		<p id="loginInstructions">Email and Password combination not found. Please try again.</p>
+		<p id="loginInstructions">{{instructions}}</p>
 		<form id="loginForm" role="form" method="get" action="/login" onsubmit="return loginListener()">
 			<div class="form-group">
-				<p> Email: <input type = "text" id="email" name="email" placeholder="Enter email" class="form-control"/></p>
+				<p> Email: <input type = "text" id="email" name="email" placeholder="Enter email" class="form-control" value={{email}}></p>
 			</div>
 			<div class="form-group">
-				<p> Password: <input type = "text" id="password" name="password" placeholder="Enter password" class="form-control"/></p>
+				<p> Password: <input type = "password" id="password" name="password" placeholder="Enter password" class="form-control"/></p>
 			</div>
 			<input type ="submit" id="loginBtn" class="btn btn-default" value = "Login"></input>
 		</form> 
