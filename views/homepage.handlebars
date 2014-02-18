@@ -1,106 +1,124 @@
-<!doctype html>
+	<!doctype html>
 
-<html>
-<head>
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<html>
+	<head>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.css" rel="stylesheet">
+		<link href="css/homepage.css" rel="stylesheet">
 
-
-</head>
-<body>
-	<div class="container">
-		<div class="toolbar">	
-			<div class ="row">
-				<div class="col-md-8"><a href="/editProfile"><p id ="userName">{{user.firstName}}</p></a></div>
-				
-
-
-				<form id="sellSomethingForm" role="form" method="get" action="/sell">
-					<div class="col-md-4">
-						<input type ="submit" id="sellSomethingButton" class="btn btn-default" value = "Sell Something"></input>
-					</div>
-				</form>
-			</div>
-			<div class="row">
-				<div class="col-md-8"></div>
-				<div class="col-md-4"><p id="balance">Balance: {{user.credits}}</p></div>
-			</div>
-
-			
-			<nav class="navbar navbar-default navbar-static-top" role="navigation">
-				<div class="container-fluid" class="visible-xs">
-
-					<!-- Collect the nav links, forms, and other content for toggling -->
+	</head>
+	<body>
+		<div class="container">
+			<div class="toolbar">	
+				<div class ="row">
+					<div class="col-md-8"><a href="/editProfile"><p id ="userName">{{user.firstName}}</p></a></div>
 					
-					<div lass="collapse navbar-collapse in" id="bs-example-navbar-collapse-1">
-						<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" class="visible-xs">-->
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Price <b class="caret" class="input-group"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">0-50</a></li>
-									<li><a href="#">50-100</a></li>
-									<li><a href="#">100+</a></li>
-								</ul>
-							</li>
-						</ul>
-
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <b class="caret" class="input-group"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Books</a></li>
-									<li><a href="#">Crafts</a></li>
-									<li><a href="#">Electronics</a></li>
-									<li><a href="#">Entertainment</a></li>
-									<li><a href="#">Fashion</a></li>
-									<li><a href="#">Home and Garden</a></li>
-									<li><a href="#">Sports and Recreational Equipment</a></li>
-									<li><a href="#">Other Goods</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Services</a></li>
-								</ul>
-							</li>
-						</ul>
 
 
-						<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="item name" class="input-group">
-							</div>
-							<button type="submit" class="btn btn-default" >Search</button>
-						</form>
+					<form id="sellSomethingForm" role="form" method="get" action="/sell">
+						<div class="col-md-4">
+							<input type ="submit" id="sellSomethingButton" class="btn btn-default" value = "Sell Something"></input>
+						</div>
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-md-8"></div>
+					<div class="col-md-4"><p id="balance">Balance: {{user.credits}}</p></div>
+				</div>
 
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
-		</div>
-		{{#each data.items}}
-		<div class="item" id="{{id}}">
-			<img src="{{image}}" class="img-thumbnail" width="500px">
-			<p id="description">{{description}}</p>
-			<p id="price">{{price}}</p>
-			<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
-		</div>
-		<br>
-		{{/each}}
-<!-- 
-		{{#each users}}
-		<div class="users">
-			<p>{{firstName}}</p>
-			<p>{{lastName}}</p>
+				
+				<nav class="navbar navbar-default navbar-static-top" role="navigation">
+					<div class="container-fluid" class="visible-xs">
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						
+						<div lass="collapse navbar-collapse in" id="bs-example-navbar-collapse-1">
+							<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" class="visible-xs">-->
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Price <b class="caret" class="input-group"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">0-50</a></li>
+										<li><a href="#">50-100</a></li>
+										<li><a href="#">100+</a></li>
+									</ul>
+								</li>
+							</ul>
+
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <b class="caret" class="input-group"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Books</a></li>
+										<li><a href="#">Crafts</a></li>
+										<li><a href="#">Electronics</a></li>
+										<li><a href="#">Entertainment</a></li>
+										<li><a href="#">Fashion</a></li>
+										<li><a href="#">Home and Garden</a></li>
+										<li><a href="#">Sports and Recreational Equipment</a></li>
+										<li><a href="#">Other Goods</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Services</a></li>
+									</ul>
+								</li>
+							</ul>
+
+
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="item name" class="input-group">
+								</div>
+								<button type="submit" class="btn btn-default" >Search</button>
+							</form>
+
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
 			</div>
-			{{/each}}
-		-->
 
+		
+		
+		{{#each data.items}}
+			<div id = "test">
+				<div id = "{{id}}" class = "carousel item">
+					<ul>
+	            		<li class="pane1">
+	            			<img src = "{{image}}"/>
+	            		</li>
+	            		<li class="pane2">
+	            			<h3 id = "description">{{description}}</h3>
+	            			<p id = "price">{{price}}</p>
+	            			<p>More product info...</p>
+	            			<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
+	            		</li>
+	        		</ul>
+				</div>
+			</div>
+		</br>
+		{{/each}}
 
-	</div>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-	<script src="js/bootstrap.js"></script>
-	<script src="js/buy.js"></script>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+		<script src="js/bootstrap.js"></script>
+		<script src="js/buy.js"></script>
 
-</body>
-</html>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    	<script src="js/modernizr.js"></script>
+
+    	<script src="js/hammer.js"></script>
+		<script src="js/homepage.js"></script>
+		
+
+		<script>
+			{{#each data.items}}
+    			var carousel = new Carousel("#{{id}}");
+    			carousel.init();
+    		{{/each}}
+		</script>
+		
+
+	</body>
+	</html>
