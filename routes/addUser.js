@@ -22,6 +22,6 @@ exports.view = function(req, res) { 
 	data["users"].push(newUser);
 	console.log("addUser\n" + data["users"]);
 	req.session.user = newUser;
-	var pageInfo = {'user': req.session.user, 'data': data};
+	var pageInfo = {'user': req.session.user, 'data': data, 'nextID': req.session.nextID};
 	res.render('homepage', pageInfo);
 }
