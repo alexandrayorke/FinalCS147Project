@@ -18,7 +18,7 @@
 					<div class="col-md-4">
 					<input type ="submit" id="sellSomethingButton" class="btn btn-default" value = "Sell Something"></input>
 					</div>
-	</form>
+				</form>
 				<form id="logOutForm" role="form" method="get" action="/logout">
 					<div class="col-md-4">
 						<input type ="submit" id="logOutBtn" class="btn btn-default" value = "Log Out"></input>
@@ -27,8 +27,8 @@
 
 
 				<div class="btn-group">
-<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-<span class="glyphicon glyphicon-envelope"></span>
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<span class="glyphicon glyphicon-envelope"></span>
 					</a>
 					<ul class="dropdown-menu">
 						{{#each user.notifications}}
@@ -109,19 +109,27 @@
 			<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
 		</div>
 		<br>-->
-			<div id = "{{id}}" class = "item carousel">
-				<ul>
-	           		<li class="pane1">
-	           			<img src = "{{image}}"/>
-	           		</li>
-	           		<li class="pane2">
-	           			<h3 id = "description">{{description}}</h3>
-	           			<p id = "price">{{price}}</p>
-	           			<p id = "sellerName">{{sellerName}}</p>
-	           			<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
-	           		</li>
-	        	</ul>
-			</div>
+		<div id = "{{id}}" class = "item carousel">
+
+			<!--Indicators-->
+			<!--<ol class="carousel-indicators">
+    			<li data-target="#{{id}}" data-slide-to="pane1" class = "active"></li>
+    			<li data-target="#{{id}}" data-slide-to="pane2"></li>
+  			</ol>-->
+
+			<ul>
+	         	<li class="pane1">
+	           		<img src = "{{image}}"/>
+	           		<!--<span class = "glyphicon glyphicon-chevron-right" id = "nextButton">-->
+	           	</li>
+	           	<li class="pane2">
+	           		<h3 id = "description">{{description}}</h3>
+	           		<p id = "price">{{price}}</p>
+	           		<p id = "sellerName">{{sellerName}}</p>
+	           		<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
+	           	</li>
+	        </ul>
+		</div>
 		</br>
 		{{/each}}
 	</div>
