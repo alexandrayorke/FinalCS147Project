@@ -176,4 +176,9 @@
     height: 70px;
 }
 
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
