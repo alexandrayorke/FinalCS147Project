@@ -27,7 +27,8 @@ $(document).ready(function() {
  	console.log("createCredentials email = " + email);
  	console.log("createCredentials password = " + password);
 
-    // attempting to get city and state from zipcode
+
+    // trying to find city and state from zipcode 
     //var lat;
     // var lng;
     // var geocoder = new google.maps.Geocoder();
