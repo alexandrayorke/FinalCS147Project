@@ -8,7 +8,7 @@ exports.view = function(req, res){
 
 	
 	var pageInfo = {'user': req.session.user, 'data': data};
-	res.render('homepage', pageInfo);
+	res.render('homepage2', pageInfo);
 };
 
 
