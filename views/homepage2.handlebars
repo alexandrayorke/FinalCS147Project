@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+<head>
+	<!-- Bootstrap -->
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/project.css" rel="stylesheet">
+	<link href="/css/menubar.css" rel="stylesheet">
+
+
+</head>
+<div class="container-fluid">
+	<body class="cbp-spmenu-push">
+		<h3>THIS IS HOMEPAGE2.HANDLEBARS</h3>
+
+		<div class="row">
+			<div class="col-md-1">
+				<button type="button" class = "btn btn-default" id="showLeft">
+					<span class="glyphicon glyphicon-th-list"></span>
+				</button>
+			</div>
+			<div class="col-md-1">Balance: {{user.credits}}</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+					</form>
+				</ul>
+			</div>
+		</div>
+
+
+<!-- 		<div class="topbar">
+			<div class="btn-group">
+				<p style="display:inline" class="navbar-text navbar-right">Balance: {{user.credits}}</p>
+
+				<button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div> -->
+						<!-- <button type="submit" class="btn btn-default">Submit</button>				 -->
+<!-- 					</form>
+				</ul>
+			</div> -->
+			<!-- Class "cbp-spmenu-open" gets applied to menu -->
+
+
+
+			<!-- sidebar menu -->
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+				<h3>Menu</h3>
+				<a href="#">Celery seakale</a>
+				<a href="#">Dulse daikon</a>
+				<a href="#">Zucchini garlic</a>
+				<a href="#">Catsear azuki bean</a>
+				<a href="#">Dandelion bunya</a>
+				<a href="#">Rutabaga</a>
+			</nav>
+
+			<!-- items for sale -->
+			{{#each data.items}}
+			<div class="item" id="{{id}}">
+				<img src="{{image}}" class="img-thumbnail" width="500px">
+				<p id="description">{{description}}</p>
+				<p id="price">{{price}}</p>
+				<p id="sellerName">{{sellerName}}</p>
+				<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
+			</div>
+			<br>
+			{{/each}}
+		</div>
+
+
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+		<script src="js/bootstrap.js"></script>
+		<script src="js/buy.js"></script>
+		<script src="js/menubar.js"></script>
+
+	</body>
+	</html>
