@@ -1,158 +1,175 @@
-	<!doctype html>
+<!doctype html>
+
 <html>
 <head>
 	<!-- Bootstrap -->
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="/css/project.css" rel="stylesheet">
+	<link href="/css/menubar.css" rel="stylesheet">
 	<link href="/css/homepage.css" rel="stylesheet">
 
+
 </head>
-<body class='cbp-spmenu-push-toright' >
-	<div class="container">
-		<div class="toolbar">	
-			<div class ="row">
-				<div class="col-md-8"><a href="/ehttps://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGZ7t-u9hbz3yaO3yMnbrT3Ia2P9WCgXERxAi407WgJzituTpKrgditProfile"><p id ="userName">{{user.firstName}}</p></a></div>
-
-				<form id="sellSomethingForm" role="form" method="get" action="/sell">
-					<div class="col-md-4">
-					<input type ="submit" id="sellSomethingButton" class="btn btn-default" value = "Sell Something"></input>
+	<body class="cbp-spmenu-push">
+			<div class = "topbar">
+				<div class = "row">
+					<div class = "col-xs-6 col-xs-4">
+						
+						<button type="button" class = "btn btn-default menuButton" id="showLeft">
+								<span class="glyphicon glyphicon-th-list icon"></span>
+						</button>
+						
 					</div>
-				</form>
-				<form id="logOutForm" role="form" method="get" action="/logout">
-					<div class="col-md-4">
-						<input type ="submit" id="logOutBtn" class="btn btn-default" value = "Log Out"></input>
+					<div class = "col-xs-6 col-xs-4">
+						<p class = "text-center balanceText">Balance: {{user.credits}}</p>
 					</div>
-				</form>
-
-
-				<div class="btn-group">
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<span class="glyphicon glyphicon-envelope"></span>
-					</a>
-					<ul class="dropdown-menu">
-						{{#each user.notifications}}
-						<div class="notification">
-							<li><p>{{message}}</p>
-								<p>{{seen}}</p></li>
-							</div>
-							<hr>
-							{{/each}}
+				
+					<div class = "col-xs-6 col-xs-4">
+						<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-search icon"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search"></input>
+								</div>
+							</form>
 						</ul>
 					</div>
-
-				</div>
-				<div class="row">
-					<div class="col-md-8"></div>
-					<div class="col-md-4"><p id="balance">Balance: {{user.credits}}</p></div>
 				</div>
 			</div>
-		</div>
+		
+		<div class="container-fluid">
 
-
-		<!--navigation bar -->
-		<nav class="navbar navbar-default navbar-static-top" role="navigation">
-			<div class="container-fluid" class="visible-xs">
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-
-				<div class="collapse navbar-collapse in" id="bs-example-navbar-collapse-1">
-					<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" class="visible-xs">-->
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Price <b class="caret" class="input-group"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">0-50</a></li>
-								<li><a href="#">50-100</a></li>
-								<li><a href="#">100+</a></li>
-							</ul>
-						</li>
-					</ul>
-
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <b class="caret" class="input-group"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Books</a></li>
-								<li><a href="#">Crafts</a></li>
-								<li><a href="#">Electronics</a></li>
-								<li><a href="#">Entertainment</a></li>
-								<li><a href="#">Fashion</a></li>
-								<li><a href="#">Home and Garden</a></li>
-								<li><a href="#">Sports and Recreational Equipment</a></li>
-								<li><a href="#">Other Goods</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Services</a></li>
-							</ul>
-						</li>
-					</ul>
-
-
+		<!--<div class="row">
+			<div class="col-md-1">
+				<button type="button" class = "btn btn-default" id="showLeft">
+					<span class="glyphicon glyphicon-th-list"></span>
+				</button>
+			</div>
+			<div class="col-md-1">Balance: {{user.credits}}</div>-->
+			<!--<div class="col-md-1">
+				<button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
 					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="item name" class="input-group">
+							<input type="text" class="form-control" placeholder="Search"></input>
 						</div>
-						<button type="submit" class="btn btn-default" >Search</button>
 					</form>
+				</ul>
+			</div>-->
+		
 
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
 
-		<!-- items for sale -->
-		{{#each data.items}}
-		<!--<div class="item" id="{{id}}">
-			<img src="{{image}}" class="img-thumbnail" width="500px">
-			<p id="description">{{description}}</p>
-			<p id="price">{{price}}</p>
-			<p id="sellerName">{{sellerName}}</p>
-			<p> {{id}}</p>
-			<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
-		</div>
-		<br>-->
-		<div id = "{{id}}" class = "item carousel">
+<!-- 		<div class="topbar">
+			<div class="btn-group">
+				<p style="display:inline" class="navbar-text navbar-right">Balance: {{user.credits}}</p>
 
-			<!--Indicators-->
-			<!--<ol class="carousel-indicators">
-    			<li data-target="#{{id}}" data-slide-to="pane1" class = "active"></li>
-    			<li data-target="#{{id}}" data-slide-to="pane2"></li>
-  			</ol>-->
+				<button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div> -->
+						<!-- <button type="submit" class="btn btn-default">Submit</button>				 -->
+<!-- 					</form>
+				</ul>
+			</div> -->
+			<!-- Class "cbp-spmenu-open" gets applied to menu -->
 
-			<ul>
-	         	<li class="pane1">
-	           		<img src = "{{image}}"/>
-	           		<!--<span class = "glyphicon glyphicon-chevron-right" id = "nextButton">-->
-	           	</li>
-	           	<li class="pane2">
-	           		<h3 id = "description">{{description}}</h3>
-	           		<p id = "price">{{price}}</p>
-	           		<p id = "sellerName">{{sellerName}}</p>
-	           		<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
-	           	</li>
-	        </ul>
-		</div>
+
+
+			<!-- sidebar menu -->
+			<div id = "menubar">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+					<a href="#">Books</a>
+					<a href="#">Crafts</a>
+					<a href="#">Electronics</a>
+					<a href="#">Entertainment</a>
+					<a href="#">Fashion</a>
+					<a href="#">Home and Garden</a>
+					<a href="#">Sports and Recreational Equipment</a>
+					<a href="#">Other Goods</a>
+					<a href="#">Services</a>
+					<p></p>
+					<a href="#">Notifications</a>
+					<a href="/sell">Sell Something</a>
+					<a href="/editProfile">Edit Account</a>
+					<a href="/logout">Logout</a>
+				</nav>
+			</div>
+
+			<!-- items for sale -->
+			<!--{{#each data.items}}
+			<div class="item" id="{{id}}">
+				<img src="{{image}}" class="img-thumbnail" width="500px">
+				<p id="description">{{description}}</p>
+				<p id="price">{{price}}</p>
+				<p id="sellerName">{{sellerName}}</p>
+				<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
+			</div>
+			<br>
+			{{/each}}-->
 		</br>
-		{{/each}}
-	</div>
+			{{#each data.items}}
+			<div class = "outline" id = "{{id}}"> 
+				<div id = "{{id}}" class = "item carousel">
+					<ul>
+		         		<li class="pane1">
+		           			<img src = "{{image}}"/>
+		           			<div class = "row">
+		           				<div class = "col-xs-6 col-xs-4">
+		           					<p class = "text-left">{{description}}</p>
+		           				</div>
+		           				<div class = "col-xs-6 col-xs-4"></div>
+		           				<div class = "col-xs-6 col-xs-4">
+		           					<p>{{price}}</p>
+		           				</div>
+		           			</div>
+		           		</li>
+		           		<li class="pane2">
+		           			<h3 id = "description" class = "text-center">{{description}}</h3>
+		           			<p id = "price" class = "text-center">{{price}}</p>
+		           			<p id = "sellerName" class = "text-center">{{sellerName}}</p>
+		           			<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
+		           		</li>
+		        	</ul>
+				</div>
+			</div>
+			</br>
+			{{/each}}
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-	<script src="js/bootstrap.js"></script>
-	<script src="js/buy.js"></script>
+			<h3>THIS IS HOMEPAGE2.HANDLEBARS</h3>
+		<!--This div closes container class! This is the last div in the body!-->
+		</div>
 
-	<!--Added for Swiping -->
-	<script src="js/hammer.js"></script>
-	<script src="js/homepage.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <!--Added for swiping -->
-	<script>
-		{{#each data.items}}
-    		var carousel = new Carousel("#{{id}}");
-    		carousel.init();
-    	{{/each}}
-	</script>
+
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+		<script src="js/bootstrap.js"></script>
+		<script src="js/buy.js"></script>
+		<script src="js/menubar.js"></script>
+
+		<!--Added for Swiping -->
+		<script src="js/hammer.js"></script>
+		<script src="js/homepage.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	    <script src="js/modernizr.js"></script>
+	    <!--Added for swiping -->
+		<script>
+			{{#each data.items}}
+	    		var carousel = new Carousel("#{{id}}");
+	    		carousel.init();
+	    	{{/each}}
+		</script>
 
 	</body>
 	</html>

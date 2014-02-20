@@ -16,18 +16,18 @@
 				<div class = "row">
 					<div class = "col-xs-6 col-xs-4">
 						
-						<button type="button" class = "btn btn-default" id="showLeft">
-								<span class="glyphicon glyphicon-th-list"></span>
+						<button type="button" class = "btn btn-default menuButton" id="showLeft">
+								<span class="glyphicon glyphicon-th-list icon"></span>
 						</button>
 						
 					</div>
 					<div class = "col-xs-6 col-xs-4">
-						<p class = "center">Balance: {{user.credits}}</p>
+						<p class = "text-center balanceText">Balance: {{user.credits}}</p>
 					</div>
 				
 					<div class = "col-xs-6 col-xs-4">
-						<button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown">
-							<span class="glyphicon glyphicon-search"></span>
+						<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-search icon"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
 							<form class="navbar-form navbar-left" role="search">
@@ -115,20 +115,23 @@
 			</div>
 			<br>
 			{{/each}}-->
-
+		</br>
 			{{#each data.items}}
-			<div id = "{{id}}" class = "item carousel">
-				<ul>
-	         		<li class="pane1">
-	           			<img src = "{{image}}"/>
-	           		</li>
-	           		<li class="pane2">
-	           			<h3 id = "description">{{description}}</h3>
-	           			<p id = "price">{{price}}</p>
-	           			<p id = "sellerName">{{sellerName}}</p>
-	           			<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
-	           		</li>
-	        	</ul>
+			<div class = "outline"> 
+				<div id = "{{id}}" class = "item carousel">
+					<ul>
+		         		<li class="pane1">
+		           			<img src = "{{image}}"/>
+		           			<p class = "text-center">{{description}}</p>
+		           		</li>
+		           		<li class="pane2">
+		           			<h3 id = "description" class = "text-center">{{description}}</h3>
+		           			<p id = "price" class = "text-center">{{price}}</p>
+		           			<p id = "sellerName" class = "text-center">{{sellerName}}</p>
+		           			<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
+		           		</li>
+		        	</ul>
+				</div>
 			</div>
 			</br>
 			{{/each}}

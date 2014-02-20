@@ -3,7 +3,8 @@
             min-height: 100%;
             height: 100%;
             padding: 0;
-            margin: 0;
+            margin-right: auto;
+            margin-left: auto;
             position: relative;
         }
 
@@ -18,7 +19,7 @@
         }*/
 
         .carousel {
-            background: black;
+            background: white;
             height: 400px;
             width: 400px;
             overflow: hidden;
@@ -60,11 +61,11 @@
 
         .carousel img {
             width: 100%;
-            height: 100%;
+            height: 90%;
         }
 
         .carousel li h2 p {
-            color: #fff;
+            color: black;
             font-size: 30px;
             text-align: center;
             position: absolute;
