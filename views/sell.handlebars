@@ -4,32 +4,70 @@
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="/css/project.css" rel="stylesheet">
+	<link href="/css/menubar.css" rel="stylesheet">
+	<link href="/css/homepage.css" rel="stylesheet">
+
 	<title> Sell an item!</title>
 </head>
-<body>
-	<div class="container">
-		<button type="button" class="btn btn-default btn-lg" id="homeBtn" onclick=" window.location = 'homepage';">
-  		<span class="glyphicon glyphicon-home"></span>
-		</button>
-	<h2>Sell An Item</h2>
-	<p id="instructions"></p>
-	<form id="sellForm" role="form" method="get" action="/itemforsale" onsubmit="return sellItem()">
+<body class = "cbp-spmenu-push">
+	<div class = "topbar">
+		<div class = "row">
+			<div class = "col-xs-6 col-xs-4">
+
+				<button type="button" class = "btn btn-default menuButton" id="showLeft">
+					<span class="glyphicon glyphicon-th-list icon"></span>
+				</button>
+
+			</div>
+			<div class = "col-xs-6 col-xs-4">
+				<p class = "text-center balanceText">Sell An Item!</p>
+			</div>
+			<div class = "col-xs-6 col-xs-4">
+				<button type="button" class="btn btn-default btn-lg searchButton" id="homeBtn" onclick=" window.location = 'homepage';">
+					<span class="glyphicon glyphicon-home icon"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		
+		<div id = "menubar">
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+				<a href="#">Books</a>
+				<a href="#">Crafts</a>
+				<a href="#">Electronics</a>
+				<a href="#">Entertainment</a>
+				<a href="#">Fashion</a>
+				<a href="#">Home and Garden</a>
+				<a href="#">Sports and Recreational Equipment</a>
+				<a href="#">Other Goods</a>
+				<a href="#">Services</a>
+				<p></p>
+				<a href="/notifications">Notifications</a>
+				<a href="/sell">Sell Something</a>
+				<a href="/editProfile">Edit Account</a>
+				<a href="/logout">Logout</a>
+			</nav>
+		</div>
+
+		<p id="instructions"></p>
+		<form id="sellForm" role="form" method="get" action="/itemforsale" onsubmit="return sellItem()">
 			<div class="form-group">
 				<p> Item Title: <input type = "text" id="title" class="form-control" placeholder="ex: Mens Jean Jacket, Medium" name="title"/></p>
 			</div>
 			
 			<div class="form-group">
-			<select class="form-control" id="category" name="category">
-			<option value="Books">Books</option>
-			<option value="Crafts">Crafts</option>
-			<option value="Electronics">Electronics</option>
-			<option value="Entertainment">Entertainment</option>
-			<option value="Fashion">Fashion</option>
-			<option value="Home and Garden">Home and Garden</option>
-			<option value="Sports and Recreational Equiptment">Sports and Recreational Equiptment</option>
-			<option value="Other">Other</option>
-			<option value="Services">Services</option>
-			</select>
+				<select class="form-control" id="category" name="category">
+					<option value="Books">Books</option>
+					<option value="Crafts">Crafts</option>
+					<option value="Electronics">Electronics</option>
+					<option value="Entertainment">Entertainment</option>
+					<option value="Fashion">Fashion</option>
+					<option value="Home and Garden">Home and Garden</option>
+					<option value="Sports and Recreational Equiptment">Sports and Recreational Equiptment</option>
+					<option value="Other">Other</option>
+					<option value="Services">Services</option>
+				</select>
 			</div>
 
 			<div class="form-group">
@@ -40,12 +78,13 @@
 			</div>
 			<button type ="submit" id="sellBtn" class="btn btn-default"/>Put Item Up for Sale</button>
 		</form> 
-</div>
+	</div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
 	<script src="js/bootstrap.js"></script>
 	<script src="js/sell.js"></script>
+	<script src="js/menubar.js"></script>
 </body>
 </html>
