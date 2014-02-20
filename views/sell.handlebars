@@ -20,7 +20,7 @@
 
 			</div>
 			<div class = "col-xs-6 col-xs-4">
-				<p class = "text-center balanceText">Sell An Item!</p>
+				<p class = "text-center balanceText">Sell An Item</p>
 			</div>
 			<div class = "col-xs-6 col-xs-4">
 				<button type="button" class="btn btn-default btn-lg searchButton" id="homeBtn" onclick=" window.location = 'homepage';">
@@ -33,6 +33,7 @@
 		
 		<div id = "menubar">
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+				<p> Categories </p>
 				<a href="#">Books</a>
 				<a href="#">Crafts</a>
 				<a href="#">Electronics</a>
@@ -42,7 +43,7 @@
 				<a href="#">Sports and Recreational Equipment</a>
 				<a href="#">Other Goods</a>
 				<a href="#">Services</a>
-				<p></p>
+				<p> Account</p>
 				<a href="/notifications">Notifications</a>
 				<a href="/sell">Sell Something</a>
 				<a href="/editProfile">Edit Account</a>
@@ -51,7 +52,7 @@
 		</div>
 
 		<p id="instructions"></p>
-		<form id="sellForm" role="form" method="get" action="/itemforsale" onsubmit="return sellItem()">
+		<form id="sellForm" role="form" method="post" action="/itemforsale" onsubmit="return sellItem()">
 			<div class="form-group">
 				<p> Item Title: <input type = "text" id="title" class="form-control" placeholder="ex: Mens Jean Jacket, Medium" name="title"/></p>
 			</div>

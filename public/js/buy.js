@@ -34,7 +34,9 @@ function callback(result) {
 		$('#balance').text("Balance: " + result["user"]["credits"]);
 		var elem = document.getElementById(result["itemID"]);
 		elem.parentNode.removeChild(elem);
-	} else {
+	} else if (result["reason"] == "negative credits"){
 		confirm("You do not have enough credits to buy this, sorry!");
+	} else{
+		confirm ("You cannot buy an item you put up for sale.")
 	}
 }

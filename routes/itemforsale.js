@@ -1,11 +1,13 @@
 var data = require('../data.json');
 var models = require('../models');
 
+
+
 exports.view = function(req, res) { 
-	var desc = req.query.title;
-	var price = req.query.price;
-	var image = req.query.imageUrl;
-	var category = req.query.category;
+	var desc = req.body.title;
+	var price = req.body.price;
+	var image = req.body.imageUrl;
+	var category = req.body.category;
 	var sellerEmail = req.session.user["email"];
 	var sellerName = req.session.user["firstName"] + " " + req.session.user["lastName"];
 	console.log("seller" + sellerEmail);
@@ -40,7 +42,6 @@ exports.view = function(req, res) { 
 		console.log("new item title:" + newItem.description);
 	
 		data["items"].push(newItem); 
-		//data["users"][sellerEmail]["notifications"].push(newNotification);
 		var pageInfo = {'user': req.session.user, 'data': data, 'nextID': req.session.nextID};
 		res.render('homepage', pageInfo);
 	}

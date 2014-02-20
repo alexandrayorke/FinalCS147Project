@@ -65,7 +65,7 @@ app.get('/createaccount', createaccount.view);
 app.get('/editProfile', editProfile.view);
 app.get('/sell', sell.view);
 app.get('/homepage', homepage.view);
-app.get('/itemforsale', itemforsale.view);
+app.post('/itemforsale', itemforsale.view);
 app.get('/addUser', addUser.view);
 app.get('/buyItem/:id', buyItem.itemPurchased);
 app.get('/editEmail/:newEmail', editEmail.editEmailInfo);
@@ -74,6 +74,7 @@ app.get('/editAddress/:newAddress', editAddress.editAddressInfo);
 app.get('/editZipCode/:newZipCode', editZipCode.editZipInfo);
 app.get('/logout', logout.view);
 app.get('/notifications', notifications.view);
+app.get('/itemforsale', homepage.view);
 // Example route
 // app.get('/users', user.list);
 

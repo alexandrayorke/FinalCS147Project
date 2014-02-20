@@ -249,5 +249,15 @@
 
 }
 
+#menubar p{
+    display: block;
+    color: #fff;
+    font-size: 1.0em;
+    font-weight: 300;
+    border-bottom: 1px solid #101010;
+    padding: 1em;
+    background-color: #282828;
+
+}
 
 
