@@ -7,33 +7,61 @@
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="/css/project.css" rel="stylesheet">
 	<link href="/css/menubar.css" rel="stylesheet">
+	<link href="/css/homepage.css" rel="stylesheet">
 
 
 </head>
-<div class="container-fluid">
 	<body class="cbp-spmenu-push">
-		<h3>THIS IS HOMEPAGE2.HANDLEBARS</h3>
+			<div class = "topbar">
+				<div class = "row">
+					<div class = "col-xs-6 col-xs-4">
+						
+						<button type="button" class = "btn btn-default menuButton" id="showLeft">
+								<span class="glyphicon glyphicon-th-list icon"></span>
+						</button>
+						
+					</div>
+					<div class = "col-xs-6 col-xs-4">
+						<p class = "text-center balanceText">Balance: {{user.credits}}</p>
+					</div>
+				
+					<div class = "col-xs-6 col-xs-4">
+						<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-search icon"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search"></input>
+								</div>
+							</form>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+		<div class="container-fluid">
 
-		<div class="row">
+		<!--<div class="row">
 			<div class="col-md-1">
 				<button type="button" class = "btn btn-default" id="showLeft">
 					<span class="glyphicon glyphicon-th-list"></span>
 				</button>
 			</div>
-			<div class="col-md-1">Balance: {{user.credits}}</div>
-			<div class="col-md-1">
+			<div class="col-md-1">Balance: {{user.credits}}</div>-->
+			<!--<div class="col-md-1">
 				<button type="button" class="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-search"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
 					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search">
+							<input type="text" class="form-control" placeholder="Search"></input>
 						</div>
 					</form>
 				</ul>
-			</div>
-		</div>
+			</div>-->
+		
 
 
 <!-- 		<div class="topbar">
@@ -57,18 +85,27 @@
 
 
 			<!-- sidebar menu -->
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-				<h3>Menu</h3>
-				<a href="#">Celery seakale</a>
-				<a href="#">Dulse daikon</a>
-				<a href="#">Zucchini garlic</a>
-				<a href="#">Catsear azuki bean</a>
-				<a href="#">Dandelion bunya</a>
-				<a href="#">Rutabaga</a>
-			</nav>
+			<div id = "menubar">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+					<a href="#">Books</a>
+					<a href="#">Crafts</a>
+					<a href="#">Electronics</a>
+					<a href="#">Entertainment</a>
+					<a href="#">Fashion</a>
+					<a href="#">Home and Garden</a>
+					<a href="#">Sports and Recreational Equipment</a>
+					<a href="#">Other Goods</a>
+					<a href="#">Services</a>
+					<p></p>
+					<a href="#">Notifications</a>
+					<a href="/sell">Sell Something</a>
+					<a href="/editProfile">Edit Account</a>
+					<a href="/logout">Logout</a>
+				</nav>
+			</div>
 
 			<!-- items for sale -->
-			{{#each data.items}}
+			<!--{{#each data.items}}
 			<div class="item" id="{{id}}">
 				<img src="{{image}}" class="img-thumbnail" width="500px">
 				<p id="description">{{description}}</p>
@@ -77,7 +114,30 @@
 				<button id="buyButton" class="btn btn-primary btn-lg">Buy</button>
 			</div>
 			<br>
+			{{/each}}-->
+		</br>
+			{{#each data.items}}
+			<div class = "outline"> 
+				<div id = "{{id}}" class = "item carousel">
+					<ul>
+		         		<li class="pane1">
+		           			<img src = "{{image}}"/>
+		           			<p class = "text-center">{{description}}</p>
+		           		</li>
+		           		<li class="pane2">
+		           			<h3 id = "description" class = "text-center">{{description}}</h3>
+		           			<p id = "price" class = "text-center">{{price}}</p>
+		           			<p id = "sellerName" class = "text-center">{{sellerName}}</p>
+		           			<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
+		           		</li>
+		        	</ul>
+				</div>
+			</div>
+			</br>
 			{{/each}}
+
+			<h3>THIS IS HOMEPAGE2.HANDLEBARS</h3>
+		<!--This div closes container class! This is the last div in the body!-->
 		</div>
 
 
@@ -89,6 +149,19 @@
 		<script src="js/bootstrap.js"></script>
 		<script src="js/buy.js"></script>
 		<script src="js/menubar.js"></script>
+
+		<!--Added for Swiping -->
+		<script src="js/hammer.js"></script>
+		<script src="js/homepage.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	    <script src="js/modernizr.js"></script>
+	    <!--Added for swiping -->
+		<script>
+			{{#each data.items}}
+	    		var carousel = new Carousel("#{{id}}");
+	    		carousel.init();
+	    	{{/each}}
+		</script>
 
 	</body>
 	</html>
