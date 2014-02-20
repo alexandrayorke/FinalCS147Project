@@ -17,15 +17,19 @@
 
 		<form id="editEmailForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
-				<p>Email: <input readonly id="accountEmail" placeholder="{{user.email}}" ></input>
-					<input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></p>
+				<div class="emailField">
+					<p style="display:inline" id="curEmail">Email: {{user.email}}</p>
+					<p style="display:inline"><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></p>
+				</div>
 			</div>
 		</form>
 
 		<form id="editPasswordForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
-				<p>Password: <input readonly id="accountPassword" placeholder="{{user.password}}" ></input>
-					<input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></p>
+				<div class="passwordField">
+					<p style="display:inline" id="curPassword">Password: {{user.password}}</p>
+					<p style="display:inline"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></p>
+				</div>
 			</div>
 		</form>
 
@@ -33,15 +37,19 @@
 
 		<form id="editAddressForm" role="form" method="get" action="/editProfile">
 			<div class="form-group">
-				<p>Street Address: <input readonly id="accountAddress" placeholder="{{user.address}}" ></input>
-					<input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></p>
+				<div class="addressField">
+					<p style="display:inline" id="curAddress">Street Address: {{user.address}}</p>
+					<p style="display:inline"><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></p>
+				</div>
 			</div>
 		</form>
 
 		<form id="editZipForm" role="form" method="get" action="/editProfile">
 			<div class="form-group">
-				<p>Zip Code: <input readonly id="accountZipCode" placeholder="{{user.zip}}"></input>
-					<input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>
+				<div class="zipCodeField">
+					<p style="display:inline" id="curZipCode">Zip Code: {{user.zip}}</p>
+					<p style="display:inline"><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>
+				</div>
 			</div>
 		</form>
 
