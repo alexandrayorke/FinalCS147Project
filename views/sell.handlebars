@@ -31,25 +31,25 @@
 	</div>
 	<div class="container-fluid">
 		
-		<div id = "menubar">
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-				<p> Categories </p>
-				<a href="#">Books</a>
-				<a href="#">Crafts</a>
-				<a href="#">Electronics</a>
-				<a href="#">Entertainment</a>
-				<a href="#">Fashion</a>
-				<a href="#">Home and Garden</a>
-				<a href="#">Sports and Recreational Equipment</a>
-				<a href="#">Other Goods</a>
-				<a href="#">Services</a>
-				<p> Account</p>
-				<a href="/notifications">Notifications</a>
-				<a href="/sell">Sell Something</a>
-				<a href="/editProfile">Edit Account</a>
-				<a href="/logout">Logout</a>
-			</nav>
-		</div>
+		<div id = "menubar" class="filters">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+					<p> Categories </p>
+					<a href="/filteredPage/Books">Books</a>
+					<a href="/filteredPage/Crafts">Crafts</a>
+					<a href="/filteredPage/Electronics">Electronics</a>
+					<a href="/filteredPage/Entertainment">Entertainment</a>
+					<a href="/filteredPage/Fashion">Fashion</a>
+					<a href="/filteredPage/Home and Garden">Home and Garden</a>
+					<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
+					<a href="/filteredPage/Other Goods">Other Goods</a>
+					<a href="/filteredPage/Services">Services</a>
+					<p> Account </p>
+					<a href="/notifications">Notifications</a>
+					<a href="/sell">Sell Something</a>
+					<a href="/editProfile">Edit Account</a>
+					<a href="/logout">Logout</a>
+				</nav>
+			</div>
 
 		<p id="instructions"></p>
 		<form id="sellForm" role="form" method="post" action="/itemforsale" onsubmit="return sellItem()">
@@ -57,7 +57,7 @@
 				<p> Item Title: <input type = "text" id="title" class="form-control" placeholder="ex: Mens Jean Jacket, Medium" name="title"/></p>
 			</div>
 			<div class="form-group">
-				<p> Extended Description: <input type = "text" id="extended description" class="form-control" placeholder="ex: In new condiiton. " name="extended description"/></p>
+				<p> Extended Description: <input type = "text" id="extendedDescription" class="form-control" placeholder="ex: In new condiiton. " name="extendedDescription"/></p>
 			</div>
 			<div class="form-group">
 				<select class="form-control" id="category" name="category">
@@ -68,7 +68,7 @@
 					<option value="Fashion">Fashion</option>
 					<option value="Home and Garden">Home and Garden</option>
 					<option value="Sports and Recreational Equiptment">Sports and Recreational Equiptment</option>
-					<option value="Other">Other</option>
+					<option value="Other Goods">Other Goods</option>
 					<option value="Services">Services</option>
 				</select>
 			</div>
@@ -79,6 +79,7 @@
 			<div class="form-group">
 				<p> Image URL: <input type = "text" id="imageUrl" class="form-control" placeholder="ex: http://images.shirt.jpg" name="imageUrl"/></p>
 			</div>
+			
 			<button type ="submit" id="sellBtn" class="btn btn-default"/>Put Item Up for Sale</button>
 		</form> 
 	</div>
