@@ -14,7 +14,13 @@ exports.view = function(req, res) { 
 			if(err) console.log(err);
 			console.log("items:" + items);
 			var pageInfo = {'user': req.session.user, 'data': data, 'items': items};
-			res.render('homepage', pageInfo);
+						res.send(pageInfo);
+
+			console.log("filteredPage.js 1");
+						res.redirect('/homepage');
+
+			console.log("filteredPage.js 2");
+			// res.render('homepage', pageInfo);
 		}
 	
  }

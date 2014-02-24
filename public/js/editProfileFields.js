@@ -84,7 +84,7 @@ $(document).ready(function() {
  		console.log("editProfileFields.js curZipCode = " + curZipCode);
  		curZipCode = curZipCode.substring(10);
  		console.log("editProfileFields.js curZipCode = " + curZipCode);
- 		var fieldHTML = '<p id="zicCodeField">Zip Code: <input id="accountZipCode" placeholder="' + curZipCode + '"></input><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>';
+ 		var fieldHTML = '<p id="zipCodeField">Zip Code: <input id="accountZipCode" placeholder="' + curZipCode + '"></input><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>';
  		$(" .zipCodeField").html(fieldHTML);
  		document.getElementById("editZipBtn").value="Save";
  	} else {
@@ -99,19 +99,43 @@ $(document).ready(function() {
  	}
  }
 
- function editAccountListener(e) {
+ function editAboutMeListener(e) {
  	e.preventDefault();
- 	if (document.getElementById("editAcctBtn").value === "Edit Account Info") {
- 		document.getElementById("accountEmail").readOnly=false;
- 		document.getElementById("accountPassword").readOnly=false;
- 		document.getElementById("editAcctBtn").value="Save";
+ 	if (document.getElementById("editAboutMeBtn").value === "Edit") {
+ 		var curAboutMe = $("#curAboutMe").text();
+ 		console.log("editProfileFields.js curAboutMe = " + curAboutMe);
+ 		// curAboutMe = curAboutMe.substring(11);
+ 		// console.log("editProfileFields.js curAboutMe = " + curAboutMe);
+ 		var fieldHTML = '<p id="ziCodeField">Zip Code: <input id="accountZipCode" placeholder="' + curZipCode + '"></input><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>';
+ 		$(" .zipCodeField").html(fieldHTML);
+ 		document.getElementById("editZipBtn").value="Save";
  	} else {
- 		var newEmail = document.forms["editAccountForm"]["accountEmail"].value;
- 		var newPassword = document.forms["editAccountForm"]["accountPassword"].value;
- 		var path = "/editAccount/" + newEmail + "/" + newPassword;
- 		$.get(path, accountCallback);
+ 		var newZipCode = document.forms["editZipForm"]["accountZipCode"].value;
+ 		if (newZipCode.length == 0) {
+ 			console.log("editProfileFields.js empty newZipCode");
+ 			newZipCode = "-1";;
+ 		}
+ 		var path = "/editZipCode/" + newZipCode;
+		$.get(path, zipCallback);
+
  	}
  }
+
+
+
+ // function editAccountListener(e) {
+ // 	e.preventDefault();
+ // 	if (document.getElementById("editAcctBtn").value === "Edit Account Info") {
+ // 		document.getElementById("accountEmail").readOnly=false;
+ // 		document.getElementById("accountPassword").readOnly=false;
+ // 		document.getElementById("editAcctBtn").value="Save";
+ // 	} else {
+ // 		var newEmail = document.forms["editAccountForm"]["accountEmail"].value;
+ // 		var newPassword = document.forms["editAccountForm"]["accountPassword"].value;
+ // 		var path = "/editAccount/" + newEmail + "/" + newPassword;
+ // 		$.get(path, accountCallback);
+ // 	}
+ // }
 
 
 

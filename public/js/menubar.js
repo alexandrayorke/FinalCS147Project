@@ -4,7 +4,6 @@ var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
         body = document.body;
  
 showLeft.onclick = function() {
-    console.log("CLICKED BUTTON!");
     classie.toggle( this, 'active' );
     classie.toggle( body, 'cbp-spmenu-push-toright' );
     classie.toggle( menuLeft, 'cbp-spmenu-open' );
