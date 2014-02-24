@@ -22,7 +22,7 @@
 						
 					</div>
 					<div class = "col-xs-6 col-xs-4">
-						<p class = "text-center balanceText">Balance: {{user.credits}}</p>
+						<p class = "text-center balanceText" id="balance">Balance: {{user.credits}}</p>
 					</div>
 				
 					<div class = "col-xs-6 col-xs-4">
@@ -30,9 +30,9 @@
 							<span class="glyphicon glyphicon-search icon"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
-							<form class="navbar-form navbar-left" role="search">
+							<form class="navbar-form navbar-left" role="search" id="searchForm">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search"></input>
+									<input type="text" class="form-control" placeholder="Search" id="search" name="search"></input>
 								</div>
 							</form>
 						</ul>
@@ -88,7 +88,7 @@
 			<div id = "menubar">
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 					<p> Categories </p>
-					<a href="#">Books</a>
+					<a href="/filteredPage/Books">Books</a>
 					<a href="#">Crafts</a>
 					<a href="#">Electronics</a>
 					<a href="#">Entertainment</a>
@@ -106,9 +106,9 @@
 			</div>
 
 		</br>
-			{{#each data.items}}
-			<div class = "outline" id = "{{id}}">
-				<div id = "{{id}}" class = "item carousel">
+			{{#each items}}
+			<div class = "outline" id = "{{_id}}">
+				<div id = "{{_id}}" class = "item carousel">
 					<ul>
 		         		<li class="pane1">
 		           			<img src = "{{image}}"/>
@@ -134,7 +134,7 @@
 			</br>
 			{{/each}}
 
-			<h3>THIS IS HOMEPAGE2.HANDLEBARS</h3>
+			
 		<!--This div closes container class! This is the last div in the body!-->
 		</div>
 
@@ -155,8 +155,8 @@
 	    <script src="js/modernizr.js"></script>
 	    <!--Added for swiping -->
 		<script>
-			{{#each data.items}}
-	    		var carousel = new Carousel("#{{id}}");
+			{{#each items}}
+	    		var carousel = new Carousel("#{{_id}}");
 	    		carousel.init();
 	    	{{/each}}
 		</script>

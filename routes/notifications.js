@@ -10,7 +10,7 @@ exports.view = function(req, res){
 
 	function afterQuery(err, notifications) {
 		if(err) console.log(err);
-		console.log(notifications);
+		console.log("notifications in js:" + notifications);
 		res.render('notifications', {"notifications": notifications});
 	}
 

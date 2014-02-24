@@ -25,6 +25,7 @@ var editAddress = require('./routes/editAddress');
 var editZipCode = require('./routes/editZipCode');
 var logout = require('./routes/logout');
 var notifications = require('./routes/notifications');
+var filteredPage = require('./routes/filteredPage');
 
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
@@ -75,6 +76,7 @@ app.get('/editZipCode/:newZipCode', editZipCode.editZipInfo);
 app.get('/logout', logout.view);
 app.get('/notifications', notifications.view);
 app.get('/itemforsale', homepage.view);
+app.get('/filteredPage/:category', filteredPage.view);
 // Example route
 // app.get('/users', user.list);
 

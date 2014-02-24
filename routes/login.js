@@ -1,4 +1,6 @@
 var data = require('../data.json');
+var models = require('../models');
+
 exports.view = function(req, res) {
 	var loginEmail = req.query.email;
 	var loginPassword = req.query.password;
@@ -28,7 +30,12 @@ exports.view = function(req, res) {
 		}
 	}
 	if (foundUser) {
-		res.render('homepage', pageInfo);
+		models.Item.find({}).sort("date").exec(displayItems);
+		function displayItems(err, items){
+			if(err) console.log(err);
+			var pageInfo = {'user': req.session.user, 'data': data, 'items' : items};
+			res.render('homepage', pageInfo);
+		}
 	} else if (foundEmail){
 
 		var pageInfo2 = {'instructions': "Please enter the correct password for this email.", 'email': loginEmail};
