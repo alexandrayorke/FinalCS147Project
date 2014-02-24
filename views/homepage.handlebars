@@ -30,7 +30,7 @@
 							<span class="glyphicon glyphicon-search icon"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
-							<form class="navbar-form navbar-left" role="search" id="searchForm">
+							<form class="navbar-form navbar-left" role="search" id="searchForm" action="/search">
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="Search" id="search" name="search"></input>
 								</div>
@@ -41,6 +41,7 @@
 			</div>
 		
 		<div class="container-fluid">
+			<h4 id="searchInfo">{{searchInfo}}</h4>
 
 		<!--<div class="row">
 			<div class="col-md-1">
@@ -85,18 +86,18 @@
 
 
 			<!-- sidebar menu -->
-			<div id = "menubar">
+			<div id = "menubar" class="filters">
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 					<p> Categories </p>
 					<a href="/filteredPage/Books">Books</a>
-					<a href="#">Crafts</a>
-					<a href="#">Electronics</a>
-					<a href="#">Entertainment</a>
-					<a href="#">Fashion</a>
-					<a href="#">Home and Garden</a>
-					<a href="#">Sports and Recreational Equipment</a>
-					<a href="#">Other Goods</a>
-					<a href="#">Services</a>
+					<a href="/filteredPage/Crafts">Crafts</a>
+					<a href="/filteredPage/Electronics">Electronics</a>
+					<a href="/filteredPage/Entertainment">Entertainment</a>
+					<a href="/filteredPage/Fashion">Fashion</a>
+					<a href="/filteredPage/Home and Garden">Home and Garden</a>
+					<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
+					<a href="/filteredPage/Other Goods">Other Goods</a>
+					<a href="/filteredPage/Services">Services</a>
 					<p> Account </p>
 					<a href="/notifications">Notifications</a>
 					<a href="/sell">Sell Something</a>
@@ -124,6 +125,7 @@
 		           		</li>
 		           		<li class="pane2">
 		           			<h3 id = "description" class = "text-center">{{description}}</h3>
+		           			<p id = "extendedDescription" class="text-center">{{extendedDescription}}</h3>
 		           			<p id = "price" class = "text-center">{{price}}</p>
 		           			<p id = "sellerName" class = "text-center">Seller: {{sellerName}}</p>
 		           			<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
@@ -135,8 +137,7 @@
 			{{/each}}
 
 			
-		<!--This div closes container class! This is the last div in the body!-->
-		</div>
+		</div> <!--This div closes container class! This is the last div in the body!-->
 
 
 
@@ -144,15 +145,15 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-		<script src="js/bootstrap.js"></script>
-		<script src="js/buy.js"></script>
-		<script src="js/menubar.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/buy.js"></script>
+		<script src="/js/menubar.js"></script>
 
 		<!--Added for Swiping -->
-		<script src="js/hammer.js"></script>
-		<script src="js/homepage.js"></script>
+		<script src="/js/hammer.js"></script>
+		<script src="/js/homepage.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	    <script src="js/modernizr.js"></script>
+	    <script src="/js/modernizr.js"></script>
 	    <!--Added for swiping -->
 		<script>
 			{{#each items}}

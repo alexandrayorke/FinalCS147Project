@@ -26,6 +26,7 @@ var editZipCode = require('./routes/editZipCode');
 var logout = require('./routes/logout');
 var notifications = require('./routes/notifications');
 var filteredPage = require('./routes/filteredPage');
+var search = require('./routes/search');
 
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
@@ -34,8 +35,7 @@ var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
 mongoose.connect(database_uri);
 
-// Example route
-// var user = require('./routes/user');
+
 
 var app = express();
 
@@ -77,8 +77,8 @@ app.get('/logout', logout.view);
 app.get('/notifications', notifications.view);
 app.get('/itemforsale', homepage.view);
 app.get('/filteredPage/:category', filteredPage.view);
-// Example route
-// app.get('/users', user.list);
+app.get('/search', search.view);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
