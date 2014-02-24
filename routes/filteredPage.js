@@ -14,7 +14,6 @@ exports.view = function(req, res) { 
 			console.log("items:" + items);
 			var pageInfo = {'user': req.session.user, 'data': data, 'items': items, 'searchInfo': "Search for " + category};
 			res.render('homepage', pageInfo);
-
 		}
 	
  }

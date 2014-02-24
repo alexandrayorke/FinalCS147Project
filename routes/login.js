@@ -34,7 +34,6 @@ exports.view = function(req, res) {
 		function displayItems(err, items){
 			if(err) console.log(err);
 			var pageInfo = {'user': req.session.user, 'data': data, 'items' : items};
-			// res.redirect('homepage', pageInfo);
 			res.render('homepage', pageInfo);
 		}
 	} else if (foundEmail){
