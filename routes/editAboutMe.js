@@ -1,30 +1,28 @@
+var models = require('../models');
+
 exports.editAboutMeInfo = function(req, res) { 
-	var newEmail = req.params.newEmail;
-	if (newEmail != "-1") {
-		for (var i = 0; i < data["users"].length; i++) {
-			var curEmail = data["users"][i]["email"];
-			if (curEmail === req.session.user.email) {
-				data["users"][i]["email"] = newEmail;
-				req.session.user = data["users"][i];
+	var newAboutMe = req.body.newAboutMe;
+	console.log("editAboutMe.js newAboutMe = " + newAboutMe);
+	models.User
+	.find({"email": req.session.user.email})
+	.exec(editUser);
+
+	function editUser(err, user){
+		if(err) console.log(err);
+		console.log("editAboutMe.js user = " + user[0]);
+		models.User.update( { "email": req.session.user.email }, { $set: {"aboutMe": newAboutMe}}).exec(afterUpdating);
+
+		function afterUpdating(err, user) {
+			if(err) console.log(err);
+			models.User.find({"email": req.session.user.email}).exec(foundUpdatedUser);
+
+			function foundUpdatedUser(err, user) {
+				if(err) console.log(err);
+				req.session.user = user[0];
+				console.log("editAboutMe.js afterUpdating req.session.user = "  + req.session.user);	
+				res.json(req.session.user);
+				console.log("editAboutMe.js end in foundUpdatedUser");
 			}
 		}
-
-		console.log("category: " + category);
-			models.User
-			.find({"category": category})
-			.sort("date")
-			.exec(displayItems);
-
-			function displayItems(err, items){
-				if(err) console.log(err);
-				console.log("items:" + items);
-				var pageInfo = {'user': req.session.user, 'data': data, 'items': items, 'searchInfo': "Search for " + category};
-				res.render('homepage', pageInfo);
-			}
-
-
-
 	}
-	res.json(req.session.user);
-	console.log("editAccount.js email = " + req.session.user.email);
 }

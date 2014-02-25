@@ -13,14 +13,15 @@ $(document).ready(function() {
  	$('#editPasswordForm').submit(editPasswordListener);
  	$('#editAddressForm').submit(editAddressListener);
  	$('#editZipForm').submit(editZipListener);
+ 	$('#editAboutMeForm').submit(editAboutMeListener);
  }
 
  function editEmailListener(e) {
  	e.preventDefault();
  	if (document.getElementById("editEmailBtn").value === "Edit") {
  		var curEmail = $("#curEmail").text();
- 		console.log("editProfileFields.js curEmail = " + curEmail);
  		curEmail = curEmail.substring(7);
+ 		console.log("editProfileFields.js curEmail = " + curEmail);
  		var fieldHTML = '<p id="emailField">Email: <input id="accountEmail" placeholder="' + curEmail + '"></input><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></p>';
  		$(" .emailField").html(fieldHTML);
  		document.getElementById("editEmailBtn").value="Save";
@@ -39,7 +40,6 @@ $(document).ready(function() {
  	e.preventDefault();
  	if (document.getElementById("editPasswordBtn").value === "Edit") {
 		var curPassword = $("#curPassword").text();
- 		console.log("editProfileFields.js curPassword = " + curPassword);
  		curPassword = curPassword.substring(10);
  		console.log("editProfileFields.js curPassword = " + curPassword);
  		var fieldHTML = '<p id="passwordField">Password: <input type="password" id="accountPassword" placeholder="' + curPassword + '"></input><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></p>';
@@ -103,40 +103,29 @@ $(document).ready(function() {
  	e.preventDefault();
  	if (document.getElementById("editAboutMeBtn").value === "Edit") {
  		var curAboutMe = $("#curAboutMe").text();
- 		console.log("editProfileFields.js curAboutMe = " + curAboutMe);
- 		// curAboutMe = curAboutMe.substring(11);
- 		// console.log("editProfileFields.js curAboutMe = " + curAboutMe);
- 		var fieldHTML = '<p id="ziCodeField">Zip Code: <input id="accountZipCode" placeholder="' + curZipCode + '"></input><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>';
- 		$(" .zipCodeField").html(fieldHTML);
- 		document.getElementById("editZipBtn").value="Save";
- 	} else {
- 		var newZipCode = document.forms["editZipForm"]["accountZipCode"].value;
- 		if (newZipCode.length == 0) {
- 			console.log("editProfileFields.js empty newZipCode");
- 			newZipCode = "-1";;
+ 		console.log("editProfileFields.js editAboutMeListener curAboutMe = " + curAboutMe);
+ 		var text = "";
+ 		if (curAboutMe === "Tell us something about yourself...") {
+ 			console.log("editProfileFields.js editAboutMeListener use placeholder");
+ 			text = 'placeholder="Tell us a little bit about yourself...">';
+ 		} else {
+ 			console.log("editProfileFields.js editAboutMeListener use curAboutMe: " + curAboutMe);
+ 			text = '>' + curAboutMe;
  		}
- 		var path = "/editZipCode/" + newZipCode;
-		$.get(path, zipCallback);
+ 		var fieldHTML = '<input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Edit"></input><p><textarea id="accountAboutMe" rows="4" cols="25 name="accountAboutMe ' + text + '</textarea></p>';
+ 		$(" .aboutMeField").html(fieldHTML);
+ 		document.getElementById("editAboutMeBtn").value="Save";
+ 	} else {
+ 		var newAboutMe = document.forms["editAboutMeForm"]["accountAboutMe"].value;
+ 		// if (newAboutMe.length == 0) {
+ 		// 	console.log("editProfileFields.js empty newAboutMe");
+ 		// 	newAboutMe = "-1";;
+ 		// }
+ 		var path = "/editAboutMe";
+		$.post(path, { "newAboutMe": newAboutMe} ).done(aboutMeCallback);
 
  	}
  }
-
-
-
- // function editAccountListener(e) {
- // 	e.preventDefault();
- // 	if (document.getElementById("editAcctBtn").value === "Edit Account Info") {
- // 		document.getElementById("accountEmail").readOnly=false;
- // 		document.getElementById("accountPassword").readOnly=false;
- // 		document.getElementById("editAcctBtn").value="Save";
- // 	} else {
- // 		var newEmail = document.forms["editAccountForm"]["accountEmail"].value;
- // 		var newPassword = document.forms["editAccountForm"]["accountPassword"].value;
- // 		var path = "/editAccount/" + newEmail + "/" + newPassword;
- // 		$.get(path, accountCallback);
- // 	}
- // }
-
 
 
  function emailCallback(result) {
@@ -177,5 +166,20 @@ $(document).ready(function() {
  	console.log(result["password"]);
  	console.log(result["address"]);
  	console.log("** " + result["zip"]);
+ }
+
+  function aboutMeCallback(result) {
+  	if (result["aboutMe"].length === 0) {
+  		result["aboutMe"] = "Tell us something about yourself...";
+  	}
+  	console.log("editProfileFields.js aboutMeCallback")
+ 	var fieldHTML = '<p><input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Edit"></input></p><p style="display:inline" id="curAboutMe">' + result["aboutMe"] + '</p>';
+ 	$(" .aboutMeField").html(fieldHTML);
+ 	console.log("editProfileFields.js in aboutMeCallback");
+ 	console.log(result["email"]);
+ 	console.log(result["password"]);
+ 	console.log(result["address"]);
+ 	console.log(result["zip"]);
+ 	console.log("** " + result["aboutMe"]);
  }
 

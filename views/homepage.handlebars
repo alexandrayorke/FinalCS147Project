@@ -67,40 +67,40 @@
 				<a href="/editProfile">Edit Account</a>
 				<a href="/logout">Logout</a>
 			</nav>
-
-			
-			
-		</br>
-		{{#each items}}
-		<div class = "outline" id = "{{_id}}">
-			<div id = "{{_id}}" class = "item carousel">
-				<ul>
-					<li class="pane1">
-						<img src = "{{image}}"/>
-						<div class = "row">
-							<div class = "col-xs-6 col-xs-4">
-								<p class = "text-left">{{description}}</p>
-							</div>
-							<div class = "col-xs-6 col-xs-4"></div>
-							<div class = "col-xs-6 col-xs-4">
-								<p>{{price}}</p>
-							</div>
-						</div>
-					</li>
-					<li class="pane2">
-						<h3 id = "description" class = "text-center">{{description}}</h3>
-						<p id = "price" class = "text-center">{{price}}</p>
-						<p id = "sellerName" class = "text-center">Seller: {{sellerName}}</p>
-						<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
-					</li>
-				</ul>
-			</div>
 		</div>
+		
+
 	</br>
-	{{/each}}
+	{{#each items}}
+	<div class = "outline" id = "{{_id}}">
+		<div id = "{{_id}}" class = "item carousel">
+			<ul>
+				<li class="pane1">
+					<img src = "{{image}}"/>
+					<div class = "row">
+						<div class = "col-xs-6 col-xs-4">
+							<p class = "text-left">{{description}}</p>
+						</div>
+						<div class = "col-xs-6 col-xs-4"></div>
+						<div class = "col-xs-6 col-xs-4">
+							<p>{{price}}</p>
+						</div>
+					</div>
+				</li>
+				<li class="pane2">
+					<h3 id = "description" class = "text-center">{{description}}</h3>
+					<p id = "price" class = "text-center">{{price}}</p>
+					<p id = "sellerName" class = "text-center">Seller: {{sellerName}}</p>
+					<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</br>
+{{/each}}
 
 
-	<!--This div closes container class! This is the last div in the body!-->
+<!--This div closes container class! This is the last div in the body!-->
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

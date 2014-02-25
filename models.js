@@ -10,7 +10,8 @@ var UserSchema = new Mongoose.Schema({
 	"state": String,
 	"zip": String,
 	"credits": Number,
-	"notifications": [{"message": String, "seen": Boolean}]
+	"notifications": [{"message": String, "seen": Boolean}],
+	"aboutMe": String
 });
 
 var ItemSchema = new Mongoose.Schema({

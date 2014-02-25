@@ -33,25 +33,25 @@
 		<!-- sidebar menu -->
 
 		<div id = "menubar" class="filters">
-				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-					<p> Categories </p>
-					<a href="/filteredPage/Books">Books</a>
-					<a href="/filteredPage/Crafts">Crafts</a>
-					<a href="/filteredPage/Electronics">Electronics</a>
-					<a href="/filteredPage/Entertainment">Entertainment</a>
-					<a href="/filteredPage/Fashion">Fashion</a>
-					<a href="/filteredPage/Home and Garden">Home and Garden</a>
-					<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
-					<a href="/filteredPage/Other Goods">Other Goods</a>
-					<a href="/filteredPage/Services">Services</a>
-					<p> Account </p>
-					<a href="/notifications">Notifications</a>
-					<a href="/sell">Sell Something</a>
-					<a href="/editProfile">Edit Account</a>
-					<a href="/logout">Logout</a>
-				</nav>
-			</div>
-	<br>
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+				<p> Categories </p>
+				<a href="/filteredPage/Books">Books</a>
+				<a href="/filteredPage/Crafts">Crafts</a>
+				<a href="/filteredPage/Electronics">Electronics</a>
+				<a href="/filteredPage/Entertainment">Entertainment</a>
+				<a href="/filteredPage/Fashion">Fashion</a>
+				<a href="/filteredPage/Home and Garden">Home and Garden</a>
+				<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
+				<a href="/filteredPage/Other Goods">Other Goods</a>
+				<a href="/filteredPage/Services">Services</a>
+				<p> Account </p>
+				<a href="/notifications">Notifications</a>
+				<a href="/sell">Sell Something</a>
+				<a href="/editProfile">Edit Account</a>
+				<a href="/logout">Logout</a>
+			</nav>
+		</div>
+		<br>
 		<form id="editEmailForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
 				<div class="emailField">
@@ -90,24 +90,22 @@
 			</div>
 		</form>
 
-		<form id="editAboutMe" role="form" method="get" action="/editProfile">
+		<form id="editAboutMeForm" role="form" method="post" action="/editProfile">
 			<div class="form-group">
+				<p style="display:inline">About Me</p>
 				<div class="aboutMeField">
-					<p>About Me</p>
-					<p id="curAboutMe">{{user.description}}</p>
 					<p style="display:inline"><input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Edit"></input></p>
-<!-- 					<input type="text" placeholder="Tell us a little bit about yourself..." id="aboutMeTextField">
- -->				<textarea rows="4" cols="25" placeholder="Tell us a little bit about yourself..." id="aboutMeTextField"></textarea>
-	
+					<p id="curAboutMe">{{aboutMeText}}</p>
+					<!-- 				<textarea rows="4" cols="25" placeholder="Tell us a little bit about yourself..." id="aboutMeTextField"></textarea>	 -->
 				</div>
 			</div>
 		</form>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-<script src="js/bootstrap.js"></script>
-<script src="js/editProfileFields.js"></script>
-<script src="js/menubar.js"></script>
-</body>
-</html>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+		<script src="js/bootstrap.js"></script>
+		<script src="js/editProfileFields.js"></script>
+		<script src="js/menubar.js"></script>
+	</body>
+	</html>
