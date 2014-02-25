@@ -2,6 +2,7 @@
 		{
 			"image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGZ7t-u9hbz3yaO3yMnbrT3Ia2P9WCgXERxAi407WgJzituTpKrg",
 			"description": "Men's Red Shirt, Medium",
+			"extendedDescription" : "In new condition.",
 			"price": "20",
 			"category": "Fashion",
 			"sellerEmail": "arielhp@stanford.edu",
@@ -11,6 +12,7 @@
 		{
 			"image": "http://funfamilycrafts.com/wp-content/uploads/2011/07/football-costume-onesie-400x266.jpg",
 			"description": "Football Onesie",
+			"extendedDescription" : "Fits a newborn baby",
 			"price": "15",
 			"category": "Fashion",
 			"sellerEmail": "lilys@stanford.edu",
@@ -21,6 +23,7 @@
 		{
 			"image": "http://travelblor.com/wp-content/uploads/2013/11/travelmug-1385815318kg48n.jpg",
 			"description": "Travel Mug",
+			"extendedDescription" : "Really good at keeping drinks hot.",
 			"price": "3",
 			"category": "Home and Garden",
 			"sellerEmail": "arielhp@stanford.edu",
@@ -31,6 +34,7 @@
 		{
 			"image": "http://www.harborfreight.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/image_21352.jpg",
 			"description": "Shovel",
+			"extendedDescription" : "Used only once to plant a tree.",
 			"price": "5",
 			"category": "Home and Garden",
 			"sellerEmail": "lilys@stanford.edu",
@@ -41,6 +45,7 @@
 		{
 			"image": "http://4.bp.blogspot.com/_9VTJFx7ps_8/TTC0TFNRflI/AAAAAAAAAPQ/knezjLSgMjM/s1600/aunt+mary%2527s+choc+chip+banana+bread.JPG",
 			"description": "Banana Bread",
+			"extendedDescription" : "Won an award in a baking competition.",
 			"price": "7",
 			"category": "Home and Garden",
 			"sellerEmail": "lilys@stanford.edu",
@@ -51,6 +56,7 @@
 		{
 			"image": "http://baseballheritagemuseum.org/wp-content/uploads/2013/08/baseball_bat.jpg",
 			"description": "Baseball Bat",
+			"extendedDescription" : "Perfect for a kid.",
 			"price": "4",
 			"category": "Sports and Recreational Equipment",
 			"sellerEmail": "ayorke@stanford.edu",
@@ -61,6 +67,7 @@
 		{
 			"image": "http://upload.wikimedia.org/wikipedia/en/b/b0/Gatsby_1925_jacket.gif",
 			"description": "The Great Gatsby",
+			"extendedDescription" : "Quite the read.",
 			"price": "2",
 			"category": "Books",
 			"sellerEmail" : "arielhp@stanford.edu",

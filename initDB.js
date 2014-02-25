@@ -9,10 +9,10 @@
 
   variable matches its value in app.js  Otherwise, you'll have
   initialized the wrong database.
-*/
+  */
 
-var mongoose = require('mongoose');
-var models   = require('./models');
+  var mongoose = require('mongoose');
+  var models   = require('./models');
 
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
@@ -31,8 +31,8 @@ var items_json = require('./items.json');
 
 // Step 2: Remove all existing documents
 models.Notification
-  .find()
-  .remove()
+.find()
+.remove()
   .exec(onceClear); // callback to continue at
 
 // Step 3: load the data from the JSON file
@@ -64,8 +64,8 @@ function onceClear(err) {
 
 // Step 2: Remove all existing documents
 models.User
-  .find()
-  .remove()
+.find()
+.remove()
   .exec(onceClear2); // callback to continue at
 
 // Step 3: load the data from the JSON file
@@ -88,7 +88,7 @@ function onceClear2(err) {
         console.log('DONE');
         // The script won't terminate until the 
         // connection to the database is closed
-      mongoose.connection.close()
+        mongoose.connection.close()
       }
     });
   }
@@ -96,8 +96,8 @@ function onceClear2(err) {
 
 // Step 2: Remove all existing documents
 models.Item
-  .find()
-  .remove()
+.find()
+.remove()
   .exec(onceClear3); // callback to continue at
 
 // Step 3: load the data from the JSON file

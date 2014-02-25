@@ -16,6 +16,7 @@ var UserSchema = new Mongoose.Schema({
 var ItemSchema = new Mongoose.Schema({
 	"image": String,
 	"description": String,
+	"extendedDescription": String,
 	"price": Number,
 	"category": String,
 	"sellerEmail" : String,
