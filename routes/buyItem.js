@@ -1,4 +1,3 @@
-var data = require('../data.json');
 var models = require('../models');
 
 exports.itemPurchased = function(req, res) { 
@@ -30,7 +29,7 @@ exports.itemPurchased = function(req, res) { 
 			} else {	
 				console.log("new balance actually is " + newBalance);
 				console.log("about to update this email" + req.session.user["email"]);
-				models.User.find({"email" : req.session.user["email"]}).update({"credits": parseInt(newBalance)}).exec(afterUpdating);
+				models.User.update( { "email": req.session.user.email }, { $set: {"credits": newBalance}}).exec(afterUpdating);
 
 				function afterUpdating(err){
 					if(err) console.log(err);
@@ -38,7 +37,8 @@ exports.itemPurchased = function(req, res) { 
 
 					function afterFinding(err, users){
 						if(err) console.log(err);
-						userItemInfo = {'user': users[0], 'itemID': itemID, 'success': true};
+						req.session.user = users[0];
+						userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': true};
 						console.log("user found" + users[0]);
 						models.Item.find({"_id": itemID}).remove().exec(afterRemoving);
 
