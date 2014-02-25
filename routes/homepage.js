@@ -1,4 +1,3 @@
-var data = require('../data.json');
 var models = require('../models');
 
 exports.view = function(req, res){
@@ -20,7 +19,7 @@ exports.view = function(req, res){
 				function displayNotifications(err, notifications){
 					if(err) console.log(err);
 					console.log("notifications in homepage:" + notifications);
-					var pageInfo = {'user': req.session.user, 'data': data, 'items' : items};
+					var pageInfo = {'user': req.session.user, 'items' : items};
 					console.log("items in display notifications" + items);
 					res.render('homepage', pageInfo);
 				}
