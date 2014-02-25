@@ -30,59 +30,41 @@
 	</div>
 	<div class="container-fluid">
 		
-<<<<<<< HEAD
 		<!-- sidebar menu -->
-		<div id = "menubar">
+
+		<div id = "menubar" class="filters">
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 				<div class = "col-xs-6 col-xs-4 homeElement">
 					<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = 'homepage';">
 						<span class="glyphicon glyphicon-home icon"></span>
 					</button>
 				</div>
-				<p>Categories</p>
+				<p> Categories </p>
 				<a href="/filteredPage/Books">Books</a>
-				<a href="#">Crafts</a>
-				<a href="#">Electronics</a>
-				<a href="#">Entertainment</a>
-				<a href="#">Fashion</a>
-				<a href="#">Home and Garden</a>
-				<a href="#">Sports and Recreational Equipment</a>
-				<a href="#">Other Goods</a>
-				<a href="#">Services</a>
-				<p>Account</p>
+				<a href="/filteredPage/Crafts">Crafts</a>
+				<a href="/filteredPage/Electronics">Electronics</a>
+				<a href="/filteredPage/Entertainment">Entertainment</a>
+				<a href="/filteredPage/Fashion">Fashion</a>
+				<a href="/filteredPage/Home and Garden">Home and Garden</a>
+				<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
+				<a href="/filteredPage/Other Goods">Other Goods</a>
+				<a href="/filteredPage/Services">Services</a>
+				<p> Account </p>
 				<a href="/notifications">Notifications</a>
 				<a href="/sell">Sell Something</a>
 				<a href="/editProfile">Edit Account</a>
 				<a href="/logout">Logout</a>
 			</nav>
 		</div>
-=======
-		<div id = "menubar" class="filters">
-				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-					<p> Categories </p>
-					<a href="/filteredPage/Books">Books</a>
-					<a href="/filteredPage/Crafts">Crafts</a>
-					<a href="/filteredPage/Electronics">Electronics</a>
-					<a href="/filteredPage/Entertainment">Entertainment</a>
-					<a href="/filteredPage/Fashion">Fashion</a>
-					<a href="/filteredPage/Home and Garden">Home and Garden</a>
-					<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
-					<a href="/filteredPage/Other Goods">Other Goods</a>
-					<a href="/filteredPage/Services">Services</a>
-					<p> Account </p>
-					<a href="/notifications">Notifications</a>
-					<a href="/sell">Sell Something</a>
-					<a href="/editProfile">Edit Account</a>
-					<a href="/logout">Logout</a>
-				</nav>
-			</div>
->>>>>>> 2d8e0fd36bacf1880720485855d3809e347c5054
-	<br>
+		<br>
 		<form id="editEmailForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
 				<div class="emailField">
-					<p style="display:inline" id="curEmail">Email: {{user.email}}</p>
-					<p style="display:inline"><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></p>
+					<div class="row-fluid">
+						<div class="col-xs-3">Email: </div>
+						<div class="col-xs-6" id="curEmail">{{user.email}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></div>
+					</div>
 				</div>
 			</div>
 		</form>
@@ -90,8 +72,11 @@
 		<form id="editPasswordForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
 				<div class="passwordField">
-					<p style="display:inline" id="curPassword">Password: {{user.password}}</p>
-					<p style="display:inline"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></p>
+					<div class="row-fluid">
+						<div class="col-xs-3">Password: </div>
+						<div class="col-xs-6" id="curPassword">{{user.password}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></div>
+					</div>
 				</div>
 			</div>
 		</form>
@@ -101,8 +86,11 @@
 		<form id="editAddressForm" role="form" method="get" action="/editProfile">
 			<div class="form-group">
 				<div class="addressField">
-					<p style="display:inline" id="curAddress">Street Address: {{user.address}}</p>
-					<p style="display:inline"><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></p>
+					<div class="row-fluid">
+						<div class="col-xs-3">Street Address: </div>
+						<div class="col-xs-6" id="curAddress">{{user.address}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></div>
+					</div>
 				</div>
 			</div>
 		</form>
@@ -110,30 +98,35 @@
 		<form id="editZipForm" role="form" method="get" action="/editProfile">
 			<div class="form-group">
 				<div class="zipCodeField">
-					<p style="display:inline" id="curZipCode">Zip Code: {{user.zip}}</p>
-					<p style="display:inline"><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>
+					<div class="row-fluid">
+						<div class="col-xs-3">Zip Code: </div>
+						<div class="col-xs-6" id="curZipCode">{{user.zip}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></div>
+					</div>
 				</div>
 			</div>
 		</form>
 
-		<form id="editAboutMe" role="form" method="get" action="/editProfile">
+		<hr>
+
+		<form id="editAboutMeForm" role="form" method="post" action="/editProfile">
 			<div class="form-group">
 				<div class="aboutMeField">
-					<p>About Me</p>
-					<p id="curAboutMe">{{user.description}}</p>
-					<p style="display:inline"><input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Edit"></input></p>
-<!-- 					<input type="text" placeholder="Tell us a little bit about yourself..." id="aboutMeTextField">
- -->				<textarea rows="4" cols="25" placeholder="Tell us a little bit about yourself..." id="aboutMeTextField"></textarea>
-	
+					<div class="row-fluid">
+						<div class="col-xs-3">About Me: </div>
+						<div class="col-xs-6" id="curAboutMe">{{aboutMeText}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Edit"></input></div>
+					</div>
 				</div>
 			</div>
 		</form>
+	</div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-<script src="js/bootstrap.js"></script>
-<script src="js/editProfileFields.js"></script>
-<script src="js/menubar.js"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+	<script src="js/bootstrap.js"></script>
+	<script src="js/editProfileFields.js"></script>
+	<script src="js/menubar.js"></script>
 </body>
 </html>
