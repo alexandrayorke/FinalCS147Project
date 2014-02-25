@@ -42,10 +42,15 @@
     top: 0;
     z-index: 1000;
 }
+
+.cbp-spmenu-vertical h3{
+
+}
  
 .cbp-spmenu-vertical a {
     border-bottom: 1px solid #101010;
     padding: 1em;
+    padding-top: 1em;
 }
  
 .cbp-spmenu-horizontal {
@@ -171,6 +176,40 @@
     }
 }
 
+#menubar p{
+/*    display: block;*/  
+    font-size: 1.2em;
+    font-variant:small-caps;  
+    color: #fff;
+    border-bottom: 1px solid #101010;
+    padding-top: .05em;
+    padding-bottom: .05em;
+    padding-left: .5em;
+    background-color: #282828;
+}
+
+.homeButton{
+    background: transparent;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    float: left;
+}
+
+#menubar .homeElement {
+    display:block;
+    background-color: #404040;
+    width:  100%;
+    height: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-bottom: 1px solid #101010;
+
+}
+
 /*CSS for topbar*/
 .topbar {
     background-color: #404040;
@@ -221,6 +260,8 @@
     color: #fff;
 }
 
+
+/*for items*/
 .picture {
     
     /*margin-left: auto;
@@ -250,6 +291,7 @@
 
 }
 
+
 #menubar p {
     display: block;
     color: #fff;
@@ -272,5 +314,6 @@
 #notification-container {
     position: relative;
 }
+
 
 
