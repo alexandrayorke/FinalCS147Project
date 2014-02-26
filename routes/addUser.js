@@ -15,7 +15,8 @@ exports.view = function(req, res) { 
 		"email": email,
 		"address": streetAddress,
 		"zip": zipCode,
-		"credits": 20
+		"credits": 20,
+		"aboutMe": ""
 	});
 	newUser.save(afterSaving);
 

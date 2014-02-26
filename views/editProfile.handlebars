@@ -61,7 +61,7 @@
 		<form id="editEmailForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
 				<div class="emailField">
-					<div class="row-fluid">
+					<div class="row-fluid fields">
 						<div class="col-xs-3">Email: </div>
 						<div class="col-xs-6" id="curEmail">{{user.email}}</div>
 						<div class="col-xs-3"><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></div>
@@ -73,7 +73,7 @@
 		<form id="editPasswordForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
 				<div class="passwordField">
-					<div class="row-fluid">
+					<div class="row-fluid fields">
 						<div class="col-xs-3">Password: </div>
 						<div class="col-xs-6" id="curPassword">{{user.password}}</div>
 						<div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></div>
@@ -87,7 +87,7 @@
 		<form id="editAddressForm" role="form" method="get" action="/editProfile">
 			<div class="form-group">
 				<div class="addressField">
-					<div class="row-fluid">
+					<div class="row-fluid fields">
 						<div class="col-xs-3">Street Address: </div>
 						<div class="col-xs-6" id="curAddress">{{user.address}}</div>
 						<div class="col-xs-3"><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></div>
@@ -99,7 +99,7 @@
 		<form id="editZipForm" role="form" method="get" action="/editProfile">
 			<div class="form-group">
 				<div class="zipCodeField">
-					<div class="row-fluid">
+					<div class="row-fluid fields">
 						<div class="col-xs-3">Zip Code: </div>
 						<div class="col-xs-6" id="curZipCode">{{user.zip}}</div>
 						<div class="col-xs-3"><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></div>
@@ -113,7 +113,7 @@
 		<form id="editAboutMeForm" role="form" method="post" action="/editProfile">
 			<div class="form-group">
 				<div class="aboutMeField">
-					<div class="row-fluid">
+					<div class="row-fluid fields">
 						<div class="col-xs-3">About Me: </div>
 						<div class="col-xs-6" id="curAboutMe">{{aboutMeText}}</div>
 						<div class="col-xs-3"><input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Edit"></input></div>

@@ -9,24 +9,34 @@ p {
 	font-size: 4.0em;
 }
 
+
+.form-control p {
+	font-size: 2.5em;
+}
+
+h1{
+	font-size: 3.5em;
+}
 #searchInfo{
 	font-size: 6.0em;
 }
-/* trying to change color of placeholders
 
-
-::-webkit-input-placeholder {
-   color: red;
+input{ /*login button*/
+	height: 50px;
+	width: 30%;
 }
 
-:-moz-placeholder { /* Firefox 18- 
-   color: red;  
+
+.submissionField { 
+	width: 500px; 
+	height: 50px; 
+	
 }
 
-::-moz-placeholder {  /* Firefox 19+ 
-   color: red;  
+.fields{
+	font-size:2.5em;
 }
 
-:-ms-input-placeholder {  
-   color: red;  
-}*/
+#loginInstructions{
+	font-size:2.0em;
+}

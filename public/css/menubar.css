@@ -1,3 +1,9 @@
+.module{
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
 .cbp-spmenu {
     /*background: #47a3da;*/
     background: #404040;
@@ -37,7 +43,7 @@
  
 .cbp-spmenu-vertical {
     /*width: 240px;*/
-    /*width: 450px;*/ width: 80%;
+    /*width: 450px;*/ width: 85%;
     height: 100%;
     top: 0;
     z-index: 1000;
@@ -58,7 +64,7 @@
  
 .cbp-spmenu-left {
     /*left: -240px;*/
-    /*left: -450px;*/ left: -80%;
+    /*left: -450px;*/ left: -85%;
 }
  
  
@@ -80,9 +86,12 @@
 }
  
 .cbp-spmenu-push-toright {
-    /*left: 450px;*/ left:80%;
+    /*left: 450px;*/ left:85%;
 }
  
+.cbp-spmenu-push-toleft {
+    /*left: 450px;*/ right:85%;
+}
  
 /* Transitions */
  
@@ -144,8 +153,6 @@
     padding-left: .5em;
     background-color: #282828;
 }
-
-
 
 .homeButton{
     background: transparent;
@@ -247,30 +254,6 @@
 
 .buyButton {
 
-}
-
-
-#menubar p {
-    display: block;
-    color: #fff;
-    font-size: 1.0em;
-    font-weight: 300;
-    border-bottom: 1px solid #101010;
-    padding: 1em;
-    background-color: #282828;
-}
-
-#notification {
-    /*width: 40px;
-    height: 40px;*/
-}
-
-#red {
-    background-color: red;
-}
-
-#notification-container {
-    position: relative;
 }
 
 
