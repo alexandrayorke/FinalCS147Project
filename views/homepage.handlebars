@@ -42,9 +42,6 @@
 	</div>
 	
 	<div class="container-fluid">
-		<h4 id="searchInfo">{{searchInfo}}</h4>
-
-		<!-- sidebar menu -->
 		<div id = "menubar" class="filters">
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 					<div class = "col-xs-6 col-xs-4 homeElement">
@@ -71,16 +68,6 @@
 					<a href="/logout">Logout</a>
 				</nav>
 		</div>
-<<<<<<< HEAD
-
-		{{#each items}}
-
-		<div class = "outline" id = "{{_id}}">
-			<div id = "{{_id}}" class = "item carousel">
-				<ul>
-					<div class="row">
-						<li class="pane1">
-=======
 		<br>
 <div class="belowTopbar">
 		{{#each items}}
@@ -89,7 +76,6 @@
 				<ul>
 					<li class="pane1">
 						<div class="row">
->>>>>>> 99cc1da5229f199077fcd91975748f2f1221ecfe
 							<div class="col-xs-12">
 								<img src="{{image}}"/>
 							</div>
@@ -98,48 +84,6 @@
 									<p class = "text-left">{{description}}</p>
 								</div>
 								<div class = "col-xs-2 col-xs-offset-3">
-<<<<<<< HEAD
-									<p class="text-right">{{price}}</p>
-								</div>
-							</div>
-						</li>
-						<li class="pane2">
-							<h3 id = "description" class = "text-center">{{description}}</h3>
-							<p id = "extendedDescription" class="text-center">{{extendedDescription}}</p>
-								<p id = "price" class = "text-center">{{price}}</p>
-								<p id = "sellerName" class = "text-center">Seller: {{sellerName}}</p>
-								<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</br>
-			{{/each}}
-			<!--This div closes container class! This is the last div in the body!-->
-		</div>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-		<script src="/js/bootstrap.js"></script>
-		<script src="/js/buy.js"></script>
-		<script src="/js/menubar.js"></script>
-
-		<!--Added for Swiping -->
-		<script src="/js/hammer.js"></script>
-		<script src="/js/homepage.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-		<script src="/js/modernizr.js"></script>
-		<!--Added for swiping -->
-		<script>
-		{{#each items}}
-		var carousel = new Carousel("#{{_id}}");
-		carousel.init();
-		{{/each}}
-		</script>
-	</body>
-	</html>
-=======
 									<p class="text-right">${{price}}</p>
 
 								</div>
@@ -186,4 +130,3 @@
 
 </body>
 </html>
->>>>>>> 99cc1da5229f199077fcd91975748f2f1221ecfe
