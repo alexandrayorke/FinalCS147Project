@@ -1,6 +1,11 @@
 var models = require('../models');
 
 exports.view = function(req, res) { 
+
+	var aboutMeText = req.session.user.aboutMe;
+	console.log("about me text: " + aboutMeText);
+	//if (aboutMeText.length === 0) {
+	
 	models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);
 
 	function displayNotifications(err, notifications){
@@ -14,6 +19,7 @@ exports.view = function(req, res) { 
 		console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
 		var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'aboutMeText': aboutMeText};
 		res.render('editProfile', pageInfo);
+
 	}
 	//var pageInfo = {'user': req.session.user, 'data': data, 'nextID': req.session.nextID};
 	//res.render('editProfile', pageInfo);

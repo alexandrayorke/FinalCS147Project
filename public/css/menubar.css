@@ -37,7 +37,7 @@
  
 .cbp-spmenu-vertical {
     /*width: 240px;*/
-    /*width: 450px;*/ width: 80%;
+    /*width: 450px;*/ width: 85%;
     height: 100%;
     top: 0;
     z-index: 1000;
@@ -58,7 +58,7 @@
  
 .cbp-spmenu-left {
     /*left: -240px;*/
-    /*left: -450px;*/ left: -80%;
+    /*left: -450px;*/ left: -85%;
 }
  
  
@@ -80,9 +80,12 @@
 }
  
 .cbp-spmenu-push-toright {
-    /*left: 450px;*/ left:80%;
+    /*left: 450px;*/ left:85%;
 }
  
+.cbp-spmenu-push-toleft {
+    /*left: 450px;*/ right:85%;
+}
  
 /* Transitions */
  
