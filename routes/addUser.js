@@ -1,5 +1,4 @@
-var data = require('../data.json');
-
+var models = require('../models');
 
 exports.view = function(req, res) { 
 	var email = req.query.email;
@@ -9,19 +8,29 @@ exports.view = function(req, res) { 
 	var streetAddress = req.query.streetAddress;
 	var zipCode = req.query.zipCode;
 
-	console.log("addUser email = " + email);
-	var newUser = {
-		"email": email,
-		"password": password,
+	var newUser = new models.User({
 		"firstName": firstName,
 		"lastName": lastName,
+		"password": password,
+		"email": email,
 		"address": streetAddress,
 		"zip": zipCode,
-		"credits": "20"
-	};
-	data["users"].push(newUser);
-	console.log("addUser\n" + data["users"]);
-	req.session.user = newUser;
-	var pageInfo = {'user': req.session.user, 'data': data, 'nextID': req.session.nextID};
-	res.render('homepage', pageInfo);
+		"credits": 20
+	});
+	newUser.save(afterSaving);
+
+	function afterSaving(err){
+		if(err){console.log(err); res.send(500);}
+		
+
+		req.session.user = newUser;
+		models.Item.find({}).sort("date").exec(displayItems);
+
+		function displayItems(err, items){
+			if(err) console.log(err);
+			var pageInfo = {'user': req.session.user, 'items' : items};
+			res.render('homepage', pageInfo);
+		}
+		
+	}
 }
