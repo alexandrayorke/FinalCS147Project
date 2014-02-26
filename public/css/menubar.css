@@ -1,11 +1,8 @@
-
-
-
 .cbp-spmenu {
     /*background: #47a3da;*/
     background: #404040;
     position: fixed;
-    overflow-y: scroll; 
+    overflow-y: auto; 
 }
  
 .cbp-spmenu h3 {
