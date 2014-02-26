@@ -1,3 +1,9 @@
+.module{
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
 .cbp-spmenu {
     /*background: #47a3da;*/
     background: #404040;
@@ -148,8 +154,6 @@
     background-color: #282828;
 }
 
-
-
 .homeButton{
     background: transparent;
     border: 0;
@@ -250,30 +254,6 @@
 
 .buyButton {
 
-}
-
-
-#menubar p {
-    display: block;
-    color: #fff;
-    font-size: 1.0em;
-    font-weight: 300;
-    border-bottom: 1px solid #101010;
-    padding: 1em;
-    background-color: #282828;
-}
-
-#notification {
-    /*width: 40px;
-    height: 40px;*/
-}
-
-#red {
-    background-color: red;
-}
-
-#notification-container {
-    position: relative;
 }
 
 
