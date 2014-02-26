@@ -16,6 +16,7 @@
 			<div class = "col-xs-6 col-xs-4">
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
 					<span class="glyphicon glyphicon-th-list icon"></span>
+					<span class = "badge">{{numNotifications}}</span>
 				</button>
 			</div>
 			<div class = "col-xs-6 col-xs-4">
@@ -29,8 +30,6 @@
 		</div>
 	</div>
 	<div class="container-fluid">
-		
-
 		<div id = "menubar" class="filters">
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 					<p> Categories </p>
@@ -44,12 +43,14 @@
 					<a href="/filteredPage/Other Goods">Other Goods</a>
 					<a href="/filteredPage/Services">Services</a>
 					<p> Account </p>
-					<a href="/notifications">Notifications</a>
+					<a href="/notifications">Notifications
+						<span class = "badge badge-error pull-right">{{numNotifications}}</span>	
+					</a>
 					<a href="/sell">Sell Something</a>
 					<a href="/editProfile">Edit Account</a>
 					<a href="/logout">Logout</a>
 				</nav>
-			</div>
+		</div>
 	<br>
 		<form id="editEmailForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">

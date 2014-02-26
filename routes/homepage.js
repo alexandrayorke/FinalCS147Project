@@ -8,20 +8,18 @@ exports.view = function(req, res){
 
 		function displayItems(err, items){
 			if(err) console.log(err);
-			console.log("items in homepage:" + items);		
+			//console.log("items in homepage:" + items);		
 			models.User.find({}).exec(displayUsers);
 			
 			function displayUsers(err, users){
 				if(err) console.log(err);
-				console.log("users in homepage:" + users);
-				models.Notification.find({}).exec(displayNotifications);
-
+				models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);
 
 				function displayNotifications(err, notifications){
 					if(err) console.log(err);
-					console.log("notifications in homepage:" + notifications);
-					var pageInfo = {'user': req.session.user, 'data': data, 'items' : items};
-					console.log("items in display notifications" + items);
+					var numNotifications = notifications.length;
+					console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
+					var pageInfo = {'user': req.session.user, 'data': data, 'items' : items, 'numNotifications': numNotifications};
 					res.render('homepage', pageInfo);
 				}
 			}

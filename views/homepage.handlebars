@@ -15,19 +15,17 @@
 	<div class = "topbar">
 		<div class = "row">
 			<div class = "col-xs-6 col-xs-4">
-				
+
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
-					<span class="glyphicon glyphicon-th-list icon">
-						
-					</span>
-					
+					<span class="glyphicon glyphicon-th-list icon"></span>
+					<span class = "badge" id = "notificationIcon">{{numNotifications}}</span>
 				</button>
-				
+
 			</div>
 			<div class = "col-xs-6 col-xs-4">
 				<p class = "text-center balanceText" id="balance">Balance: {{user.credits}}</p>
 			</div>
-			
+
 			<div class = "col-xs-6 col-xs-4">
 				<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-search icon"></span>
@@ -42,7 +40,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="container-fluid">
 		<h4 id="searchInfo">{{searchInfo}}</h4>
 
@@ -54,7 +52,7 @@
 						<span class="glyphicon glyphicon-home icon"></span>
 					</button>
 				</div>
-				<p>Categories</p>
+				<p> Categories </p>
 				<a href="/filteredPage/Books">Books</a>
 				<a href="/filteredPage/Crafts">Crafts</a>
 				<a href="/filteredPage/Electronics">Electronics</a>
@@ -66,53 +64,47 @@
 				<a href="/filteredPage/Services">Services</a>
 				<p> Account </p>
 				<a href="/notifications">Notifications
-					<span class = "badge pull-right">2</span>
+					<span class = "badge badge-error pull-right" id = "notificationMenu">{{numNotifications}}</span>	
 				</a>
 				<a href="/sell">Sell Something</a>
 				<a href="/editProfile">Edit Account</a>
 				<a href="/logout">Logout</a>
 			</nav>
+
+			</div>
+			
+		</br>
+		{{#each items}}
+		<div class = "outline" id = "{{_id}}">
+			<div id = "{{_id}}" class = "item carousel">
+				<ul>
+					<li class="pane1">
+						<img src = "{{image}}"/>
+						<div class = "row">
+							<div class = "col-xs-6 col-xs-4">
+								<p class = "text-left">{{description}}</p>
+							</div>
+							<div class = "col-xs-6 col-xs-4"></div>
+							<div class = "col-xs-6 col-xs-4">
+								<p>{{price}}</p>
+							</div>
+						</div>
+					</li>
+					<li class="pane2">
+						<h3 id = "description" class = "text-center">{{description}}</h3>
+						<p id = "price" class = "text-center">{{price}}</p>
+						<p id = "sellerName" class = "text-center">Seller: {{sellerName}}</p>
+						<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div>
+	</br>
+	{{/each}}
+
+
+	<!--This div closes container class! This is the last div in the body!-->
 </div>
-
-</br>
-{{#each items}}
-<div class = "outline" id = "{{_id}}">
-	<div id = "{{_id}}" class = "item carousel">
-		<ul>
-			<li class="pane1">
-				<img src = "{{image}}"/>
-				<div class = "row">
-					<div class = "col-xs-6 col-xs-4">
-						<p class = "text-left">{{description}}</p>
-					</div>
-					<div class = "col-xs-6 col-xs-4"></div>
-					<div class = "col-xs-6 col-xs-4">
-						<p>{{price}}</p>
-					</div>
-				</div>
-			</li>
-			<li class="pane2">
-				<h3 id = "description" class = "text-center">{{description}}</h3>
-				<p id = "extendedDescription" class="text-center">{{extendedDescription}}</h3>
-					<p id = "price" class = "text-center">{{price}}</p>
-					<p id = "sellerName" class = "text-center">Seller: {{sellerName}}</p>
-					<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
-				</li>
-			</ul>
-		</div>
-	</div>
-</br>
-{{/each}}
-
-
-<!--This div closes container class! This is the last div in the body!-->
-</div>
-
-
-
-
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>

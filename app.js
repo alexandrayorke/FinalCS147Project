@@ -23,6 +23,7 @@ var editEmail = require('./routes/editEmail');
 var editPassword = require('./routes/editPassword');
 var editAddress = require('./routes/editAddress');
 var editZipCode = require('./routes/editZipCode');
+var editNotifications = require('./routes/editNotifications');
 var logout = require('./routes/logout');
 var notifications = require('./routes/notifications');
 var filteredPage = require('./routes/filteredPage');
@@ -78,6 +79,7 @@ app.get('/notifications', notifications.view);
 app.get('/itemforsale', homepage.view);
 app.get('/filteredPage/:category', filteredPage.view);
 app.get('/search', search.view);
+app.get('/editNotifications', editNotifications.editNotifications);
 
 
 http.createServer(app).listen(app.get('port'), function(){

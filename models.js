@@ -26,7 +26,7 @@ var ItemSchema = new Mongoose.Schema({
 var NotificationSchema = new Mongoose.Schema({
 	"message": String,
 	"user": String,
-	"seen": Boolean,
+	"seen": String,
 	"date": { type: Date, default: Date.now}
 })
 
