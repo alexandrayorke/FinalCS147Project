@@ -8,7 +8,8 @@
 			"city": "Brookline",
 			"state": "MA",
 			"zip": "02445",
-			"credits": "100"
+			"credits": "100",
+			"aboutMe": ""
 		},
 
 		{
@@ -20,7 +21,8 @@
 			"city": "Greenwich",
 			"state": "CT",
 			"zip": "11111",
-			"credits": "50"
+			"credits": "50",
+			"aboutMe": ""
 		},
 		{
 			"firstName": "Lily",
@@ -31,7 +33,8 @@
 			"city": "Disney Land",
 			"state": "CA",
 			"zip": "00000",
-			"credits": "50"
+			"credits": "50",
+			"aboutMe": ""
 		},
 		{
 			"firstName": "Muffin",
@@ -42,7 +45,8 @@
 			"city": "Palo Alto",
 			"state": "CA",
 			"zip": "94306",
-			"credits": "50"
+			"credits": "50",
+			"aboutMe": ""
 		},
 		{
 			"firstName": "Barack",
@@ -53,6 +57,7 @@
 			"city": "Washington",
 			"state": "DC",
 			"zip": "20500",
-			"credits": "50"
+			"credits": "50",
+			"aboutMe": ""
 		}
 	]

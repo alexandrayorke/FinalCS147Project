@@ -108,7 +108,7 @@ $(document).ready(function() {
  			console.log("editProfileFields.js editAboutMeListener use curAboutMe: " + curAboutMe);
  			text = '>' + curAboutMe;
  		}
-		var fieldHTML = '<div class="row-fluid"><div class="col-xs-3">About Me: </div><div class="col-xs-6" id="curAboutMe"><textarea id="accountAboutMe" rows="4" cols="25 name="accountAboutMe ' + text + '</textarea></div><div class="col-xs-3"><input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Save"></input></div></div>';
+		var fieldHTML = '<div class="row-fluid"><div class="col-xs-3">About Me: </div><div class="col-xs-6" id="curAboutMe"><textarea id="accountAboutMe" rows="4" cols="25 name="accountAboutMe ' + text + '</textarea>																																	</div><div class="col-xs-3"><input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Save"></input></div></div>';
  		//var fieldHTML = '<input type ="submit" id="editAboutMeBtn" class="btn btn-default" value="Edit"></input><p><textarea id="accountAboutMe" rows="4" cols="25 name="accountAboutMe ' + text + '</textarea></p>';
  		$(" .aboutMeField").html(fieldHTML);
  		//document.getElementById("editAboutMeBtn").value="Save";

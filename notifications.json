@@ -2,13 +2,12 @@
 		{
 		"message": "Lily Sierra bought the 'Medium Womens Red Shirt'. Please mail the item to her at: 1 Magical Kingom Disney Land, CA 00000.",
 		"user": "arielhp@stanford.edu",
-		"seen": "false"
+		"seen": "notSeen"
 		},
 		
 		{
 		"message": "Alex Yorke bought the 'banana bread'. Please plan a meet up with Alex by sending her an email today. Her email is: alexy@stanford.edu",
 		"user": "arielhp@stanford.edu",
-		"seen": "false"
-
+		"seen": "notSeen"
 		}
 	]
