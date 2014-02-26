@@ -7,7 +7,7 @@
  
 .cbp-spmenu h3 {
     color: #afdefa;
-   /* font-size: 1.9em; */ font-size: 3.0em;
+   /* font-size: 1.9em; */ font-size: 6.0em;
     padding: 20px;
     margin: 0;
     font-weight: 300;
@@ -17,7 +17,7 @@
 .cbp-spmenu a {
     display: block;
     color: #fff;
-    font-size: 0.9em;
+   /* font-size: 0.9em;*/ font-size:6.0em;
     font-weight: 300;
     text-decoration: none;
 }
@@ -37,7 +37,7 @@
  
 .cbp-spmenu-vertical {
     /*width: 240px;*/
-    width: 450px;
+    /*width: 450px;*/ width: 80%;
     height: 100%;
     top: 0;
     z-index: 1000;
@@ -53,37 +53,14 @@
     padding-top: 1em;
 }
  
-.cbp-spmenu-horizontal {
-    width: 100%;
-    height: 150px;
-    left: 0;
-    z-index: 1000;
-   /* overflow: hidden;*/
-}
- 
-.cbp-spmenu-horizontal h3 {
-    height: 100%;
-    width: 20%;
-    float: left;
-}
- 
-.cbp-spmenu-horizontal a {
-    float: left;
-    width: 20%;
-    padding: 0.8em;
-    border-left: 1px solid #258ecd;
-}
  
 /* Vertical menu that slides from the left or right */
  
 .cbp-spmenu-left {
     /*left: -240px;*/
-    left: -450px;
+    /*left: -450px;*/ left: -80%;
 }
  
-.cbp-spmenu-right {
-    right: -240px;
-}
  
 .cbp-spmenu-left.cbp-spmenu-open {
     left: 0px;
@@ -93,23 +70,6 @@
     right: 0px;
 }
  
-/* Horizontal menu that slides from the top or bottom */
- 
-.cbp-spmenu-top {
-    top: -150px;
-}
- 
-.cbp-spmenu-bottom {
-    bottom: -150px;
-}
- 
-.cbp-spmenu-top.cbp-spmenu-open {
-    top: 0px;
-}
- 
-.cbp-spmenu-bottom.cbp-spmenu-open {
-    bottom: 0px;
-}
  
 /* Push classes applied to the body */
  
@@ -120,12 +80,9 @@
 }
  
 .cbp-spmenu-push-toright {
-    left: 450px;
+    /*left: 450px;*/ left:80%;
 }
  
-.cbp-spmenu-push-toleft {
-    left: -240px;
-}
  
 /* Transitions */
  
@@ -178,7 +135,7 @@
 
 #menubar p{
 /*    display: block;*/  
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/ font-size: 6.0em;
     font-variant:small-caps;  
     color: #fff;
     border-bottom: 1px solid #101010;
@@ -193,8 +150,8 @@
 .homeButton{
     background: transparent;
     border: 0;
-    width: 50px;
-    height: 50px;
+   /* width: 50px;*/ width: 150px;
+   /* height: 50px;*/ height: 150px;
     margin: 0 auto;
     float: left;
 }
@@ -203,7 +160,7 @@
     display:block;
     background-color: #404040;
     width:  100%;
-    height: 60px;
+    /*height: 60px;*/ height: 200px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
@@ -216,7 +173,7 @@
 .topbar {
     background-color: #404040;
     width:  100%;
-    height: 60px;
+    /*height: 60px;*/ height: 200px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
@@ -234,8 +191,8 @@
 .menuButton {
     background: transparent;
     border: 0;
-    width: 50px;
-    height: 50px;
+   /* width: 50px;*/ width:150px;
+   /* height: 50px;*/ height:150px;
     float: left;
     display: block;
 }
@@ -243,22 +200,22 @@
 .searchButton {
     background: transparent;
     border: 0;
-    width: 50px;
-    height: 50px;
+   /* width: 50px;*/ width:150px;
+    /*height: 50px;*/ height: 150px;
     margin: 0 auto;
     float: right;
 }
 
 .icon {
     color: #fff;
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/ font-size: 5.0em;
     /*width: 100%;
     height: 100%;*/
 }
 
 .balanceText {
     padding-top: 10px;
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/ font-size: 5.0em;
     color: #fff;
 }
 
@@ -274,15 +231,14 @@
     border: 2px solid;
     border-color: #404040;
     border-radius: 5px;
-    /*margin-right: auto;
-    margin-left: auto;
-    width: 500px;
+    /*width: 500px;
     height: 500px;*/
-    padding-top: 10px;
+    padding: 10px;
     /*padding-bottom: 10px;*/
-    width: 440px;
-    margin-right: auto;
-    margin-left: auto;
+    /*width: 440px;*/
+    width:100%;
+/*    margin-right: auto;
+    margin-left: auto;*/
 }
 
 .priceText {
