@@ -20,8 +20,8 @@
 
         .carousel {
             background: white;
-            height: 400px;
-            width: 400px;
+            /*height: 400px;*/ height:100%;
+            /*width: 400px;*/ width:100%;
             overflow: hidden;
             -webkit-backface-visibility: hidden;
             -webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
