@@ -5,19 +5,20 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<link href="/css/project.css" rel="stylesheet">
+	<link href="/css/menubar.css" rel="stylesheet">
 	<title> Welcome </title>
 </head>
 <body>
 	<div class="container">
 		<!-- Need to make a form for login -->
-		<h1> Welcome </h1>
+		<h1 id="welcome"> Welcome </h1>
 		<p id="loginInstructions"></p>
 		<form id="loginForm" role="form" method="get" action="/login">
 			<div class="form-group">
-				<p> Email: <input type = "text" id="email" name="email" placeholder="ex: name@mail.com" class="form-control submissionField"/></p>
+				<p> Email <input type = "text" id="email" name="email" placeholder="ex: name@mail.com" class="form-control submissionField"/></p>
 			</div>
 			<div class="form-group">
-				<p > Password: <input type = "password" id="password" name="password" placeholder="ex: mypassword" class="form-control submissionField"/></p>
+				<p > Password <input type = "password" id="password" name="password" placeholder="ex: mypassword" class="form-control submissionField"/></p>
 			</div>
 			<input type ="submit" id="loginBtn" class="btn btn-default" value = "Login"></input>
 		</form> 

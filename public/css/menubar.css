@@ -181,7 +181,10 @@
     padding-bottom: 5px;
     padding-right: 5px;
     padding-left: 5px;
+    position: fixed;
+    z-index:1;
 }
+
 
 .center {
     /*margin: 0 auto;
@@ -248,9 +251,37 @@
     text-align: left;
 }
 
-.buyButton {
+#buyButton {
+    width:35%;
+    height:12%;
+    text-align: center;
+    font-size: 4.0em;
+}
+
+.pane2{
+    text-align:center;
+}
+
+#sellBtn{
+    width:45%;
+    height:7%;
+    text-align:center;
+    font-size: 2.75em;
+}
+
+#loginBtn{
+    width:45%;
+    height:7%;
+    text-align:center;
+    font-size: 2.75em;
 
 }
 
+.belowTopbar{
+    margin-top: 200px; /*sets how much space is above the start of the items to prevent them from starting under the topbar*/
+}
 
+#welcome{
+    font-size:5em;
+}
 
