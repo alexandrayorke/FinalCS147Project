@@ -2,8 +2,10 @@
     /*background: #47a3da;*/
     background: #404040;
     position: fixed;
-    /*overflow-y: auto; */
+    overflow-y: auto; 
 }
+
+
  
 .cbp-spmenu h3 {
     color: #afdefa;
