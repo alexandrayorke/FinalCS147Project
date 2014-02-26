@@ -24,10 +24,20 @@ exports.view = function(req, res) {
 				console.log(users[0]);
 				req.session.user = users[0];
 				models.Item.find({}).sort("date").exec(displayItems);
+
+
 				function displayItems(err, items){
 					if(err) console.log(err);
-					var pageInfo = {'user': req.session.user, 'items' : items};
-					res.render('homepage', pageInfo);
+					models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);
+
+					function displayNotifications(err, notifications){
+						if(err) console.log(err);
+						var numNotifications = notifications.length;
+						console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
+						var pageInfo = {'user': req.session.user,'items' : items, 'numNotifications': numNotifications};
+						res.render('homepage', pageInfo);
+					}
+
 				}
 			}
 			//user has incorrect password

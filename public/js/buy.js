@@ -32,6 +32,8 @@ function callback(result) {
 		console.log("buy.js successfully bought itemID = " + result["itemID"]);
 		console.log("buy.js new user bal = " + result["user"]["credits"]);
 		$('#balance').text("Balance: " + result["user"]["credits"]);
+		$('#notificationIcon').text(result["numNotifications"]);
+		$('#notificationMenu').text(result["numNotifications"]);
 		var elem = document.getElementById(result["itemID"]);
 		elem.parentNode.removeChild(elem);
 	} else if (result["reason"] == "negative credits"){

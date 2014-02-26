@@ -7,6 +7,7 @@
 	<link href="/css/project.css" rel="stylesheet">
 	<link href="/css/menubar.css" rel="stylesheet">
 	<link href="/css/homepage.css" rel="stylesheet">
+	<link href="/css/notifications.css" rel = "stylesheet">
 
 	<title> Edit Your Profile</title>
 </head>
@@ -17,6 +18,7 @@
 
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
 					<span class="glyphicon glyphicon-th-list icon"></span>
+					<span class = "badge">{{numNotifications}}</span>
 				</button>
 
 			</div>
@@ -50,16 +52,19 @@
 				<a href="/filteredPage/Other Goods">Other Goods</a>
 				<a href="/filteredPage/Services">Services</a>
 				<p> Account </p>
-				<a href="/notifications">Notifications</a>
+				<a href="/notifications">Notifications
+					<span class = "badge badge-error pull-right">{{numNotifications}}</span>
+				</a>				
 				<a href="/sell">Sell Something</a>
 				<a href="/editProfile">Edit Account</a>
 				<a href="/logout">Logout</a>
 			</nav>
 		</div>
 	</div>
+
 	<br>
 	{{#each notifications}}
-	<div>
+	<div class = "{{seen}}">
 		<p>{{message}}</p>
 		<p>{{seen}}</p>
 		<hr>
@@ -67,11 +72,11 @@
 	<br>
 	{{/each}}
 
-
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
 	<script src="js/bootstrap.js"></script>
-	<script src="js/menubar.js"></script>
+	<script src="/js/notification.js"></script>
+	<script src="/js/menubar.js"></script>
 </body>
 </html>

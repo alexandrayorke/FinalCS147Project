@@ -42,9 +42,10 @@ exports.view = function(req, res) { 
 
 		var newNotification = new models.Notification({
 			"message": message,
-			"seen": false,
+			"seen": "notSeen",
 			"user": sellerEmail
 		});
+
 		newNotification.save(afterSaving);
 
 		function afterSaving(err) {
@@ -58,18 +59,20 @@ exports.view = function(req, res) { 
 
 
 			function displayItems(err, items){
-			var pageInfo = {'user': req.session.user, 'data': data, 'nextID': req.session.nextID, "items": items};
-			res.render('homepage', pageInfo);
+				if(err) console.log(err);
+				models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);
+
+				function displayNotifications(err, notifications){
+					if(err) console.log(err);
+					var numNotifications = notifications.length;
+					var pageInfo = {'user': req.session.user, 'data': data, 'items' : items, 'nextID': req.session.nextID,'numNotifications': numNotifications};
+					res.render('homepage', pageInfo);
+				}
+			}
 		}		
 	}
-
-	/*req.session.nextID = req.session.nextID + 1;	
-	console.log("new notificaiton" + newNotification);
-	console.log("new item title:" + newItem.description);
-	
-	data["items"].push(newItem); 
-	//data["users"][sellerEmail]["notifications"].push(newNotification);
-	var pageInfo = {'user': req.session.user, 'data': data, 'nextID': req.session.nextID};
-	res.render('homepage', pageInfo);*/
- 	}
 }
+
+
+ 	
+

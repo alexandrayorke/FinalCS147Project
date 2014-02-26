@@ -38,7 +38,6 @@ exports.itemPurchased = function(req, res) { 
 					function afterFinding(err, users){
 						if(err) console.log(err);
 						req.session.user = users[0];
-						userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': true};
 						console.log("user found" + users[0]);
 						models.Item.find({"_id": itemID}).remove().exec(afterRemoving);
 
@@ -49,7 +48,7 @@ exports.itemPurchased = function(req, res) { 
 						var newNotification = new models.Notification(
 						{ 
 							"message": newMessage2,
-							"seen": false,
+							"seen": "notSeen",
 							"user": sellerEmail
 						});
 
@@ -60,7 +59,7 @@ exports.itemPurchased = function(req, res) { 
 							console.log("buyItem.js session balance = " + req.session.user.credits);
 							var newNotification2 = new models.Notification({ //making second notification 
 								"message" : newMessage1,
-								"seen": false,
+								"seen": "notSeen",
 								"user": req.session.user["email"]
 							});
 							newNotification2.save(afterSaving2);
@@ -68,7 +67,17 @@ exports.itemPurchased = function(req, res) { 
 							function afterSaving2(err){
 								if(err) console.log(err);
 								console.log("in after saving 2");
-								res.json(userItemInfo);
+
+								
+								models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(afterQuery);
+								function afterQuery(err, notifications){
+									var numNotifications = notifications.length;
+									userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': true, 'numNotifications': numNotifications};
+
+									res.json(userItemInfo);
+								}
+								
+								//res.json(userItemInfo);
 							}
 						}
 					}

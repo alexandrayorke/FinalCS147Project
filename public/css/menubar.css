@@ -7,7 +7,7 @@
  
 .cbp-spmenu h3 {
     color: #afdefa;
-   /* font-size: 1.9em; */ font-size: 3.0em;
+   /* font-size: 1.9em; */ font-size: 6.0em;
     padding: 20px;
     margin: 0;
     font-weight: 300;
@@ -17,7 +17,7 @@
 .cbp-spmenu a {
     display: block;
     color: #fff;
-   /* font-size: 0.9em;*/ font-size:3.0em;
+   /* font-size: 0.9em;*/ font-size:6.0em;
     font-weight: 300;
     text-decoration: none;
 }
@@ -135,7 +135,7 @@
 
 #menubar p{
 /*    display: block;*/  
-    /*font-size: 1.2em;*/ font-size: 3.0em;
+    /*font-size: 1.2em;*/ font-size: 6.0em;
     font-variant:small-caps;  
     color: #fff;
     border-bottom: 1px solid #101010;
@@ -144,6 +144,8 @@
     padding-left: .5em;
     background-color: #282828;
 }
+
+
 
 .homeButton{
     background: transparent;
@@ -245,6 +247,30 @@
 
 .buyButton {
 
+}
+
+
+#menubar p {
+    display: block;
+    color: #fff;
+    font-size: 1.0em;
+    font-weight: 300;
+    border-bottom: 1px solid #101010;
+    padding: 1em;
+    background-color: #282828;
+}
+
+#notification {
+    /*width: 40px;
+    height: 40px;*/
+}
+
+#red {
+    background-color: red;
+}
+
+#notification-container {
+    position: relative;
 }
 
 
