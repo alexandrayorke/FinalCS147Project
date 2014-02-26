@@ -1,4 +1,3 @@
-<!doctype html>
 
 <html>
 <head>
@@ -8,25 +7,26 @@
 	<link href="/css/project.css" rel="stylesheet">
 	<link href="/css/menubar.css" rel="stylesheet">
 	<link href="/css/homepage.css" rel="stylesheet">
+	<link href="/css/notifications.css" rel = "stylesheet">
 
 
 </head>
-</head>
+
 <body class="cbp-spmenu-push">
 	<div class = "topbar">
 		<div class = "row">
-			<div class = "col-xs-1">
+			<div class = "col-xs-6 col-xs-4">
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
 					<span class="glyphicon glyphicon-th-list icon"></span>
 					<span class = "badge" id = "notificationIcon">{{numNotifications}}</span>
 				</button>
 				
 			</div>
-			<div class = "col-xs-10">
+			<div class = "col-xs-6 col-xs-4">
 				<p class = "text-center balanceText" id="balance">Balance: {{user.credits}}</p>
 			</div>
 			
-			<div class = "col-xs-1">
+			<div class = "col-xs-6 col-xs-4">
 				<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-search icon"></span>
 				</button>
@@ -46,31 +46,32 @@
 
 		<!-- sidebar menu -->
 		<div id = "menubar" class="filters">
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-				<div class="homeElement">
-					<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = 'homepage';">
-						<span class="glyphicon glyphicon-home icon"></span>
-					</button>
-				</div>
-				<p> Categories </p>
-				<a href="/filteredPage/Books">Books</a>
-				<a href="/filteredPage/Crafts">Crafts</a>
-				<a href="/filteredPage/Electronics">Electronics</a>
-				<a href="/filteredPage/Entertainment">Entertainment</a>
-				<a href="/filteredPage/Fashion">Fashion</a>
-				<a href="/filteredPage/Home and Garden">Home and Garden</a>
-				<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
-				<a href="/filteredPage/Other Goods">Other Goods</a>
-				<a href="/filteredPage/Services">Services</a>
-				<p> Account </p>
-				<a href="/notifications">Notifications
-					<span class = "badge badge-error pull-right" id = "notificationMenu">{{numNotifications}}</span>	
-				</a>
-				<a href="/sell">Sell Something</a>
-				<a href="/editProfile">Edit Account</a>
-				<a href="/logout">Logout</a>
-			</nav>
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+					<div class = "col-xs-6 col-xs-4 homeElement">
+						<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = 'homepage';">
+							<span class="glyphicon glyphicon-home icon"></span>
+						</button>
+					</div>
+					<p> Categories </p>
+					<a href="/filteredPage/Books">Books</a>
+					<a href="/filteredPage/Crafts">Crafts</a>
+					<a href="/filteredPage/Electronics">Electronics</a>
+					<a href="/filteredPage/Entertainment">Entertainment</a>
+					<a href="/filteredPage/Fashion">Fashion</a>
+					<a href="/filteredPage/Home and Garden">Home and Garden</a>
+					<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
+					<a href="/filteredPage/Other Goods">Other Goods</a>
+					<a href="/filteredPage/Services">Services</a>
+					<p> Account </p>
+					<a href="/notifications">Notifications
+						<span class = "badge badge-error pull-right menu-badge">{{numNotifications}}</span>	
+					</a>
+					<a href="/sell">Sell Something</a>
+					<a href="/editProfile">Edit Account</a>
+					<a href="/logout">Logout</a>
+				</nav>
 		</div>
+<<<<<<< HEAD
 
 		{{#each items}}
 
@@ -79,6 +80,16 @@
 				<ul>
 					<div class="row">
 						<li class="pane1">
+=======
+		<br>
+<div class="belowTopbar">
+		{{#each items}}
+		<div class = "outline" id = "{{_id}}">
+			<div id = "{{_id}}" class = "item carousel">
+				<ul>
+					<li class="pane1">
+						<div class="row">
+>>>>>>> 99cc1da5229f199077fcd91975748f2f1221ecfe
 							<div class="col-xs-12">
 								<img src="{{image}}"/>
 							</div>
@@ -87,6 +98,7 @@
 									<p class = "text-left">{{description}}</p>
 								</div>
 								<div class = "col-xs-2 col-xs-offset-3">
+<<<<<<< HEAD
 									<p class="text-right">{{price}}</p>
 								</div>
 							</div>
@@ -127,3 +139,51 @@
 		</script>
 	</body>
 	</html>
+=======
+									<p class="text-right">${{price}}</p>
+
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="pane2">
+						<p id = "description" class = "text-center">{{description}}</p>
+						<p id = "extendedDescription" class="text-center">{{extendedDescription}}</p>
+						<p id = "price" class = "text-center">${{price}}</p>
+						<p id = "sellerName" class = "text-center">Seller: {{sellerName}}</p>
+						<button id="buyButton" class="btn btn-primary btn-lg buyButton">Buy</button>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<br>
+		{{/each}}
+		<!--This div closes container class! This is the last div in the body!-->
+	</div>
+</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/buy.js"></script>
+	<script src="/js/menubar.js"></script>
+
+	<!--Added for Swiping -->
+	<script src="/js/hammer.js"></script>
+	<script src="/js/homepage.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="/js/modernizr.js"></script>
+	<!--Added for swiping -->
+	<script>
+	{{#each items}}
+	var carousel = new Carousel("#{{_id}}");
+	carousel.init();
+	{{/each}}
+	</script>
+
+
+</body>
+</html>
+>>>>>>> 99cc1da5229f199077fcd91975748f2f1221ecfe

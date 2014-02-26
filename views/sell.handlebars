@@ -6,6 +6,7 @@
 	<link href="/css/project.css" rel="stylesheet">
 	<link href="/css/menubar.css" rel="stylesheet">
 	<link href="/css/homepage.css" rel="stylesheet">
+	<link href="/css/notifications.css" rel = "stylesheet">
 
 	<title> Sell an item!</title>
 </head>
@@ -34,6 +35,11 @@
 		
 		<div id = "menubar" class="filters">
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+					<div class = "col-xs-6 col-xs-4 homeElement">
+						<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = 'homepage';">
+							<span class="glyphicon glyphicon-home icon"></span>
+						</button>
+					</div>
 					<p> Categories </p>
 					<a href="/filteredPage/Books">Books</a>
 					<a href="/filteredPage/Crafts">Crafts</a>
@@ -46,21 +52,21 @@
 					<a href="/filteredPage/Services">Services</a>
 					<p> Account </p>
 					<a href="/notifications">Notifications
-						<span class = "badge badge-error pull-right">{{numNotifications}}</span>
+						<span class = "badge badge-error pull-right menu-badge">{{numNotifications}}</span>
 					</a>
 					<a href="/sell">Sell Something</a>
 					<a href="/editProfile">Edit Account</a>
 					<a href="/logout">Logout</a>
 				</nav>
 			</div>
-
+<div class="belowTopbar">
 		<p id="instructions"></p>
 		<form id="sellForm" role="form" method="post" action="/itemforsale" onsubmit="return sellItem()">
 			<div class="form-group">
-				<p> Item Title: <input type = "text" id="title" class="form-control" placeholder="ex: Mens Jean Jacket, Medium" name="title"/></p>
+				<p> Item Title <input type = "text" id="title" class="form-control submissionField" placeholder="ex: Mens Jean Jacket, Medium" name="title"/></p>
 			</div>
 			<div class="form-group">
-				<p> Extended Description: <input type = "text" id="extendedDescription" class="form-control" placeholder="ex: In new condiiton. " name="extendedDescription"/></p>
+				<p> Extended Description <input type = "text" id="extendedDescription" class="form-control submissionField" placeholder="ex: This item is in new condiiton. It was orginally purcased from a local farmer's market for $25. " name="extendedDescription"/></p>
 			</div>
 			<div class="form-group">
 				<select class="form-control" id="category" name="category">
@@ -77,15 +83,16 @@
 			</div>
 
 			<div class="form-group">
-				<p> Price: <input type = "text" id="price" class="form-control" placeholder="ex: 20" name="price"/></p>
+				<p> Price <input type = "text" id="price" class="form-control submissionField" placeholder="ex: 20" name="price"/></p>
 			</div>
 			<div class="form-group">
-				<p> Image URL: <input type = "text" id="imageUrl" class="form-control" placeholder="ex: http://images.shirt.jpg" name="imageUrl"/></p>
+				<p> Image URL <input type = "text" id="imageUrl" class="form-control submissionField" placeholder="ex: http://images.shirt.jpg" name="imageUrl"/></p>
 			</div>
 			
 			<button type ="submit" id="sellBtn" class="btn btn-default"/>Put Item Up for Sale</button>
 		</form> 
 	</div>
+</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>

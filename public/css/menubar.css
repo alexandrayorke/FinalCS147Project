@@ -2,8 +2,10 @@
     /*background: #47a3da;*/
     background: #404040;
     position: fixed;
-    overflow-y: scroll; 
+    overflow-y: auto; 
 }
+
+
  
 .cbp-spmenu h3 {
     color: #afdefa;
@@ -148,8 +150,6 @@
     background-color: #282828;
 }
 
-
-
 .homeButton{
     background: transparent;
     border: 0;
@@ -181,7 +181,10 @@
     padding-bottom: 5px;
     padding-right: 5px;
     padding-left: 5px;
+    position: fixed;
+    z-index:1;
 }
+
 
 .center {
     /*margin: 0 auto;
@@ -248,33 +251,37 @@
     text-align: left;
 }
 
-.buyButton {
+#buyButton {
+    width:35%;
+    height:12%;
+    text-align: center;
+    font-size: 4.0em;
+}
+
+.pane2{
+    text-align:center;
+}
+
+#sellBtn{
+    width:45%;
+    height:7%;
+    text-align:center;
+    font-size: 2.75em;
+}
+
+#loginBtn{
+    width:45%;
+    height:7%;
+    text-align:center;
+    font-size: 2.75em;
 
 }
 
-
-#menubar p {
-    display: block;
-    color: #fff;
-    font-size: 1.0em;
-    font-weight: 300;
-    border-bottom: 1px solid #101010;
-    padding: 1em;
-    background-color: #282828;
+.belowTopbar{
+    margin-top: 200px; /*sets how much space is above the start of the items to prevent them from starting under the topbar*/
 }
 
-#notification {
-    /*width: 40px;
-    height: 40px;*/
+#welcome{
+    font-size:5em;
 }
-
-#red {
-    background-color: red;
-}
-
-#notification-container {
-    position: relative;
-}
-
-
 
