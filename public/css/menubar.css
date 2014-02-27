@@ -2,8 +2,7 @@
     /*background: #47a3da;*/
     background: #404040;
     position: fixed;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; 
+    overflow-y: auto; 
 }
 
 
@@ -87,7 +86,7 @@
 }
  
 .cbp-spmenu-push-toleft {
-    /*left: -450px;*/ left:-85%;
+    /*left: 450px;*/ right:85%;
 }
  
 /* Transitions */
@@ -180,6 +179,7 @@
     padding-bottom: 5px;
     padding-right: 5px;
     padding-left: 5px;
+    position: fixed;        /*makes top bar also fixed during shift right for menu bar*/
     z-index:1;
 }
 .topbar {
@@ -190,10 +190,6 @@
 
 .cbp-spmenu-push-toright .topbar {
     left: 85%;
-}
-
-.topbarWithoutMenu {
-    position: fixed;
 }
 
 
@@ -271,6 +267,7 @@
 .priceText {
     text-align: left;
 }
+
 
 .buyButton {
     /*width:35%;
