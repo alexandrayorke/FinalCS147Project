@@ -15,17 +15,17 @@
 <body class = "cbp-spmenu-push">
 	<div class = "topbar">
 		<div class = "row">
-			<div class = "col-xs-6 col-xs-4">
+			<div class = "col-xs-2">
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
 					<span class="glyphicon glyphicon-th-list icon"></span>
 					<span class = "badge">{{numNotifications}}</span>
 				</button>
 			</div>
-			<div class = "col-xs-6 col-xs-4">
-				<p class = "text-center balanceText">Edit Account</p>
+			<div class = "col-xs-8">
+				<p class = "text-center titleText">Edit Account</p>
 			</div>
-			<div class = "col-xs-6 col-xs-4">
-				<button type="button" class="btn btn-default btn-lg searchButton" id="homeBtn" onclick=" window.location = 'homepage';">
+			<div class = "col-xs-2">
+				<button type="button" class="btn btn-default searchButton" id="homeBtn" onclick=" window.location = 'homepage';">
 					<span class="glyphicon glyphicon-home icon"></span>
 				</button>
 			</div>
@@ -78,7 +78,7 @@
 				<div class="passwordField">
 					<div class="row fields">
 						<div class="col-xs-3">Password: </div>
-						<div class="col-xs-6" id="curPassword">{{user.password}}</div>
+						<div class="col-xs-6" id="curPassword">{{#each passwordText}} &middot; {{/each}}</div>
 						<div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></div>
 					</div>
 				</div>
