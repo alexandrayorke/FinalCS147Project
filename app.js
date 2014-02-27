@@ -72,7 +72,6 @@ app.get('/homepage', homepage.view);
 app.get('/homepageAlternative', homepage.viewAlternative);
 
 
-
 app.post('/itemforsale', itemforsale.view);
 app.get('/addUser', addUser.view);
 app.get('/buyItem/:id', buyItem.itemPurchased);
