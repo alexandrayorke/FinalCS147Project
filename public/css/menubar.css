@@ -182,8 +182,15 @@
     background-color: #404040;
     width:  100%;
     height: 60px; /*height: 200px;*/
-    position: fixed;        /*makes top bar also fixed during shift right for menu bar*/
+    position: absolute; 
+    top:0;
+    left: 0;       /*makes top bar also fixed during shift right for menu bar*/
     z-index:1;
+}
+
+
+#wrapper{
+position:relative;
 }
 .topbar {
     -webkit-transition: left 0.3s ease;
