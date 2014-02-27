@@ -7,6 +7,8 @@ showLeft.onclick = function() {
     classie.toggle( this, 'active' );
     classie.toggle( body, 'cbp-spmenu-push-toright' );
     classie.toggle( menuLeft, 'cbp-spmenu-open' );
+    var elem = document.getElementById("topbar");
+    classie.toggle( elem, 'topbarWithoutMenu');
     disableOther( 'showLeft' );
 };
 
@@ -22,6 +24,9 @@ var classie = {
 
 function toggleClass(elem, c) {
     var hasClass = null;
+    // if (elem == div) {
+    //     console.log("menubar.js doing something to div");
+    // }
     if (elem.classList.contains(c)) {
         hasClass = true;
     } else {

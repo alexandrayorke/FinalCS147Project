@@ -2,7 +2,8 @@
     /*background: #47a3da;*/
     background: #404040;
     position: fixed;
-    overflow-y: auto; 
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; 
 }
 
 
@@ -86,7 +87,7 @@
 }
  
 .cbp-spmenu-push-toleft {
-    /*left: 450px;*/ right:85%;
+    /*left: -450px;*/ left:-85%;
 }
  
 /* Transitions */
@@ -181,8 +182,11 @@
     padding-bottom: 5px;
     padding-right: 5px;
     padding-left: 5px;
-    position: fixed;
     z-index:1;
+}
+
+.topbarWithoutMenu {
+    position: fixed;
 }
 
 
@@ -251,7 +255,7 @@
     text-align: left;
 }
 
-#buyButton {
+.buyButton {
     width:35%;
     height:12%;
     text-align: center;

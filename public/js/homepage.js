@@ -117,7 +117,6 @@ var debug_el = $("#debug");
         function handleHammer(ev) {
             console.log(ev);
             // disable browser scrolling
-            ev.gesture.preventDefault();
 
             switch(ev.type) {
                 case 'dragright':
@@ -138,11 +137,13 @@ var debug_el = $("#debug");
                 case 'swipeleft':
                     self.next();
                     ev.gesture.stopDetect();
+                    ev.gesture.preventDefault();
                     break;
 
                 case 'swiperight':
                     self.prev();
                     ev.gesture.stopDetect();
+                    ev.gesture.preventDefault();
                     break;
 
                 case 'release':

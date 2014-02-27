@@ -9,13 +9,13 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$(".item button").click(buyListener);
+	$(".buyButton").click(buyListener);
 }
 
 function buyListener(e) {
 	e.preventDefault();
 	var itemID = $(this).closest('.item').attr('id');
-	var itemDescription = $('#' + itemID + ' #description').text();
+	var itemDescription = $('#' + itemID + ' .description').text();
 	console.log("buy.js in buyListener");
 	var c = confirm("Are you sure you want to buy\n" + itemDescription + "?");
 	if (c) {
