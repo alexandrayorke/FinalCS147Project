@@ -5,7 +5,7 @@
 }
 
 
-p {
+/*p {
 	font-size: 4.0em;
 }
 
@@ -21,7 +21,7 @@ h1{
 	font-size: 6.0em;
 }
 
-input{ /*login button*/
+input{ /*login button
 	height: 50px;
 	width: 30%;
 }
@@ -43,4 +43,4 @@ input{ /*login button*/
 
 #loginInstructions{
 	font-size:2.0em;
-}
+}*/
