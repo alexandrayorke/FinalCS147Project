@@ -9,7 +9,7 @@
  
 .cbp-spmenu h3 {
     color: #afdefa;
-   /* font-size: 1.9em; */ font-size: 6.0em;
+   font-size: 1.9em; /*font-size: 6.0em;*/
     padding: 20px;
     margin: 0;
     font-weight: 300;
@@ -19,7 +19,7 @@
 .cbp-spmenu a {
     display: block;
     color: #fff;
-   /* font-size: 0.9em;*/ font-size:6.0em;
+   font-size: 0.9em; /*font-size:6.0em;*/
     font-weight: 300;
     text-decoration: none;
 }
@@ -140,7 +140,7 @@
 
 #menubar p{
 /*    display: block;*/  
-    /*font-size: 1.2em;*/ font-size: 6.0em;
+    font-size: 1.2em; /*font-size: 6.0em;*/
     font-variant:small-caps;  
     color: #fff;
     border-bottom: 1px solid #101010;
@@ -153,8 +153,8 @@
 .homeButton{
     background: transparent;
     border: 0;
-   /* width: 50px;*/ width: 150px;
-   /* height: 50px;*/ height: 150px;
+    width: 50px; /*width: 150px;*/
+   height: 50px; /*height: 150px;*/
     margin: 0 auto;
     float: left;
 }
@@ -163,7 +163,7 @@
     display:block;
     background-color: #404040;
     width:  100%;
-    /*height: 60px;*/ height: 200px;
+    height: 60px; /*height: 200px;*/
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
@@ -176,7 +176,7 @@
 .topbar {
     background-color: #404040;
     width:  100%;
-    /*height: 60px;*/ height: 200px;
+    height: 80px; /*height: 200px;*/
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
@@ -206,8 +206,8 @@
 .menuButton {
     background: transparent;
     border: 0;
-   /* width: 50px;*/ width:150px;
-   /* height: 50px;*/ height:150px;
+   width: 50px; /*width:150px;*/
+   height: 50px; /*height:150px;*/
     float: left;
     display: block;
 }
@@ -215,22 +215,22 @@
 .searchButton {
     background: transparent;
     border: 0;
-   /* width: 50px;*/ width:150px;
-    /*height: 50px;*/ height: 150px;
+    width: 50px; /*width:150px;*/
+    height: 50px; /*height: 150px;*/
     margin: 0 auto;
     float: right;
 }
 
 .icon {
     color: #fff;
-    /*font-size: 1.5em;*/ font-size: 5.0em;
+    font-size: 1.5em; /*font-size: 5.0em;*/
     /*width: 100%;
     height: 100%;*/
 }
 
 .balanceText {
     padding-top: 10px;
-    /*font-size: 1.5em;*/ font-size: 5.0em;
+    font-size: 1.5em; /*font-size: 5.0em;*/
     color: #fff;
 }
 
@@ -260,11 +260,12 @@
     text-align: left;
 }
 
-#buyButton {
-    width:35%;
+
+.buyButton {
+    /*width:35%;
     height:12%;
     text-align: center;
-    font-size: 4.0em;
+    font-size: 4.0em;*/
 }
 
 .pane2{
@@ -272,22 +273,22 @@
 }
 
 #sellBtn{
-    width:45%;
+    /*width:45%;
     height:7%;
     text-align:center;
-    font-size: 2.75em;
+    font-size: 2.75em;*/
 }
 
 #loginBtn{
-    width:45%;
+    /*width:45%;
     height:7%;
     text-align:center;
-    font-size: 2.75em;
+    font-size: 2.75em;*/
 
 }
 
 .belowTopbar{
-    margin-top: 200px; /*sets how much space is above the start of the items to prevent them from starting under the topbar*/
+    margin-top: 85px; /*sets how much space is above the start of the items to prevent them from starting under the topbar*/
 }
 
 #welcome{
