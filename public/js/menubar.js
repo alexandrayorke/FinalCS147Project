@@ -7,6 +7,7 @@ showLeft.onclick = function() {
     classie.toggle( this, 'active' );
     classie.toggle( body, 'cbp-spmenu-push-toright' );
     classie.toggle( menuLeft, 'cbp-spmenu-open' );
+    classie.toggle( topbar, 'position: fixed');
     disableOther( 'showLeft' );
 };
 

@@ -181,8 +181,17 @@
     padding-bottom: 5px;
     padding-right: 5px;
     padding-left: 5px;
-    position: fixed;
+    position: fixed;        /*makes top bar also fixed during shift right for menu bar*/
     z-index:1;
+}
+.topbar {
+    -webkit-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+}
+
+.cbp-spmenu-push-toright .topbar {
+    left: 85%;
 }
 
 
