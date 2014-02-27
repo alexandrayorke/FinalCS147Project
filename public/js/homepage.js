@@ -14,8 +14,9 @@ $(document).ready(function() {
 
 function searchListener() {
     console.log("homepage.js in searchListener");
-    var searchHTML = '<div class="form-group"><form class="navbar-form navbar-left" role="search" id="searchForm" action="/search"><input type="search" class="form-control" placeholder="search" id="search" name="search"></input></form></div>';
-    $(" .search").html(searchHTML);
+    var searchHTML = '<div class="form-group searchBar col-xs-offset-2 col-xs-8 "><form class="navbar-right " role="search" id="searchForm" action="/search"><input type="search" class="form-control col-xs-10 " placeholder="search" id="search" name="search"></input></form></div>';
+    console.log(searchHTML);
+    $(" .balanceAndSearch").html(searchHTML);
 }
 
 
