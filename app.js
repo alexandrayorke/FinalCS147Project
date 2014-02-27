@@ -67,7 +67,12 @@ app.get('/login', login.view);
 app.get('/createaccount', createaccount.view);
 app.get('/editProfile', editProfile.view);
 app.get('/sell', sell.view);
+
 app.get('/homepage', homepage.view);
+app.get('/homepageAlternative', homepage.viewAlternative);
+
+
+
 app.post('/itemforsale', itemforsale.view);
 app.get('/addUser', addUser.view);
 app.get('/buyItem/:id', buyItem.itemPurchased);
