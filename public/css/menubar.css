@@ -182,15 +182,17 @@
     background-color: #404040;
     width:  100%;
     height: 60px; /*height: 200px;*/
-    position: absolute; 
-    top:0;
-    left: 0;       /*makes top bar also fixed during shift right for menu bar*/
+    position: absolute;      /*office hours changed from fix*/
+    top:0;           /*office hours added*/
+    left: 0;       /*office hours added*/
     z-index:1;
 }
 
 
 #wrapper{
-position:relative;
+position:fixed; 
+top:0;
+left:0;      /*office hours added*/
 }
 .topbar {
     -webkit-transition: left 0.3s ease;
