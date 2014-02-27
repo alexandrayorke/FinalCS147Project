@@ -182,18 +182,11 @@
     background-color: #404040;
     width:  100%;
     height: 60px; /*height: 200px;*/
-    position: absolute;      /*office hours changed from fix*/
-    top:0;           /*office hours added*/
-    left: 0;       /*office hours added*/
+    position: fixed;      /*office hours changed from fix*/
     z-index:1;
 }
 
 
-#wrapper{
-position:fixed; 
-top:0;
-left:0;      /*office hours added*/
-}
 .topbar {
     -webkit-transition: left 0.3s ease;
     -moz-transition: left 0.3s ease;
