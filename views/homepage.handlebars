@@ -27,85 +27,87 @@
 			</div>
 			
 			<div class = "col-xs-6 col-xs-4">
-				<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-search icon"></span>
-				</button>
-				<ul class="dropdown-menu" role="menu">
+				<div class="search">
+					<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-search icon"></span>
+					</button>
+				</div>
+<!-- 				<ul class="dropdown-menu" role="menu">
 					<form class="navbar-form navbar-left" role="search" id="searchForm" action="/search">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Search" id="search" name="search"></input>
 						</div>
 					</form>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</div>
 	
 	<div class="container-fluid">
 		<div id = "menubar" class="filters">
-				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-					<div class = "col-xs-6 col-xs-4 homeElement">
-						<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = 'homepage';">
-							<span class="glyphicon glyphicon-home icon"></span>
-						</button>
-					</div>
-					<p> Categories </p>
-					<a href="/filteredPage/Books">Books</a>
-					<a href="/filteredPage/Crafts">Crafts</a>
-					<a href="/filteredPage/Electronics">Electronics</a>
-					<a href="/filteredPage/Entertainment">Entertainment</a>
-					<a href="/filteredPage/Fashion">Fashion</a>
-					<a href="/filteredPage/Home and Garden">Home and Garden</a>
-					<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
-					<a href="/filteredPage/Other Goods">Other Goods</a>
-					<a href="/filteredPage/Services">Services</a>
-					<p> Account </p>
-					<a href="/notifications">Notifications
-						<span class = "badge badge-error pull-right menu-badge">{{numNotifications}}</span>	
-					</a>
-					<a href="/sell">Sell Something</a>
-					<a href="/editProfile">Edit Account</a>
-					<a href="/logout">Logout</a>
-				</nav>
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+				<div class = "col-xs-6 col-xs-4 homeElement">
+					<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = 'homepage';">
+						<span class="glyphicon glyphicon-home icon"></span>
+					</button>
+				</div>
+				<p> Categories </p>
+				<a href="/filteredPage/Books">Books</a>
+				<a href="/filteredPage/Crafts">Crafts</a>
+				<a href="/filteredPage/Electronics">Electronics</a>
+				<a href="/filteredPage/Entertainment">Entertainment</a>
+				<a href="/filteredPage/Fashion">Fashion</a>
+				<a href="/filteredPage/Home and Garden">Home and Garden</a>
+				<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
+				<a href="/filteredPage/Other Goods">Other Goods</a>
+				<a href="/filteredPage/Services">Services</a>
+				<p> Account </p>
+				<a href="/notifications">Notifications
+					<span class = "badge badge-error pull-right menu-badge">{{numNotifications}}</span>	
+				</a>
+				<a href="/sell">Sell Something</a>
+				<a href="/editProfile">Edit Account</a>
+				<a href="/logout">Logout</a>
+			</nav>
 		</div>
 		<br>
-<div class="belowTopbar">
-		{{#each items}}
-		<div class = "outline">
-			<div id = "{{_id}}" class = "item carousel">
-				<ul>
-					<li class="pane1">
-						<div class="row">
-							<div class="col-xs-12">
-								<img src="{{image}}"/>
-							</div>
+		<div class="belowTopbar">
+			{{#each items}}
+			<div class = "outline">
+				<div id = "{{_id}}" class = "item carousel">
+					<ul>
+						<li class="pane1">
 							<div class="row">
-								<div class = "col-xs-5 col-xs-offset-1">
-									<p class = "text-left">{{description}}</p>
+								<div class="col-xs-12">
+									<img src="{{image}}"/>
 								</div>
-								<div class = "col-xs-2 col-xs-offset-3">
-									<p class="text-right">${{price}}</p>
+								<div class="row">
+									<div class = "col-xs-5 col-xs-offset-1">
+										<p class = "text-left">{{description}}</p>
+									</div>
+									<div class = "col-xs-2 col-xs-offset-3">
+										<p class="text-right">${{price}}</p>
 
+									</div>
 								</div>
 							</div>
-						</div>
-					</li>
-					<li class="pane2">
-						<p class ="description text-center">{{description}}</p>
-						<p class="extendedDescription text-center">{{extendedDescription}}</p>
-						<p class="price text-center">${{price}}</p>
-						<p class="sellerName text-center">Seller: {{sellerName}}</p>
-						<button class="btn btn-primary btn-lg buyButton">Buy</button>
-						
-					</li>
-				</ul>
+						</li>
+						<li class="pane2">
+							<p class ="description text-center">{{description}}</p>
+							<p class="extendedDescription text-center">{{extendedDescription}}</p>
+							<p class="price text-center">${{price}}</p>
+							<p class="sellerName text-center">Seller: {{sellerName}}</p>
+							<button class="btn btn-primary btn-lg buyButton">Buy</button>
+							
+						</li>
+					</ul>
+				</div>
 			</div>
+			<br>
+			{{/each}}
+			<!--This div closes container class! This is the last div in the body!-->
 		</div>
-		<br>
-		{{/each}}
-		<!--This div closes container class! This is the last div in the body!-->
 	</div>
-</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>

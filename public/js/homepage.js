@@ -1,20 +1,40 @@
+'use strict';
+
+// Call this function when the page loads (the "ready" event)
+$(document).ready(function() {
+    initializePage();
+})
+
+/*
+ * Function that is called when the document is ready.
+ */
+ function initializePage() {
+    $('.searchButton').click(searchListener);
+}
+
+function searchListener() {
+    console.log("homepage.js in searchListener");
+    var searchHTML = '<div class="form-group"><form class="navbar-form navbar-left" role="search" id="searchForm" action="/search"><input type="search" class="form-control" placeholder="search" id="search" name="search"></input></form></div>';
+    $(" .search").html(searchHTML);
+}
+
 
 var debug_el = $("#debug");
-    function debug(text) {
-        debug_el.text(text);
-    }
+function debug(text) {
+    debug_el.text(text);
+}
 
 
     /**
      * requestAnimationFrame and cancel polyfill
      */
-    (function() {
+     (function() {
         var lastTime = 0;
         var vendors = ['ms', 'moz', 'webkit', 'o'];
         for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
             window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
             window.cancelAnimationFrame =
-                    window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+            window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
         }
 
         if (!window.requestAnimationFrame)
@@ -22,16 +42,16 @@ var debug_el = $("#debug");
                 var currTime = new Date().getTime();
                 var timeToCall = Math.max(0, 16 - (currTime - lastTime));
                 var id = window.setTimeout(function() { callback(currTime + timeToCall); },
-                        timeToCall);
+                    timeToCall);
                 lastTime = currTime + timeToCall;
                 return id;
             };
 
-        if (!window.cancelAnimationFrame)
-            window.cancelAnimationFrame = function(id) {
-                clearTimeout(id);
-            };
-    }());
+            if (!window.cancelAnimationFrame)
+                window.cancelAnimationFrame = function(id) {
+                    clearTimeout(id);
+                };
+            }());
 
 
     /**
@@ -55,7 +75,7 @@ var debug_el = $("#debug");
         /**
          * initial
          */
-        this.init = function() {
+         this.init = function() {
             setPaneDimensions();
 
             $(window).on("load resize orientationchange", function() {
@@ -68,7 +88,7 @@ var debug_el = $("#debug");
         /**
          * set the pane dimensions and scale the container
          */
-        function setPaneDimensions() {
+         function setPaneDimensions() {
             pane_width = element.width();
             panes.each(function() {
                 $(this).width(pane_width);
@@ -80,7 +100,7 @@ var debug_el = $("#debug");
         /**
          * show pane by index
          */
-        this.showPane = function(index, animate) {
+         this.showPane = function(index, animate) {
             // between the bounds
             index = Math.max(0, Math.min(index, pane_count-1));
             current_pane = index;
@@ -129,22 +149,22 @@ var debug_el = $("#debug");
                     if((current_pane == 0 && ev.gesture.direction == "right") ||
                         (current_pane == pane_count-1 && ev.gesture.direction == "left")) {
                         drag_offset *= .4;
-                    }
+                }
 
-                    setContainerOffset(drag_offset + pane_offset);
-                    break;
+                setContainerOffset(drag_offset + pane_offset);
+                break;
 
                 case 'swipeleft':
-                    self.next();
-                    ev.gesture.stopDetect();
-                    ev.gesture.preventDefault();
-                    break;
+                self.next();
+                ev.gesture.stopDetect();
+                ev.gesture.preventDefault();
+                break;
 
                 case 'swiperight':
-                    self.prev();
-                    ev.gesture.stopDetect();
-                    ev.gesture.preventDefault();
-                    break;
+                self.prev();
+                ev.gesture.stopDetect();
+                ev.gesture.preventDefault();
+                break;
 
                 case 'release':
                     // more then 50% moved, navigate
@@ -159,12 +179,12 @@ var debug_el = $("#debug");
                         self.showPane(current_pane, true);
                     }
                     break;
+                }
             }
+
+            var hammertime = new Hammer(element[0], { drag_lock_to_axis: true }).on("release dragleft dragright swipeleft swiperight", handleHammer);
         }
 
-        var hammertime = new Hammer(element[0], { drag_lock_to_axis: true }).on("release dragleft dragright swipeleft swiperight", handleHammer);
-    }
 
-
-    var carousel = new Carousel("#carousel");
-    carousel.init();
+        var carousel = new Carousel("#carousel");
+        carousel.init();
