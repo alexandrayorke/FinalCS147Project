@@ -8,12 +8,13 @@
 	<link href="/css/menubar.css" rel="stylesheet">
 	<link href="/css/homepage.css" rel="stylesheet">
 	<link href="/css/notifications.css" rel = "stylesheet">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, width=device-width"/>
 
 </head>
 
-<body class="cbp-spmenu-push trialBody">
-	<div id="topbar" class="topbar topbarWithoutMenu topbarOriginal">
+<body class="cbp-spmenu-push">
+	<div id="wrapper">
+	<div id="topbar" class="topbar topbarWithoutMenu">
 		<div class = "row">
 			<div class = "col-xs-2 topbarElement">
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
@@ -29,7 +30,7 @@
 
 				<div class = "col-xs-2 topbarElement">
 					<div class="search">
-						<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
+						<button type="button" id="searchBar" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
 							<span class="glyphicon glyphicon-search icon"></span>
 						</button>
 					</div>
@@ -103,6 +104,7 @@
 			<!--This div closes container class! This is the last div in the body!-->
 		</div>
 	</div>
+</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery.js"></script>
@@ -113,6 +115,8 @@
 
 	<!--Added for Swiping -->
 	<script src="/js/hammer.js"></script>
+
+	<script src="/js/searchScroll.js"></script>
 	<script src="/js/homepage.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<script src="/js/modernizr.js"></script>
