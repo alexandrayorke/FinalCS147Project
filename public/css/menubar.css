@@ -182,9 +182,8 @@
     background-color: #404040;
     width:  100%;
     height: 60px; /*height: 200px;*/
-/*        position: fixed; 
-*/       /*makes top bar also fixed during shift right for menu bar*/
-z-index:1;
+    position: fixed; 
+    z-index:1;
 }
 
 .topbar {
