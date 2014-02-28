@@ -10,7 +10,46 @@ $(document).ready(function() {
  */
  function initializePage() {
     $('.searchButton').click(searchListener);
+$(".buyButton").click(buyListener);
+
 }
+
+ function buyListener(e) {
+    e.preventDefault();
+    var itemID = $(this).closest('.item').attr('id');
+    var itemDescription = $('#' + itemID + ' .description').text();
+    console.log("homepage.js in buyListener");
+    var c = confirm("Are you sure you want to buy\n" + itemDescription + "?");
+    if (c) {
+        var path = "/buyItem/" + itemID;
+        console.log("homepage.js itemID: " + itemID);
+        console.log("homepage.js url: " + path);
+        $.get(path, callback);
+    }
+ }
+
+ function callback(result) {
+    console.log("homepage.js in callback");
+    if (result["success"]) {
+        console.log("homepage.js successfully bought itemID = " + result["itemID"]);
+        console.log("homepage.js new user bal = " + result["user"]["credits"]);
+        $('#balance').text("Balance: " + result["user"]["credits"]);
+        $('#notificationIcon').text(result["numNotifications"]);
+        $('#notificationMenu').text(result["numNotifications"]);
+        var elem = document.getElementById(result["itemID"]);
+        elem.parentNode.removeChild(elem);
+    } else if (result["reason"] == "negative credits"){
+        confirm("You do not have enough credits to buy this, sorry!");
+    } else{
+        confirm ("You cannot buy an item you put up for sale.")
+    }
+ }
+
+
+
+
+
+
 
 function searchListener() {
     console.log("homepage.js in searchListener");
