@@ -10,11 +10,45 @@ $(document).ready(function() {
  */
  function initializePage() {
     $('.searchButton').click(searchListener);
+    $(document).on('focus', 'input', function(e) {
+        console.log("homepage.js in searchInput focus function");
+        var topbarPosition = $("#topbar").offset();
+        console.log("homepage.js topbarPosition = " + topbarPosition);
+        
+       // $('#topbar').removeClass('topbarOriginal');
+       // $('#topbar').addClass('topbarTrial');
+
+
+        //$('#topbar').css(position, topbarPosition);
+        //$('#topbar').css('topbarOriginal');
+
+        //$('body').animate({ scrollTop: topbarPosition.top });
+
+    })
+    .on('blur', 'input', function(e) {
+        console.log("homepage.js in searchInput blur function");
+        $('#topbar').removeClass('fixfixed');
+    });
+    //$('#searchInput').on('blur', searchInputOnBlur);
+}
+
+function searchInputOnFocus(e) {
+    console.log("homepage.js in searchInput focus function");
+    $(document).getElementsByTagName(body).classList.add(fixfixed);
+ //    document.getElementById('topbar').classList.add('trialSearch');
+ //    header.css({position: 'absolute'});
+ //    $(window).scrollTop(0);
+}
+
+function searchInputOnBlur() {
+    console.log("homepage.js in searchInput blur function");
+    // document.getElementById('topbar').classList.add('trialSearch');
+ //   header.css({position: 'absolute'});
 }
 
 function searchListener() {
     console.log("homepage.js in searchListener");
-    var searchHTML = '<div class="form-group searchBar col-xs-offset-2 col-xs-8 "><form class="navbar-right " role="search" id="searchForm" action="/search"><input type="search" class="form-control col-xs-10 " placeholder="search" id="search" name="search"></input></form></div>';
+    var searchHTML = '<div class="form-group searchBar col-xs-offset-2 col-xs-8 "><form class="navbar-right " role="search" id="searchForm" action="/search"><input type="search" class="form-control col-xs-10 " placeholder="search" id="searchInput" name="search"></input></form></div>';
     console.log(searchHTML);
     $(" .balanceAndSearch").html(searchHTML);
 }
