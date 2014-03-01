@@ -11,6 +11,7 @@ function initializePage() {
 
 function sellItem(e) {
 	//e.preventDefault();
+	ga('send', 'event', 'sell', 'click');
 	console.log("inside sellitem");
 	var title = document.forms["sellForm"]["title"].value;
 	var price = document.forms["sellForm"]["price"].value;
