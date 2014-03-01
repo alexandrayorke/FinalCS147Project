@@ -69,7 +69,7 @@ app.get('/editProfile', editProfile.view);
 app.get('/sell', sell.view);
 
 app.get('/homepage', homepage.view);
-app.get('/homepageAlternative', homepage.viewAlternative);
+app.get('/alternative', homepage.viewAlternative);
 
 
 app.post('/itemforsale', itemforsale.view);
@@ -86,6 +86,8 @@ app.get('/itemforsale', homepage.view);
 app.get('/filteredPage/:category', filteredPage.view);
 app.get('/search', search.view);
 app.get('/editNotifications', editNotifications.editNotifications);
+
+
 
 
 http.createServer(app).listen(app.get('port'), function(){
