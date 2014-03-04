@@ -10,7 +10,7 @@ $(document).ready(function() {
  */
  function initializePage() {
     $('.searchButton').click(searchListener);
-$(".buyButton").click(buyListener);
+    $(".buyButton").click(buyListener);
 
 }
 
