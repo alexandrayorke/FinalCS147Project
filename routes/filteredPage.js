@@ -1,6 +1,10 @@
 var models = require('../models');
 
 exports.view = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
+
 	var category = req.params.category;
 	console.log("category: " + category);
 	if (category === "homepage") {

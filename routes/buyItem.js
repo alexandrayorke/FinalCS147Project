@@ -1,6 +1,11 @@
 var models = require('../models');
 
 exports.itemPurchased = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}	
+
+
 	var itemID = req.params.id;
 	console.log("buyItem.js itemID = " + itemID);
 

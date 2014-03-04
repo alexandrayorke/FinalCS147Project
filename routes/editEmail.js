@@ -1,6 +1,11 @@
 var models = require('../models');
 
 exports.editEmailInfo = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
+
+
 	var newEmail = req.params.newEmail;
 	if (newEmail != "-1") {
 		console.log("editEmail.js newEmail = " + newEmail);

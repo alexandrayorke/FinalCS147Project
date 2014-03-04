@@ -1,6 +1,9 @@
 var models = require('../models');
 
 exports.view = function(req, res){
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
 	//console.log(data);
 	models.Item.find({}).sort("date").exec(displayItems);
 
@@ -41,7 +44,7 @@ exports.viewAlternative = function(req, res) {
 					var numNotifications = notifications.length;
 					console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
 					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'alternative': true};
-					res.render('homepageAlternative', pageInfo);
+					res.render('homepage', pageInfo);
 				}
 			}
 		}

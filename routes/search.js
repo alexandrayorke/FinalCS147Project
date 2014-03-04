@@ -2,6 +2,10 @@ var data = require("../data.json");
 var models = require('../models');
 
 exports.view = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
+
 	var searchWords = req.query.search;
 	var regex = new RegExp(searchWords, 'i');
 	models.Item.find({"description": regex}).exec(afterFinding);

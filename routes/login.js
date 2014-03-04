@@ -23,6 +23,11 @@ exports.view = function(req, res) {
 				console.log("login.js correct username and password");
 				console.log(users[0]);
 				req.session.user = users[0];
+			
+				if (typeof req.session.user == 'undefined'){
+					res.render('index');
+				}
+
 				models.Item.find({}).sort("date").exec(displayItems);
 
 

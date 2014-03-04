@@ -4,6 +4,10 @@ var models = require('../models');
 
 
 exports.view = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
+
 	var desc = req.body.title;
 	var price = req.body.price;
 	var image = req.body.imageUrl;

@@ -1,6 +1,11 @@
 var models = require('../models');
 
 exports.editZipInfo = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
+
+
 	var newZipCode = req.params.newZipCode;
 	if (newZipCode != "-1") {
 		console.log("editZipCode.js newZipCode = " + newZipCode);

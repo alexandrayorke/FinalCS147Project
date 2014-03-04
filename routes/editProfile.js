@@ -2,6 +2,10 @@ var models = require('../models');
 
 exports.view = function(req, res) { 
 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
+
 	var aboutMeText = req.session.user.aboutMe;
 	console.log("about me text: " + aboutMeText);
 	//if (aboutMeText.length === 0) {

@@ -2,7 +2,9 @@ var models = require('../models');
 
 exports.view = function(req, res){
 	//console.log(data);	
-
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
 	var email = req.session.user.email;
 	//console.log("EMAIL IN NOTIFICATION.JS: " + email);
 	//models.Notification.find({"user": email}).update( {$set: {"seen": true}}, {multi: true} ).exec(afterUpdate);

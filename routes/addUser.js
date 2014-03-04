@@ -1,6 +1,7 @@
 var models = require('../models');
 
 exports.view = function(req, res) { 
+
 	var email = req.query.email;
 	var password = req.query.password;
 	var firstName = req.query.firstName;
@@ -25,6 +26,9 @@ exports.view = function(req, res) { 
 		
 
 		req.session.user = newUser;
+		if (typeof req.session.user == 'undefined'){
+		res.render('index');
+		}	
 		models.Item.find({}).sort("date").exec(displayItems);
 
 		function displayItems(err, items){

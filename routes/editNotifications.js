@@ -1,6 +1,10 @@
 var models = require('../models');
 
 exports.editNotifications = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
+
 	var email = req.session.user.email;
 	console.log("GOT TO EDIT NOTIFICATIONS");
 	var oldStatus = "notSeen";

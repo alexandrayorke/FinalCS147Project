@@ -1,6 +1,10 @@
 var models = require('../models');
 
 exports.editAboutMeInfo = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('index');
+	}
+
 	var newAboutMe = req.body.newAboutMe;
 	console.log("editAboutMe.js newAboutMe = " + newAboutMe);
 	models.User

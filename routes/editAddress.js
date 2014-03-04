@@ -1,6 +1,11 @@
 var models = require('../models');
 
 exports.editAddressInfo = function(req, res) { 
+	if (typeof req.session.user == 'undefined'){
+		res.render('/');
+	}
+
+
 	var newAddress = req.params.newAddress;
 	if (newAddress != "-1") {
 		console.log("editAddress.js newAddress = " + newAddress);
