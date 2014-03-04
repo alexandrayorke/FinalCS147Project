@@ -2,7 +2,7 @@ var models = require('../models');
 
 exports.view = function(req, res) { 
 	if (typeof req.session.user == 'undefined'){
-		res.render('index');
+		res.redirect('/');
 	}
 
 	models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);

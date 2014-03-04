@@ -3,7 +3,7 @@ var models = require('../models');
 exports.view = function(req, res){
 	//console.log(data);	
 	if (typeof req.session.user == 'undefined'){
-		res.render('index');
+		res.redirect('/');
 	}
 	var email = req.session.user.email;
 	//console.log("EMAIL IN NOTIFICATION.JS: " + email);

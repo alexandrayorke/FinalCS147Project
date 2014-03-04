@@ -2,7 +2,7 @@ var models = require('../models');
 
 exports.view = function(req, res){
 	if (typeof req.session.user == 'undefined'){
-		res.render('index');
+		res.redirect('/');
 	}
 	//console.log(data);
 	models.Item.find({}).sort("date").exec(displayItems);

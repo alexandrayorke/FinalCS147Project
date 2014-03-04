@@ -2,7 +2,7 @@ var models = require('../models');
 
 exports.editAddressInfo = function(req, res) { 
 	if (typeof req.session.user == 'undefined'){
-		res.render('/');
+		res.redirect('/');
 	}
 
 

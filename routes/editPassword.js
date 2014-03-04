@@ -2,7 +2,7 @@ var models = require('../models');
 
 exports.editPasswordInfo = function(req, res) { 
 	if (typeof req.session.user == 'undefined'){
-		res.render('index');
+		res.redirect('/');
 	}
 
 	var newPassword = req.params.newPassword;

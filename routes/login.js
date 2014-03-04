@@ -25,7 +25,7 @@ exports.view = function(req, res) {
 				req.session.user = users[0];
 			
 				if (typeof req.session.user == 'undefined'){
-					res.render('index');
+					res.redirect('/');
 				}
 
 				models.Item.find({}).sort("date").exec(displayItems);

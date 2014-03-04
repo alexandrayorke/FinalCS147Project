@@ -3,7 +3,7 @@ var models = require('../models');
 exports.view = function(req, res) { 
 
 	if (typeof req.session.user == 'undefined'){
-		res.render('index');
+		res.redirect('/');
 	}
 
 	var aboutMeText = req.session.user.aboutMe;
