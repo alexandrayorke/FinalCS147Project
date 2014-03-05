@@ -27,9 +27,14 @@ exports.view = function(req, res){
 				}
 			}
 		}
-	};
+	}
+};
 
 	exports.viewAlternative = function(req, res) {
+		console.log("user in homepagealternative:" + req.session.user);
+		if (typeof req.session.user === 'undefined'){
+			res.redirect('/');
+		}else{
 		models.Item.find({}).sort("date").exec(displayItems);
 		function displayItems(err, items){
 			if(err) console.log(err);
