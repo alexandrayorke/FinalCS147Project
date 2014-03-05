@@ -8,6 +8,11 @@ exports.view = function(req, res) { 
 
 	var alternative = req.params.alternative;
 	var category = req.params.category;
+	if (alternative === "true") {
+		alternative = true;
+	} else {
+		alternative = false;
+	}
 	console.log("category: " + category);
 	if (category === "homepage") {
 		models.Item
