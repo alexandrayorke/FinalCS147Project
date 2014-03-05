@@ -1,15 +1,16 @@
 var models = require('../models');
 
 exports.view = function(req, res){
-	if (typeof req.session.user == 'undefined'){
+	console.log("user in homepage:" + req.session.user);
+	if (typeof req.session.user === 'undefined'){
 		res.redirect('/');
-	}
+	}else{
 	//console.log(data);
 	models.Item.find({}).sort("date").exec(displayItems);
 
 
-		function displayItems(err, items){
-			if(err) console.log(err);
+	function displayItems(err, items){
+		if(err) console.log(err);
 			//console.log("items in homepage:" + items);		
 			models.User.find({}).exec(displayUsers);
 			
@@ -26,10 +27,10 @@ exports.view = function(req, res){
 				}
 			}
 		}
-};
+	};
 
-exports.viewAlternative = function(req, res) {
-	models.Item.find({}).sort("date").exec(displayItems);
+	exports.viewAlternative = function(req, res) {
+		models.Item.find({}).sort("date").exec(displayItems);
 		function displayItems(err, items){
 			if(err) console.log(err);
 			//console.log("items in homepage:" + items);		
@@ -48,7 +49,8 @@ exports.viewAlternative = function(req, res) {
 				}
 			}
 		}
-};
+	};
+}
 
 
 

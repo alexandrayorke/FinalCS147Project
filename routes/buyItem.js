@@ -1,9 +1,10 @@
 var models = require('../models');
 
 exports.itemPurchased = function(req, res) { 
-	if (typeof req.session.user == 'undefined'){
+	console.log("user in buyitem:" + req.session.user);
+	if (typeof req.session.user === 'undefined'){
 		res.redirect('/');
-	}	
+	} else{	
 
 
 	var itemID = req.params.id;
@@ -100,4 +101,5 @@ exports.itemPurchased = function(req, res) { 
 			}
 		}
 	}
+}
 

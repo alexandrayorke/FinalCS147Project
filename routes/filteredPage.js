@@ -1,9 +1,10 @@
 var models = require('../models');
 
 exports.view = function(req, res) { 
-	if (typeof req.session.user == 'undefined'){
+	console.log("user in filter:" + req.session.user);
+	if (typeof req.session.user === 'undefined'){
 		res.redirect('/');
-	}
+	}else {
 
 	var category = req.params.category;
 	console.log("category: " + category);
@@ -37,6 +38,7 @@ exports.view = function(req, res) { 
 					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'searchInfo': "Search for " + category};
 					res.render('homepage', pageInfo);
 				}
+			}
 		}
 	}
  }

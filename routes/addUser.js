@@ -26,15 +26,17 @@ exports.view = function(req, res) { 
 		
 
 		req.session.user = newUser;
-		if (typeof req.session.user == 'undefined'){
-		res.redirect('/');
-		}	
-		models.Item.find({}).sort("date").exec(displayItems);
+		console.log("user in adduser:" + req.session.user);
+		if (typeof req.session.user === 'undefined'){
+			res.redirect('/');
+		}	else {
+			models.Item.find({}).sort("date").exec(displayItems);
 
-		function displayItems(err, items){
-			if(err) console.log(err);
-			var pageInfo = {'user': req.session.user, 'items' : items};
-			res.render('homepage', pageInfo);
+			function displayItems(err, items){
+				if(err) console.log(err);
+				var pageInfo = {'user': req.session.user, 'items' : items};
+				res.render('homepage', pageInfo);
+			}
 		}
 		
 	}

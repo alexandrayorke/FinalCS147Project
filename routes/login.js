@@ -23,10 +23,10 @@ exports.view = function(req, res) {
 				console.log("login.js correct username and password");
 				console.log(users[0]);
 				req.session.user = users[0];
-			
-				if (typeof req.session.user == 'undefined'){
+				console.log("user in login:" + req.session.user);
+				if (typeof req.session.user === 'undefined'){
 					res.redirect('/');
-				}
+				}else{
 
 				models.Item.find({}).sort("date").exec(displayItems);
 
@@ -52,4 +52,5 @@ exports.view = function(req, res) {
 				res.render('loginTryAgain', pageInfo2);
 			}
 		}
+	}
 }

@@ -2,10 +2,11 @@ var models = require('../models');
 
 exports.view = function(req, res){
 	//console.log(data);	
-	if (typeof req.session.user == 'undefined'){
+	console.log("user in notifications:" + req.session.user);
+	if (typeof req.session.user === 'undefined'){
 		res.redirect('/');
-	}
-	var email = req.session.user.email;
+	} else{
+		var email = req.session.user.email;
 	//console.log("EMAIL IN NOTIFICATION.JS: " + email);
 	//models.Notification.find({"user": email}).update( {$set: {"seen": true}}, {multi: true} ).exec(afterUpdate);
 
@@ -22,5 +23,6 @@ exports.view = function(req, res){
 			res.render('notifications', {"notifications": notifications, "numNotifications": numNotifications});
 		}
 	}
+}
 
 };
