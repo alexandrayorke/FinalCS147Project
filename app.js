@@ -84,7 +84,7 @@ app.post('/editAboutMe', editAboutMe.editAboutMeInfo);
 app.get('/logout', logout.view);
 app.get('/notifications', notifications.view);
 app.get('/itemforsale', homepage.view);
-app.get('/filteredPage/:category', filteredPage.view);
+app.get('/filteredPage/:category/:alternative', filteredPage.view);
 app.get('/search', search.view);
 app.get('/editNotifications', editNotifications.editNotifications);
 
