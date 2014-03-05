@@ -6,10 +6,10 @@ exports.view = function(req, res) {
 	console.log("login.js loginEmail = " + loginEmail);
 
 	models.User
-		.find({"email": loginEmail})
-		.exec(foundEmail);
+	.find({"email": loginEmail})
+	.exec(foundEmail);
 
-		function foundEmail(err, users){
+	function foundEmail(err, users){
 			//user is not found
 			if(err) console.log(err);
 			if (users.length === 0) {
@@ -26,31 +26,29 @@ exports.view = function(req, res) {
 				console.log("user in login:" + req.session.user);
 				if (typeof req.session.user === 'undefined'){
 					res.redirect('/');
-				}else{
+				} else {
 
-				models.Item.find({}).sort("date").exec(displayItems);
+					models.Item.find({}).sort("date").exec(displayItems);
 
 
-				function displayItems(err, items){
-					if(err) console.log(err);
-					models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);
-
-					function displayNotifications(err, notifications){
+					function displayItems(err, items){
 						if(err) console.log(err);
-						var numNotifications = notifications.length;
-						console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
-						var pageInfo = {'user': req.session.user,'items' : items, 'numNotifications': numNotifications};
-						res.render('homepage', pageInfo);
-					}
+						models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);
 
+						function displayNotifications(err, notifications){
+							if(err) console.log(err);
+							var numNotifications = notifications.length;
+							console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
+							var pageInfo = {'user': req.session.user,'items' : items, 'numNotifications': numNotifications};
+							res.render('homepage', pageInfo);
+						}
+
+					}
+				}
+				} else { //wrong password
+					console.log("login.js incorrect password for this email");
+					var pageInfo2 = {'instructions': "Please enter the correct password for this email.", 'email': loginEmail};
+					res.render('loginTryAgain', pageInfo2);
 				}
 			}
-			//user has incorrect password
-			else {
-				console.log("login.js incorrect password for this email");
-				var pageInfo2 = {'instructions': "Please enter the correct password for this email.", 'email': loginEmail};
-				res.render('loginTryAgain', pageInfo2);
-			}
 		}
-	}
-}
