@@ -70,7 +70,7 @@ exports.view = function(req, res) { 
 					function displayNotifications(err, notifications){
 						if(err) console.log(err);
 						var numNotifications = notifications.length;
-						var pageInfo = {'user': req.session.user, 'data': data, 'items' : items, 'nextID': req.session.nextID,'numNotifications': numNotifications};
+						var pageInfo = {'user': req.session.user, 'data': data, 'items' : items, 'nextID': req.session.nextID,'numNotifications': numNotifications, 'alternative': req.session.alternative};
 						res.render('homepage', pageInfo);
 					}
 				}

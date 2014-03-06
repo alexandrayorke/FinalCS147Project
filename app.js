@@ -68,6 +68,8 @@ app.get('/createaccount', createaccount.view);
 app.get('/editProfile', editProfile.view);
 app.get('/sell', sell.view);
 
+app.get('/start', homepage.view);
+
 app.get('/homepage', homepage.view);
 app.get('/alternative', homepage.viewAlternative);
 //app.get('/homepageAlternative', homepage.viewAlternative);

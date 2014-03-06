@@ -73,16 +73,16 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<div id = "menubar" class="filters">
 			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 				<div class = "col-xs-6 col-xs-4 homeElement topbarElement">
-					<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = 'homepage';">
+					<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = '/homepage';">
 						<span class="glyphicon glyphicon-home icon"></span>
 					</button>
 				</div>
 				<p> Account </p>
-				<a href="/notifications">Notifications
+				<a href="/notifications/true">Notifications
 					<span class = "badge badge-error pull-right menu-badge" id = "notificationMenu">{{numNotifications}}</span>	
 				</a>
-				<a href="/sell">Sell Something</a>
-				<a href="/editProfile">Edit Account</a>
+				<a href="/sell/true">Sell Something</a>
+				<a href="/editProfile/true">Edit Account</a>
 				<a href="/logout">Logout</a>
 			</nav>
 		</div>

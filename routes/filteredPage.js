@@ -6,13 +6,14 @@ exports.view = function(req, res) { 
 		res.redirect('/');
 	}else {
 
-	var alternative = req.params.alternative;
+	
 	var category = req.params.category;
+	/*var alternative = req.params.alternative;
 	if (alternative === "true") {
 		alternative = true;
 	} else {
 		alternative = false;
-	}
+	}*/
 	console.log("category: " + category);
 	if (category === "homepage") {
 		models.Item
@@ -24,7 +25,7 @@ exports.view = function(req, res) { 
 			if(err) console.log(err);
 			console.log("items:" + items);
 			console.log("ALTERNATIVE homepage category: " + alternative);
-			var pageInfo = {'user': req.session.user, 'items': items, 'alternative': alternative};
+			var pageInfo = {'user': req.session.user, 'items': items, 'alternative': req.session.alternative};
 			res.render('homepage', pageInfo);
 		}
 	} else {
@@ -44,7 +45,7 @@ exports.view = function(req, res) { 
 					if(err) console.log(err);
 					var numNotifications = notifications.length;
 					console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
-					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'searchInfo': "Search for " + category, 'alternative': alternative, 'filtered': true};
+					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'searchInfo': "Search for " + category, 'alternative': req.session.alternative, 'filtered': true};
 					res.render('homepage', pageInfo);
 				}
 			}

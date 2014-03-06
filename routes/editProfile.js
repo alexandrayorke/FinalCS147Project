@@ -8,6 +8,8 @@ exports.view = function(req, res) { 
 
 		var aboutMeText = req.session.user.aboutMe;
 		console.log("about me text: " + aboutMeText);
+		var alternative = req.params.alternative;
+
 	//if (aboutMeText.length === 0) {
 
 		models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);
@@ -27,7 +29,7 @@ exports.view = function(req, res) { 
 			passwordText[i] = req.session.user.password.charAt(i);
 		}
 		console.log("editProfile.js passwordText = " + passwordText);
-		var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'aboutMeText': aboutMeText, 'passwordText': passwordText};
+		var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'aboutMeText': aboutMeText, 'passwordText': passwordText, 'alternative': req.session.alternative};
 		res.render('editProfile', pageInfo);
 
 	}

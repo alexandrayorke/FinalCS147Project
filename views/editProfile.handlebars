@@ -40,6 +40,7 @@
 							<span class="glyphicon glyphicon-home icon"></span>
 						</button>
 					</div>
+					{{#unless alternative}}
 					<p> Categories </p>
 					<a href="/filteredPage/Books">Books</a>
 					<a href="/filteredPage/Crafts">Crafts</a>
@@ -50,6 +51,7 @@
 					<a href="/filteredPage/Sports and Recreational Equipment">Sports and Recreational Equipment</a>
 					<a href="/filteredPage/Other Goods">Other Goods</a>
 					<a href="/filteredPage/Services">Services</a>
+					{{/unless}}
 					<p> Account </p>
 					<a href="/notifications">Notifications
 						<span class = "badge badge-error pull-right menu-badge">{{numNotifications}}</span>	
