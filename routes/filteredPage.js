@@ -44,7 +44,7 @@ exports.view = function(req, res) { 
 					if(err) console.log(err);
 					var numNotifications = notifications.length;
 					console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
-					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'searchInfo': "Search for " + category, 'alternative': alternative};
+					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'searchInfo': "Search for " + category, 'alternative': alternative, 'filtered': true};
 					res.render('homepage', pageInfo);
 				}
 			}
