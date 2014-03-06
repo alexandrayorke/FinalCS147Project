@@ -8,12 +8,6 @@ exports.view = function(req, res) { 
 
 	
 	var category = req.params.category;
-	/*var alternative = req.params.alternative;
-	if (alternative === "true") {
-		alternative = true;
-	} else {
-		alternative = false;
-	}*/
 	console.log("category: " + category);
 	if (category === "homepage") {
 		models.Item
@@ -24,7 +18,6 @@ exports.view = function(req, res) { 
 		function displayAllItems(err, items){
 			if(err) console.log(err);
 			console.log("items:" + items);
-			console.log("ALTERNATIVE homepage category: " + alternative);
 			var pageInfo = {'user': req.session.user, 'items': items, 'alternative': req.session.alternative};
 			res.render('homepage', pageInfo);
 		}
@@ -37,7 +30,6 @@ exports.view = function(req, res) { 
 		function displayItems(err, items){
 			if(err) console.log(err);
 			console.log("items:" + items);
-			console.log("ALTERNATIVE other categories: " + alternative);
 
 			models.Notification.find({"user": req.session.user["email"], "seen": "notSeen"}).exec(displayNotifications);
 
