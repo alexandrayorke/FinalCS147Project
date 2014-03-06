@@ -9,6 +9,7 @@ exports.view = function(req, res) { 
 	var streetAddress = req.query.streetAddress;
 	var zipCode = req.query.zipCode;
 
+
 	var newUser = new models.User({
 		"firstName": firstName,
 		"lastName": lastName,
