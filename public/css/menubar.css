@@ -1,6 +1,7 @@
 .cbp-spmenu {
     /*background: #47a3da;*/
-    background: #404040;
+    /*background: #404040;*/
+    background: #202020;
     position: fixed;
     overflow-y: auto; 
 }
@@ -18,7 +19,8 @@
  
 .cbp-spmenu a {
     display: block;
-    color: #fff;
+    /*color: #fff;*/
+    color: #E0E0E0;
    font-size: 0.9em; /*font-size:6.0em;*/
     font-weight: 300;
     text-decoration: none;
@@ -149,7 +151,8 @@
 /*    display: block;*/  
     font-size: 1.2em; /*font-size: 6.0em;*/
     font-variant:small-caps;  
-    color: #fff;
+    /*color: #fff;*/
+    color: #E0E0E0;
     border-bottom: 1px solid #101010;
     padding-top: .05em;
     padding-bottom: .05em;
@@ -168,7 +171,8 @@
 
 #menubar .homeElement {
     display:block;
-    background-color: #404040;
+    /*background: #404040;*/
+    background: #202020;
     width:  100%;
     height: 60px; /*height: 200px;*/
     padding-right: 5px;
@@ -179,7 +183,8 @@
 
 /*CSS for topbar*/
 .topbar {
-    background-color: #404040;
+    /*background: #404040;*/
+    background: #202020;
     width:  100%;
     height: 60px; /*height: 200px;*/
     position: fixed;        /*makes top bar also fixed during shift right for menu bar*/
@@ -239,7 +244,8 @@
     height: 25px;
     margin: 0 auto;
  /*   float: right;*/
-    color: #fff;
+    /*color: #fff;*/
+    color: #E0E0E0;
 /*    padding-right: 5px;*/
 } 
 
@@ -247,7 +253,8 @@
     text-align: center;
 }
 .icon {
-    color: #fff;
+    /*color: #fff;*/
+    color: #E0E0E0;
     font-size: 1.5em; /*font-size: 5.0em;*/
     /*width: 100%;
     height: 100%;*/
@@ -256,12 +263,14 @@
 .titleText {
     padding-top: 10px;
     font-size: 1.5em; /*font-size: 5.0em;*/
-    color: #fff;
+    /*color: #fff;*/
+    color: #E0E0E0;
 }
 
 .titleTextAlternative {
     font-size: 1em; /*font-size: 5.0em;*/
-    color: #fff;
+    /*color: #fff;*/
+    color: #E0E0E0;
     padding-bottom: .5px;
 }
 
@@ -275,7 +284,8 @@
 
 .outline {
     border: 2px solid;
-    border-color: #404040;
+    /*border-color: #404040;*/
+    border-color: #202020;
     border-radius: 5px;
     /*width: 500px;*/
     height: 300px;
