@@ -50,7 +50,9 @@ exports.view = function(req, res) {
 					models.User.find({}).exec(printUsers);
 
 					function printUsers(err, items) {
-						console.log("USERS: " + items);
+						for (var i = 0; i < items.length; i++) {
+							console.log("USER:" + i + " " + items[i]);
+						}
 						var pageInfo2 = {'instructions': "Please enter the correct password for this email.", 'email': loginEmail};
 						res.render('loginTryAgain', pageInfo2);
 					}
