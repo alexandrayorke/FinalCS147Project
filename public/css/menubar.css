@@ -278,7 +278,7 @@
     border-color: #404040;
     border-radius: 5px;
     /*width: 500px;*/
-    height: 800px;
+    height: 300px;
     padding: 10px;
     /*padding-bottom: 10px;*/
     /*width: 440px;*/
@@ -329,7 +329,7 @@
 
 .toBottom {
     position: absolute;
-    bottom: 20px;
+    bottom: 45px;
     width: 100%;
     margin: 0 auto;
 }
@@ -352,7 +352,23 @@
     display:inline;
 }
 
-.productImage {
+.imageContainer {
+    height: 170px;
     width: 100%;
+}
+
+.productImage {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+}
+
+.imageContainer .productImage img{
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
     height: auto;
+    max-height: 170px;
+    max-width: 100%;
 }
