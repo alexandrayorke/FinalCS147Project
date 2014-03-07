@@ -47,8 +47,16 @@ exports.view = function(req, res) {
 				}
 				} else { //wrong password
 					console.log("login.js incorrect password for this email");
-					var pageInfo2 = {'instructions': "Please enter the correct password for this email.", 'email': loginEmail};
-					res.render('loginTryAgain', pageInfo2);
+					models.User.find({}).exec(printUsers);
+
+					function printUsers(err, items) {
+						console.log("USERS: " + items);
+						var pageInfo2 = {'instructions': "Please enter the correct password for this email.", 'email': loginEmail};
+						res.render('loginTryAgain', pageInfo2);
+					}
+
+
+					
 				}
 			}
 		}
