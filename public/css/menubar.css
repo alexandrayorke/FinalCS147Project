@@ -277,12 +277,13 @@
     border: 2px solid;
     border-color: #404040;
     border-radius: 5px;
-    /*width: 500px;
-    height: 500px;*/
+    /*width: 500px;*/
+    height: 800px;
     padding: 10px;
     /*padding-bottom: 10px;*/
     /*width: 440px;*/
     width:100%;
+    position: relative;
 /*    margin-right: auto;
     margin-left: auto;*/
 }
@@ -326,3 +327,32 @@
     font-size:5em;
 }
 
+.toBottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dots {
+    text-align: center;
+}
+
+.dots .cur{
+    padding: 0px;
+    font-size: 40px;
+    color: #000000;
+    display:inline;
+}
+
+.dots .next{
+    padding: 0px;
+    font-size: 40px;
+    color: #CCCCCC;
+    display:inline;
+}
+
+.productImage {
+    width: 100%;
+    height: auto;
+}

@@ -150,9 +150,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 						<li class="pane1">
 							<div class="row">
 								<div class="col-xs-12">
-									<img src="{{image}}"/>
+									<img class="productImage" src="{{image}}"/>
 								</div>
-
+								<div class="dots">
+									<p class="cur text-center">&middot;</p>
+									<p class="next text-center">  &middot;</p>
+								</div>
 								<div class="row">
 									<div class = "col-xs-5 col-xs-offset-1">
 										<p class = "text-left">{{description}}</p>
@@ -170,7 +173,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 							<p class="price text-center">${{price}}</p>
 							<p class="sellerName text-center">Seller: {{sellerName}}</p>
 							<button class="btn btn-primary btn-lg buyButton">Buy</button>
-
+							<div class="dots toBottom">
+								<p class="next text-center">  &middot;</p>
+								<p class="cur text-center">&middot;</p>
+							</div>
 						</li>
 					</ul>
 				</div>
