@@ -1,5 +1,4 @@
 <html>
-
 <head>
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -7,29 +6,31 @@
 	<link href="/css/project.css" rel="stylesheet">
 	<link href="/css/menubar.css" rel="stylesheet">
 	<meta name="viewport" content="initial-scale=1">
-	<title> Welcome </title>
+	<title> Yardsale Login </title>
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid loginpage">
 		<!-- Need to make a form for login -->
-		<h1 id="welcome"> Welcome </h1>
+		
+		<h1 id="welcome" class="yardsaleText text-center">YardSale </h1>
 		<p id="loginInstructions"></p>
 		<form id="loginForm" role="form" method="get" action="/login">
 			<div class="form-group">
-				<p> Email <input type = "text" id="email" name="email" placeholder="ex: name@mail.com" class="form-control submissionField"/></p>
+				<input type = "text" id="email" name="email" placeholder="User Email" class="form-control submissionField"/>
 			</div>
 			<div class="form-group">
-				<p > Password <input type = "password" id="password" name="password" placeholder="ex: mypassword" class="form-control submissionField"/></p>
+				<input type = "password" id="password" name="password" placeholder="Password" class="form-control submissionField"/>
 			</div>
 			<input type ="submit" id="loginBtn" class="btn btn-default" value = "Login"></input>
 		</form> 
 		<p><a href="/createaccount">Create New Account</a></p>
 	</div>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-	<script src="js/bootstrap.js"></script>
-	<script src="js/credentials.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (blelow), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+<script src="js/credentials.js"></script>
 	
 <!--Google analytics code-->
 <script>

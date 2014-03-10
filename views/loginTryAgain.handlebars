@@ -6,19 +6,19 @@
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<link href="/css/project.css" rel="stylesheet">
 	<meta name="viewport" content="initial-scale=1">
-	<title> Welcome </title>
+	<link href="/css/menubar.css" rel="stylesheet">
+	<title> Yardsale Login </title>
 </head>
 <body>
-	<div class="container">
-		<!-- Need to make a form for login -->
-		<h1> Welcome </h1>
+	<div class="container-fluid loginpage">
+		<h1 id="welcome" class="yardsaleText text-center">YardSale </h1>
 		<p id="loginInstructions">{{instructions}}</p>
 		<form id="loginForm" role="form" method="get" action="/login" onsubmit="return loginListener()">
 			<div class="form-group">
-				<p> Email: <input type = "text" id="email" name="email" placeholder="Enter email" class="form-control" value={{email}}></p>
+				<input type = "text" id="email" name="email" placeholder="User email" class="form-control" value={{email}}>
 			</div>
 			<div class="form-group">
-				<p> Password: <input type = "password" id="password" name="password" placeholder="Enter password" class="form-control"/></p>
+				<input type = "password" id="password" name="password" placeholder="Password" class="form-control"/>
 			</div>
 			<input type ="submit" id="loginBtn" class="btn btn-default" value = "Login"></input>
 		</form> 
