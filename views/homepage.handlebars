@@ -41,6 +41,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			</div>
 			<div class = "balanceAndSearch">
 				<div class = "col-xs-8 topbarElement">
+					<p class = "text-center titleText">yardsale</p>
 					<p class = "text-center titleTextAlternative" id="balance">Balance: {{user.credits}}</p>
 					<div class="trial">
 					<button type="button" class="btn btn-default dropdown-toggle navbar-btn categoriesDropdown" data-toggle="dropdown">Categories
@@ -98,8 +99,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				
 			</div>
 			<div class="balanceAndSearch">
-				<div class = "col-xs-8 topbarElement">
-					<p class = "text-center titleText" id="balance">Balance: {{user.credits}}</p>
+				<div class = "col-xs-8">
+					<p class = "text-center yardsaleText">yardsale</p>
+					<div class="balance text-center">
+						<p class = "balanceText" id="balance">your yard$  </p>
+						<p class = "balanceNum"> {{user.credits}}</p>
+					</div>
 				</div>
 
 				<div class = "col-xs-2 topbarElement">
@@ -126,8 +131,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<a href="/filteredPage/Electronics/false">Electronics</a>
 				<a href="/filteredPage/Entertainment/false">Entertainment</a>
 				<a href="/filteredPage/Fashion/false">Fashion</a>
-				<a href="/filteredPage/Home and Garden/false">Home and Garden</a>
-				<a href="/filteredPage/Sports and Recreational Equipment/false">Sports and Recreational Equipment</a>
+				<a href="/filteredPage/Home and Garden/false">Home & Garden</a>
+				<a href="/filteredPage/Sports and Recreational Equipment/false">Sports & Recreational Equipment</a>
 				<a href="/filteredPage/Other Goods/false">Other Goods</a>
 				<a href="/filteredPage/Services/false">Services</a>
 				<p> Account </p>
@@ -154,30 +159,73 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 										<img src="{{image}}"/>
 									</div>
 								</div>
-								<div class="dots">
-									<p class="cur text-center">&middot;</p>
-									<p class="next text-center">  &middot;</p>
+							</div>
+							<div class="toBottom">
+								<div class="row">
+									<div class="col-xs-9  text-left">
+										<p class="text-left description">{{description}}</p>
+									</div>
+									<div class = "col-xs-3">
+										<p class="price">{{price}}</p>
+										<p class="yardDollars">yard$</p>
+									</div>
 								</div>
 								<div class="row">
-									<div class = "col-xs-5 col-xs-offset-1">
-										<p class = "text-left">{{description}}</p>
+									<div class="dots">
+										<p class="cur text-center">&middot;</p>
+										<p class="next text-center">  &middot;</p>
 									</div>
-									<div class = "col-xs-2 col-xs-offset-1">
-										<p class="text-right">${{price}}</p>
-									</div>
-
 								</div>
 							</div>
 						</li>
 						<li class="pane2">
-							<p class ="description text-center">{{description}}</p>
-							<p class="extendedDescription text-center">{{extendedDescription}}</p>
-							<p class="price text-center">${{price}}</p>
-							<p class="sellerName text-center">Seller: {{sellerName}}</p>
-							<button class="btn btn-primary btn-lg buyButton">Buy</button>
-							<div class="dots toBottom">
-								<p class="next text-center">  &middot;</p>
-								<p class="cur text-center">&middot;</p>
+							<div class="row">
+								<div class="col-xs-4 infoLabel">
+									<br>
+									<br>
+									<p>seller</p>
+								</div>
+								<div class="col-xs-8 infoText">
+									<br>
+									<br>
+									<p> {{sellerName}}</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4 infoLabel">
+									<p>item</p>
+								</div>
+								<div class="col-xs-8 infoText">
+									<p> {{description}}</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4 infoLabel">
+									<p>info</p>
+								</div>
+								<div class="col-xs-8 infoText">
+									<p> {{extendedDescription}}</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4 infoLabel">
+									<p>price</p>
+								</div>
+								<div class="col-xs-8 infoText">
+									<p> {{price}} yard$</p>
+								</div>
+							</div>
+							<div class="toBottom">
+								<div class="row">
+									<div class="col-xs-10 col-xs-offset-1">
+										<button class="btn btn-default btn-block btn-lg buyButton">buy now</button>
+										<br>
+									</div>
+								</div>
+								<div class="row dots">
+									<p class="next text-center">  &middot;</p>
+									<p class="cur text-center">&middot;</p>
+								</div>
 							</div>
 						</li>
 					</ul>

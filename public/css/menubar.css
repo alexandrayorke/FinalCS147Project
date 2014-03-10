@@ -53,8 +53,9 @@
  
 .cbp-spmenu-vertical a {
     border-bottom: 1px solid #101010;
-    padding: 1em;
-    padding-top: 1em;
+    padding: .75em;
+    font-size: 1.2em;
+    padding-top: .75em;
 }
  
  
@@ -210,8 +211,8 @@
 }
 
 .topbarElement {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .searchBar {
@@ -267,11 +268,39 @@
     color: #E0E0E0;
 }
 
-.titleTextAlternative {
-    font-size: 1em; /*font-size: 5.0em;*/
-    /*color: #fff;*/
+.yardsaleText {
+    color: #00B800;
+    font-size: 2.0em;
+    font-weight: lighter;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+/*    line-height: 2.0em;
+*/}
+
+.balance {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin:0;
+    line-height: 5px;
+    text-align: center;
+}
+
+.balanceText {
+
+    font-weight: lighter;
+    font-size: 1em;
     color: #E0E0E0;
     padding-bottom: .5px;
+    display: inline;
+}
+
+.balanceNum {
+
+    font-size: 1.25em;
+    color: #E0E0E0;
+    padding-bottom: .5px;
+    display: inline;
 }
 
 
@@ -283,10 +312,10 @@
 }
 
 .outline {
-    border: 2px solid;
-    /*border-color: #404040;*/
-    border-color: #202020;
-    border-radius: 5px;
+/*    border: 2px solid;
+*/    /*border-color: #404040;*/
+/*    border-color: #202020;
+*/    border-radius: 5px;
     /*width: 500px;*/
     height: 300px;
     padding: 10px;
@@ -294,6 +323,8 @@
     /*width: 440px;*/
     width:100%;
     position: relative;
+
+    background-color: #FFFFFF;
 /*    margin-right: auto;
     margin-left: auto;*/
 }
@@ -304,6 +335,10 @@
 
 
 .buyButton {
+    height: 45px;
+    font-size: 25px;
+    padding-top: 5px;
+    color: #00B800;
     /*width:35%;
     height:12%;
     text-align: center;
@@ -339,31 +374,36 @@
 
 .toBottom {
     position: absolute;
-    bottom: 45px;
+    bottom: 0px;
     width: 100%;
     margin: 0 auto;
 }
 
 .dots {
     text-align: center;
+    line-height: 10px;
+    margin: 0;
 }
 
 .dots .cur{
+
     padding: 0px;
-    font-size: 40px;
+    font-size: 55px;
     color: #000000;
     display:inline;
 }
 
 .dots .next{
+ 
     padding: 0px;
-    font-size: 40px;
+    font-size: 55px;
     color: #CCCCCC;
     display:inline;
 }
 
 .imageContainer {
-    height: 170px;
+    height: 210px;
+/*    height: 170px;*/
     width: 100%;
 }
 
@@ -371,7 +411,6 @@
     display: inline-block;
     text-align: center;
     position: relative;
-
 }
 
 .imageContainer .productImage img{
@@ -379,6 +418,44 @@
     vertical-align: middle;
     width: auto;
     height: auto;
-    max-height: 170px;
+    max-height: 210px;
     max-width: 100%;
 }
+
+.infoLabel {
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: right;
+}
+
+.infoText {
+    line-height: 20px;
+    text-align: left;
+    font-size: 18px;
+    display: inline;
+}
+
+.description {
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.price {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.yardDollars {
+    text-align: center;
+    margin:0;
+    line-height: 0px;
+    font-size: 11px;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
