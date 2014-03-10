@@ -15,12 +15,14 @@ exports.view = function(req, res){
 	function getNumUnread(err, numNotifications) {
 		if(err) console.log(err);
 		var numNotifications = numNotifications.length;
+		var zeroNotifications = true;
+		if (numNotifications > 0) zeroNotifications = false;
 		models.Notification.find({"user":email}).sort("-date").exec(afterQuery);
 
 		function afterQuery(err, notifications) {
 			if(err) console.log(err);
 			console.log("notifications in js:" + notifications);
-			res.render('notifications', {"notifications": notifications, "numNotifications": numNotifications, "alternative": req.session.alternative});
+			res.render('notifications', {"notifications": notifications, "numNotifications": numNotifications, "alternative": req.session.alternative, 'zeroNotifications': zeroNotifications});
 		}
 	}
 }

@@ -12,7 +12,9 @@ exports.view = function(req, res) { 
 			if(err) console.log(err);
 			var numNotifications = notifications.length;
 			console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
-			var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'alternative': req.session.alternative};
+			var zeroNotifications = true;
+			if (numNotifications > 0) zeroNotifications = false;
+			var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'alternative': req.session.alternative, 'zeroNotifications': zeroNotifications};
 			res.render('sell', pageInfo);
 		}
 	//res.render('sell');

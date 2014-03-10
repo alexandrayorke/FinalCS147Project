@@ -22,8 +22,10 @@ exports.view = function(req, res){
 					if(err) console.log(err);
 					var numNotifications = notifications.length;
 					console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
+					var zeroNotifications = true;
+					if (numNotifications > 0) zeroNotifications = false;
 					req.session.alternative = false;
-					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'alternative': req.session.alternative};
+					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'alternative': req.session.alternative, 'zeroNotifications': zeroNotifications};
 					res.render('homepage', pageInfo);
 				}
 			}
@@ -51,7 +53,9 @@ exports.view = function(req, res){
 					var numNotifications = notifications.length;
 					console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
 					req.session.alternative = true;
-					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'alternative': req.session.alternative};
+					var zeroNotifications = true;
+					if (numNotifications > 0) zeroNotifications = false;
+					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'alternative': req.session.alternative, 'zeroNotifications': zeroNotifications};
 					res.render('homepage', pageInfo);
 				}
 			}

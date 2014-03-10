@@ -18,7 +18,9 @@
 
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
 					<span class="glyphicon glyphicon-th-list icon"></span>
+					{{#unless zeroNotifications}}
 					<span class = "badge">{{numNotifications}}</span>
+					{{/unless}}
 				</button>
 
 			</div>
@@ -55,7 +57,9 @@
 					{{/unless}}
 					<p> Account </p>
 					<a href="/notifications">Notifications
+						{{#unless zeroNotifications}}
 						<span class = "badge badge-error pull-right menu-badge">{{numNotifications}}</span>
+						{{/unless}}
 					</a>
 					<a href="/sell">Sell Something</a>
 					<a href="/editProfile">Edit Account</a>

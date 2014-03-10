@@ -34,6 +34,8 @@ $(document).ready(function() {
     if (result["success"]) {
         console.log("homepage.js successfully bought itemID = " + result["itemID"]);
         console.log("homepage.js new user bal = " + result["user"]["credits"]);
+        console.log("zeroNotifications: " + result["zeroNotifications"]);
+        console.log("numNotifications: " + result["numNotifications"]);
         $('#balance').text("Balance: " + result["user"]["credits"]);
         $('#notificationIcon').text(result["numNotifications"]);
         $('#notificationMenu').text(result["numNotifications"]);
@@ -42,13 +44,9 @@ $(document).ready(function() {
     } else if (result["reason"] == "negative credits"){
         confirm("You do not have enough credits to buy this, sorry!");
     } else{
-        confirm ("You cannot buy an item you put up for sale.")
+        confirm("You cannot buy an item you put up for sale.");
     }
  }
-
-
-
-
 
 
 

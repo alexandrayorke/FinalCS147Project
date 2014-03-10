@@ -18,6 +18,8 @@ exports.view = function(req, res) { 
 			if(err) console.log(err);
 			var numNotifications = notifications.length;
 			var aboutMeText = req.session.user.aboutMe;
+			var zeroNotifications = true;
+					if (numNotifications > 0) zeroNotifications = false;
 			if (aboutMeText.length === 0) {
 		//if (typeof aboutMeText === 'undefined') {
 			aboutMeText = "Tell us something about yourself...";
@@ -29,7 +31,7 @@ exports.view = function(req, res) { 
 			passwordText[i] = req.session.user.password.charAt(i);
 		}
 		console.log("editProfile.js passwordText = " + passwordText);
-		var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'aboutMeText': aboutMeText, 'passwordText': passwordText, 'alternative': req.session.alternative};
+		var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'aboutMeText': aboutMeText, 'passwordText': passwordText, 'alternative': req.session.alternative, 'zeroNotifications': zeroNotifications};
 		res.render('editProfile', pageInfo);
 
 	}

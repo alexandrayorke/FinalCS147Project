@@ -28,6 +28,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<meta name="viewport" content="initial-scale=1">
 
 </head>
+<p>{{zeroNotifications}}</p>
 
 <body class="cbp-spmenu-push">
 	{{#if alternative}}
@@ -36,7 +37,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<div class = "col-xs-2 topbarElement">
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
 					<span class="glyphicon glyphicon-th-list icon"></span>
-					<span class = "badge" id = "notificationIcon">{{numNotifications}}</span>
+					{{#unless zeroNotifications}}
+						<span class = "badge" id = "notificationIcon">{{numNotifications}}</span>
+					{{/unless}}
 				</button>
 			</div>
 			<div class = "balanceAndSearch">
@@ -79,7 +82,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				</div>
 				<p> Account </p>
 				<a href="/notifications">Notifications
-					<span class = "badge badge-error pull-right menu-badge" id = "notificationMenu">{{numNotifications}}</span>	
+					{{#unless zeroNotifications}}
+					<span class = "badge badge-error pull-right menu-badge" id = "notificationMenu">{{numNotifications}}</span>
+					{{/unless}}	
 				</a>
 				<a href="/sell">Sell Something</a>
 				<a href="/editProfile">Edit Account</a>
@@ -93,7 +98,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<div class = "col-xs-2 topbarElement">
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
 					<span class="glyphicon glyphicon-th-list icon"></span>
-					<span class = "badge" id = "notificationIcon">{{numNotifications}}</span>
+					{{#unless zeroNotifications}}
+						<span class = "badge" id = "notificationIcon">{{numNotifications}}</span>
+					{{/unless}}
 				</button>
 				
 			</div>
@@ -132,7 +139,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<a href="/filteredPage/Services/false">Services</a>
 				<p> Account </p>
 				<a href="/notifications">Notifications
-					<span class = "badge badge-error pull-right menu-badge" id = "notificationMenu">{{numNotifications}}</span>	
+					{{#unless zeroNotifications}}
+					<span class = "badge badge-error pull-right menu-badge" id = "notificationMenu">{{numNotifications}}</span>
+					{{/unless}}	
 				</a>
 				<a href="/sell">Sell Something</a>
 				<a href="/editProfile">Edit Account</a>

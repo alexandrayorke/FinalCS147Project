@@ -87,7 +87,9 @@ exports.itemPurchased = function(req, res) { 
 
 											function afterQuery(err, notifications){
 												var numNotifications = notifications.length;
-												userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': true, 'numNotifications': numNotifications};
+												var zeroNotifications = true;
+												if (numNotifications > 0) zeroNotifications = false;
+												userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': true, 'numNotifications': numNotifications, 'zeroNotifications': zeroNotifications};
 
 												res.json(userItemInfo);
 											}
