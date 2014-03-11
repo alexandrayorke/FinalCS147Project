@@ -90,7 +90,6 @@ exports.itemPurchased = function(req, res) { 
 												var zeroNotifications = true;
 												if (numNotifications > 0) zeroNotifications = false;
 												userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': true, 'numNotifications': numNotifications, 'zeroNotifications': zeroNotifications};
-
 												res.json(userItemInfo);
 											}
 										}

@@ -27,7 +27,6 @@ function notificationCallback(result) {
         $('#notificationIcon').hide();
         $('#notificationMenu').hide();
     }
-
 }
 
  function buyListener(e) {
