@@ -22,7 +22,18 @@ exports.editNotifications = function(req, res) { 
 			function afterUpdate(err, notifications) {
 				if(err) console.log(err);
 				console.log("NOTIFICATIONS IN editNotifications: " + notifications);
-				res.send();
+
+				var status = "notSeen";
+				models.Notification.find({"user": email, "seen": status}).exec(getAllNotifications);
+
+
+				function getAllNotifications(err, notifications){
+					if(err) console.log(err);
+					console.log("notifications: " + notifications);
+					var numNotifications = notifications.length;
+					var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications};
+					res.json(pageInfo);
+				}
 			}
 		}
 	}

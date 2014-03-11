@@ -18,9 +18,7 @@
 
 				<button type="button" class = "btn btn-default menuButton" id="showLeft">
 					<span class="glyphicon glyphicon-th-list icon"></span>
-					{{#unless zeroNotifications}}
-					<span class = "badge">{{numNotifications}}</span>
-					{{/unless}}
+					<span class = "badge" id = "notificationIcon">{{numNotifications}}</span>
 				</button>
 
 			</div>
@@ -57,9 +55,7 @@
 					{{/unless}}
 					<p> Account </p>
 					<a href="/notifications">Notifications
-						{{#unless zeroNotifications}}
-						<span class = "badge badge-error pull-right menu-badge">{{numNotifications}}</span>
-						{{/unless}}
+						<span class = "badge badge-error pull-right menu-badge" id = "notificationMenu">{{numNotifications}}</span>
 					</a>
 					<a href="/sell">Sell Something</a>
 					<a href="/editProfile">Edit Account</a>
@@ -107,7 +103,6 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/sell.js"></script>
 	<script src="js/menubar.js"></script>
-
 	<!--Google analytics code-->
 	
 <script>

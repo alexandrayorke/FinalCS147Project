@@ -7,6 +7,22 @@ $(document).ready(function() {
 
 function initializePage() {
 	$("#sellForm").submit(sellItem);
+	var path = "/checkNotifications";
+    $.get(path, notificationCallback);
+}
+
+function notificationCallback(result) {
+    var num = parseInt(result["numNotifications"]);
+    console.log(num);
+    if (num > 0) {
+        console.log("NUM > 0");
+        $('#notificationIcon').show();
+        $('#notificationMenu').show();
+    } else {
+        console.log("NUM = 0");
+        $('#notificationIcon').hide();
+        $('#notificationMenu').hide();
+    }
 }
 
 function sellItem(e) {

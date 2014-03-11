@@ -11,6 +11,22 @@ $(document).ready(function() {
  function initializePage() {
     $('.searchButton').click(searchListener);
     $(".buyButton").click(buyListener);
+    var path = "/checkNotifications";
+    $.get(path, notificationCallback);
+}
+
+function notificationCallback(result) {
+    var num = parseInt(result["numNotifications"]);
+    console.log(num);
+    if (num > 0) {
+        console.log("NUM > 0");
+        $('#notificationIcon').show();
+        $('#notificationMenu').show();
+    } else {
+        console.log("NUM = 0");
+        $('#notificationIcon').hide();
+        $('#notificationMenu').hide();
+    }
 
 }
 
@@ -36,7 +52,11 @@ $(document).ready(function() {
         console.log("homepage.js new user bal = " + result["user"]["credits"]);
         console.log("zeroNotifications: " + result["zeroNotifications"]);
         console.log("numNotifications: " + result["numNotifications"]);
-        $('#balance').text("Balance: " + result["user"]["credits"]);
+        //$('#balance').text("Balance: " + result["user"]["credits"]);
+        //$('#notificationIcon').text(result["numNotifications"]);
+        //$('#notificationMenu').text(result["numNotifications"]);
+        $('#notificationIcon').show();
+        $('#notificationMenu').show();
         $('#notificationIcon').text(result["numNotifications"]);
         $('#notificationMenu').text(result["numNotifications"]);
         var elem = document.getElementById(result["itemID"]);

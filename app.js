@@ -30,13 +30,14 @@ var notifications = require('./routes/notifications');
 var filteredPage = require('./routes/filteredPage');
 var search = require('./routes/search');
 
+var checkNotifications = require('./routes/checkNotifications');
+
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
 var local_database_name = 'FinalCS147Project';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name;
 var database_uri = process.env.MONGOLAB_URI || local_database_uri;
 mongoose.connect(database_uri);
-
 
 
 var app = express();
@@ -89,6 +90,7 @@ app.get('/itemforsale', homepage.view);
 app.get('/filteredPage/:category/:alternative', filteredPage.view);
 app.get('/search', search.view);
 app.get('/editNotifications', editNotifications.editNotifications);
+app.get('/checkNotifications', checkNotifications.checkNotifications);
 
 
 http.createServer(app).listen(app.get('port'), function(){
