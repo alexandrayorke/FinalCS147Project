@@ -42,7 +42,7 @@ exports.view = function(req, res) { 
 				"sellerName": sellerName,
 				"id": req.session.nextID	
 			};
-			var message = "Put " + desc + " up for sale";
+			var message = "You put " + desc + " up for sale.";
 
 
 			var newNotification = new models.Notification({
@@ -72,7 +72,7 @@ exports.view = function(req, res) { 
 						var numNotifications = notifications.length;
 						var zeroNotifications = true;
 						if (numNotifications > 0) zeroNotifications = false;
-						var pageInfo = {'user': req.session.user, 'data': data, 'items' : items, 'nextID': req.session.nextID,'numNotifications': numNotifications, 'alternative': req.session.alternative, 'zeroNotifications': zeroNotifications};
+						var pageInfo = {'user': req.session.user, 'data': data, 'items' : items, 'nextID': req.session.nextID,'numNotifications': numNotifications,'zeroNotifications': zeroNotifications};
 						res.render('homepage', pageInfo);
 					}
 				}

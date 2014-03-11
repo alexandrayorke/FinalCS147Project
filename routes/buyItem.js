@@ -59,8 +59,8 @@ exports.itemPurchased = function(req, res) { 
 
 								function afterRemoving(err){
 									if(err) console.log(err);
-									var newMessage1 =  "You bought " + description + " for " + price + ". If this seller does not contact you within a week, feel free to email the seller at " + sellerEmail + ".";
-									var newMessage2 = req.session.user.firstName + " " + req.session.user.lastName + " bought your item: " + description + ".  Contact the buyer at " + req.session.user.email;
+									var newMessage1 =  "You bought '" + description + "' for " + price + " yard$. If this seller doesn't contact you within a week, email the seller at " + sellerEmail + ".";
+									var newMessage2 = req.session.user.firstName + " " + req.session.user.lastName + " bought your '" + description + "'.  Email buyer at " + req.session.user.email;
 									var newNotification = new models.Notification(
 									{ 
 										"message": newMessage2,
@@ -90,7 +90,6 @@ exports.itemPurchased = function(req, res) { 
 												var zeroNotifications = true;
 												if (numNotifications > 0) zeroNotifications = false;
 												userItemInfo = {'user': req.session.user, 'itemID': itemID, 'success': true, 'numNotifications': numNotifications, 'zeroNotifications': zeroNotifications};
-
 												res.json(userItemInfo);
 											}
 										}

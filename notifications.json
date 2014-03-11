@@ -1,13 +1,27 @@
 [
 		{
-		"message": "Lily Sierra bought the 'Medium Womens Red Shirt'. Please mail the item to her at: 1 Magical Kingom Disney Land, CA 00000.",
+		"message": "You bought 'Old Yoga DVD' for 3 yard$. If this seller doesn't contact you within a week, email the seller at alexy@stanford.edu.",
+		"user": "arielhp@stanford.edu",
+		"seen": "notSeen"
+		},		
+		{
+		"message": "Alex Yorke bought your 'banana bread'. Email buyer at alexy@stanford.edu",
 		"user": "arielhp@stanford.edu",
 		"seen": "notSeen"
 		},
-		
 		{
-		"message": "Alex Yorke bought the 'banana bread'. Please plan a meet up with Alex by sending her an email today. Her email is: alexy@stanford.edu",
-		"user": "arielhp@stanford.edu",
+		"message": "Alex Yorke bought your 'pink baby slippers'. Email buyer at alexy@stanford.edu",
+		"user": "lilys@stanford.edu",
+		"seen": "notSeen"
+		},
+		{
+		"message": "You put '50 Shades of Grey' up for sale.",
+		"user": "lilys@stanford.edu",
+		"seen": "notSeen"
+		},
+		{
+		"message": "You put 'Vintage Desk' up for sale.",
+		"user": "alexy@stanford.edu",
 		"seen": "notSeen"
 		}
 	]
