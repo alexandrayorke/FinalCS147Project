@@ -1,75 +1,95 @@
 [
 		{
-			"image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGZ7t-u9hbz3yaO3yMnbrT3Ia2P9WCgXERxAi407WgJzituTpKrg",
-			"description": "Men's Red Shirt, Medium",
-			"extendedDescription" : "In new condition.",
-			"price": "20",
-			"category": "Fashion",
+			"image": "http://media4.onsugar.com/files/2013/10/22/841/n/1922729/d192d170bfd8cb0f_1fitbit_force.xxxlarge/i/FitBit-Force.jpg",
+			"description": "Brand New FitBit",
+			"extendedDescription" : "Can't convince my husband to exercise.",
+			"price": "50",
+			"category": "Electronics",
 			"sellerEmail": "arielhp@stanford.edu",
 			"sellerName" : "Ariel Posner"
 			
 		},
 		{
-			"image": "http://funfamilycrafts.com/wp-content/uploads/2011/07/football-costume-onesie-400x266.jpg",
-			"description": "Football Onesie",
-			"extendedDescription" : "Fits a newborn baby",
-			"price": "15",
-			"category": "Fashion",
+			"image": "http://images2.fanpop.com/images/photos/3300000/Game-Box-from-1949-Original-Candy-Land-candy-land-3327075-392-272.jpg",
+			"description": "CandyLand Board Game",
+			"extendedDescription" : "One of the first made. All pieces included.",
+			"price": "10",
+			"category": "Entertainment",
 			"sellerEmail": "lilys@stanford.edu",
 			"sellerName" : "Lily Sierra"
 			
 
 		},
 		{
-			"image": "http://travelblor.com/wp-content/uploads/2013/11/travelmug-1385815318kg48n.jpg",
-			"description": "Travel Mug",
-			"extendedDescription" : "Really good at keeping drinks hot.",
+			"image": "http://static.spoonful.com/sites/default/files/collections/snack-bag-bracelet-craft-photo-420-FF1007EFGA07.jpg",
+			"description": "Homemade Bracelet",
+			"extendedDescription" : "I make these from recycled material. ONESIZE.",
 			"price": "3",
-			"category": "Home and Garden",
+			"category": "Crafts",
 			"sellerEmail": "arielhp@stanford.edu",
 			"sellerName" : "Ariel Posner"
 			
 
 		},
 		{
-			"image": "http://www.harborfreight.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/image_21352.jpg",
-			"description": "Shovel",
-			"extendedDescription" : "Used only once to plant a tree.",
+			"image": "http://img.costumecraze.com/images/vendors/california/PET20109-Raptor-Dog-Costume-large.jpg",
+			"description": "Dog Dinosaur Costume",
+			"extendedDescription" : "Fits all dogs less than 10 pounds.",
+			"price": "8",
+			"category": "Fashion",
+			"sellerEmail": "lilys@stanford.edu",
+			"sellerName" : "Lily Sierra"
+			
+
+		},
+		{
+			"image": "http://img2.timeinc.net/ew/i/2012/11/12/FIFTY-SHADES-OF-GREY.jpg",
+			"description": "50 Shades of Grey",
+			"extendedDescription" : "This is a classic. Perfect for young woman.",
 			"price": "5",
-			"category": "Home and Garden",
+			"category": "Books",
 			"sellerEmail": "lilys@stanford.edu",
 			"sellerName" : "Lily Sierra"
 			
 
 		},
 		{
-			"image": "http://4.bp.blogspot.com/_9VTJFx7ps_8/TTC0TFNRflI/AAAAAAAAAPQ/knezjLSgMjM/s1600/aunt+mary%2527s+choc+chip+banana+bread.JPG",
-			"description": "Banana Bread",
-			"extendedDescription" : "Won an award in a baking competition.",
-			"price": "7",
+			"image": "http://m.joinerydev.litzastark.com/sites/default/files/products/810_ShakerWrittingDesk_Cherry_0.jpg",
+			"description": "Vintage Desk",
+			"extendedDescription" : "This desk is an antique, but it is still sturdy.",
+			"price": "20",
 			"category": "Home and Garden",
-			"sellerEmail": "lilys@stanford.edu",
-			"sellerName" : "Lily Sierra"
-			
-
-		},
-		{
-			"image": "http://baseballheritagemuseum.org/wp-content/uploads/2013/08/baseball_bat.jpg",
-			"description": "Baseball Bat",
-			"extendedDescription" : "Perfect for a kid.",
-			"price": "4",
-			"category": "Sports and Recreational Equipment",
 			"sellerEmail": "ayorke@stanford.edu",
 			"sellerName" : "Alex Yorke"
 			
 
 		},
 		{
-			"image": "http://upload.wikimedia.org/wikipedia/en/b/b0/Gatsby_1925_jacket.gif",
-			"description": "The Great Gatsby",
-			"extendedDescription" : "Quite the read.",
-			"price": "2",
-			"category": "Books",
+			"image": "http://2k13.konaworld.com/images/bikes/hires/lanai.jpg",
+			"description": "Used Men's 2005 Bike",
+			"extendedDescription" : "Barely used mountain bike bought for $100.",
+			"price": "60",
+			"category": "Sports and Recreational Equipment",
+			"sellerEmail" : "arielhp@stanford.edu",
+			"sellerName" : "Ariel Posner"
+			
+		},
+		{
+			"image": "http://www.kevela.co.uk/ebay/products/purple_silver_streamers.jpg",
+			"description": "Purple Bike Streamers",
+			"extendedDescription" : "Wanna make your daughter's day?.",
+			"price": "4",
+			"category": "Other Goods",
+			"sellerEmail" : "arielhp@stanford.edu",
+			"sellerName" : "Ariel Posner"
+			
+		},
+		{
+			"image": "http://momitforward.com/wp-content/uploads/2012/07/yoga-pose-lululemon-athleti.jpg",
+			"description": "One-on-One Yoga Hour",
+			"extendedDescription" : "I am a certified teacher. All levels.",
+			"price": "15",
+			"category": "Services",
 			"sellerEmail" : "arielhp@stanford.edu",
 			"sellerName" : "Ariel Posner"
 			
