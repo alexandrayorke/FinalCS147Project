@@ -330,7 +330,7 @@
 }
 
 .belowTopbar{
-    margin-top: 85px; /*sets how much space is above the start of the items to prevent them from starting under the topbar*/
+    margin-top: 75px; /*sets how much space is above the start of the items to prevent them from starting under the topbar*/
 }
 
 #welcome{
@@ -382,3 +382,74 @@
     max-height: 170px;
     max-width: 100%;
 }
+
+
+.infoLabel {
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: right;
+}
+
+.infoText {
+    line-height: 20px;
+    text-align: left;
+    font-size: 18px;
+    display: inline;
+}
+
+.description {
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.price {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.yardDollars {
+    text-align: center;
+    margin:0;
+    line-height: 0px;
+    font-size: 11px;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+h1{
+    display: inline;
+}
+
+.loginpage {
+    width:300px;
+    height:200px;
+    background-color:#FAFAFA;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-115px 0 0 -150px;
+}
+
+.createpage {
+    background-color:#FAFAFA;
+}
+
+
+#loginBtn {
+    width:100%;
+    text-align: center;   
+
+}
+
+.searched{
+    font-size:30px;
+    font-weight: bold;
+    margin-top:-16px;
+   
+}
+

@@ -13,7 +13,7 @@ exports.view = function(req, res) { 
 
 		function afterFinding (err, q){
 			if(err) console.log(err);
-			var pageInfo = {'user': req.session.user, 'data': data, 'items' : q, 'searchInfo': "Searched for " + searchWords, 'alternative': req.session.alternative, 'filtered': true};
+			var pageInfo = {'user': req.session.user, 'data': data, 'items' : q, 'searchInfo': "'" + searchWords + "'",'filtered': true};
 			res.render('homepage', pageInfo);
 		}
 	}

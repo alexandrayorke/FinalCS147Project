@@ -22,7 +22,7 @@ exports.view = function(req, res){
 		function afterQuery(err, notifications) {
 			if(err) console.log(err);
 			console.log("notifications in js:" + notifications);
-			res.render('notifications', {"notifications": notifications, "numNotifications": numNotifications, "alternative": req.session.alternative, 'zeroNotifications': zeroNotifications});
+			res.render('notifications', {"notifications": notifications, "numNotifications": numNotifications, 'zeroNotifications': zeroNotifications});
 		}
 	}
 }

@@ -31,7 +31,7 @@ exports.view = function(req, res) { 
 			passwordText[i] = req.session.user.password.charAt(i);
 		}
 		console.log("editProfile.js passwordText = " + passwordText);
-		var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'aboutMeText': aboutMeText, 'passwordText': passwordText, 'alternative': req.session.alternative, 'zeroNotifications': zeroNotifications};
+		var pageInfo = {'user': req.session.user, 'numNotifications': numNotifications, 'aboutMeText': aboutMeText, 'passwordText': passwordText, 'zeroNotifications': zeroNotifications};
 		res.render('editProfile', pageInfo);
 
 	}
