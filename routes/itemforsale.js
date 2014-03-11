@@ -72,7 +72,7 @@ exports.view = function(req, res) { 
 						var numNotifications = notifications.length;
 						var zeroNotifications = true;
 						if (numNotifications > 0) zeroNotifications = false;
-						var pageInfo = {'user': req.session.user, 'data': data, 'items' : items, 'nextID': req.session.nextID,'numNotifications': numNotifications, 'alternative': req.session.alternative, 'zeroNotifications': zeroNotifications};
+						var pageInfo = {'user': req.session.user, 'data': data, 'items' : items, 'nextID': req.session.nextID,'numNotifications': numNotifications,'zeroNotifications': zeroNotifications};
 						res.render('homepage', pageInfo);
 					}
 				}

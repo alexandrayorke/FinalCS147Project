@@ -39,7 +39,7 @@ exports.view = function(req, res) { 
 					console.log("NUM_NOTIFICATIONS IN HOMEPAGE.JS: " + numNotifications);
 					var zeroNotifications = true;
 					if (numNotifications > 0) zeroNotifications = false;
-					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'searchInfo':  "" + category, 'alternative': req.session.alternative, 'filtered': true, 'zeroNotifications': zeroNotifications};
+					var pageInfo = {'user': req.session.user, 'items' : items, 'numNotifications': numNotifications, 'searchInfo':  "" + category, 'filtered': true, 'zeroNotifications': zeroNotifications};
 					res.render('homepage', pageInfo);
 				}
 			}

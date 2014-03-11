@@ -1,22 +1,6 @@
 
 <html>
 <head>
-{{#unless filtered}}
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='82983144-0',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
-{{/unless}}
 
 	<!-- Bootstrap -->
 	<link href="/css/bootstrap.css" rel="stylesheet">
@@ -29,65 +13,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 </head>
 <body class="cbp-spmenu-push">
-	{{#if alternative}}
-	<div id="topbar" class="topbar topbarWithoutMenu">
-		<div class = "row">
-			<div class = "col-xs-2 topbarElement">
-				<button type="button" class = "btn btn-default menuButton" id="showLeft">
-					<span class="glyphicon glyphicon-th-list icon"></span>
-					<span class = "badge" id = "notificationIcon">{{numNotifications}}</span>
-				</button>
-			</div>
-			<div class = "balanceAndSearch">
-				<div class = "col-xs-8 topbarElement">
-					<p class = "text-center titleText">yardsale</p>
-					<p class = "text-center titleTextAlternative" id="balance">Balance: {{user.credits}}</p>
-					<div class="trial">
-					<button type="button" class="btn btn-default dropdown-toggle navbar-btn categoriesDropdown" data-toggle="dropdown">Categories
-						<span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-						<li><a href="/filteredPage/Books/true">Books</a></li>
-						<li><a href="/filteredPage/Crafts/true">Crafts</a></li>
-						<li><a href="/filteredPage/Electronics/true">Electronics</a></li>
-						<li><a href="/filteredPage/Entertainment/true">Entertainment</a></li>
-						<li><a href="/filteredPage/Fashion/true">Fashion</a></li>
-						<li><a href="/filteredPage/Home and Garden/true">Home and Garden</a></li>
-						<li><a href="/filteredPage/Sports and Recreational Equipment/true">Sports and Recreational Equipment</a></li>
-						<li><a href="/filteredPage/Other Goods/true">Other Goods</a></li>
-						<li><a href="/filteredPage/Services/true">Services</a></li>
-					</ul>
-				</div>
-				</div>
-				<div class = "col-xs-2 topbarElement">
-					<div class="search">
-						<button type="button" class="btn btn-default dropdown-toggle navbar-btn searchButton" data-toggle="dropdown">
-							<span class="glyphicon glyphicon-search icon"></span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div id = "menubar" class="filters">
-			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-				<div class = "col-xs-6 col-xs-4 homeElement topbarElement">
-					<button type="button" class="btn btn-default homeButton" id="homeBtn" onclick=" window.location = '/homepage';">
-						<span class="glyphicon glyphicon-home icon"></span>
-					</button>
-				</div>
-				<p> Account </p>
-				<a href="/notifications">Notifications
-					<span class = "badge badge-error pull-right menu-badge" id = "notificationMenu">{{numNotifications}}</span>
-				</a>
-				<a href="/sell">Sell Something</a>
-				<a href="/editProfile">Edit Account</a>
-				<a href="/logout">Logout</a>
-			</nav>
-		</div>
-		<br>
-	{{else}}
 	<div id="topbar" class="topbar topbarWithoutMenu">
 		<div class = "row">
 			<div class = "col-xs-2 topbarElement">
@@ -144,11 +69,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			</nav>
 		</div>
 		<br>
-	{{/if}}
+
 			<div class="belowTopbar">
 			<p class="searched">{{searchInfo}}</p>
 			{{#each items}}
-			<div id="{{_id}}" class = "outline">
+			<div id="{{_id}}" class = "outline shadow">
 				<div id = "{{_id}}" class = "item carousel">
 					<ul>
 						<li class="pane1">
@@ -181,13 +106,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 							<div class="row">
 								<div class="col-xs-4 infoLabel">
 									<br>
-									<br>
 									<p>seller</p>
 								</div>
 								<div class="col-xs-8 infoText">
 									<br>
-									<br>
-									<p> {{sellerName}}</p>
+									<p>{{sellerName}}</p>
 								</div>
 							</div>
 							<div class="row">
@@ -211,13 +134,14 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 									<p>price</p>
 								</div>
 								<div class="col-xs-8 infoText">
-									<p> {{price}} yard$</p>
+									<p class="pricePane2">{{price}}</p>
+									<p class="yardDollarsPane2">yard$</p>
 								</div>
 							</div>
 							<div class="toBottom">
 								<div class="row">
 									<div class="col-xs-10 col-xs-offset-1">
-										<button class="btn btn-default btn-block btn-lg buyButton">buy now</button>
+										<button class="btn btn-default btn-block btn-lg buyButton tryBuy">buy now</button>
 										<br>
 									</div>
 								</div>
@@ -256,17 +180,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	{{/each}}
 	</script>
 
-<!--Google analytics code -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48670832-1', 'ayorke-project.herokuapp.com');
-  ga('send', 'pageview');
-
-</script>
 
 </body>
 </html>
