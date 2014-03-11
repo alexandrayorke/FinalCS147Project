@@ -16,6 +16,7 @@
 	padding-bottom: 0px;
 	display:inline-block;
 	border-bottom: 1px solid #202020;
+	width: 100%;
 }
 
 .notifications p {

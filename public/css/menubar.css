@@ -551,3 +551,14 @@ h1{
     padding-bottom: 0;
 }
 
+.signUpText {
+    font-size: 12px;
+}
+
+.signUpText a {
+    color: black;
+    font-weight: bold;
+}
+
+
+
