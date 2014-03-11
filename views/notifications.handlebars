@@ -63,36 +63,39 @@
 		</div>
 	</div>
 
-	<!--<div class = "notifications">-->
+	<div>
 		<div class="belowTopbarNotifications">
 		{{#each notifications}}
 			<!--<div class = "{{seen}}"> CHANGE THIS BACK!!!!!!!!!!-->
 			<div class = "{{seen}} notifications">
 				<p>{{message}}</p>
-				<script>
-					var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-	    			"Jul", "Aug", "Sept", "Oct", "Nov", "Dec" ];
-					var date = new Date('{{date}}');
-					date.toDateString();
-					var month = monthNames[date.getMonth()];
-					var day = date.getDate();
-					var hours = date.getHours() + 1;
-					var period = "am";
-					if (hours > 12) {
-						hours = hours - 12;
-						period = "pm";
-					}
-					var minutes = date.getMinutes();
-					if (minutes < 10) {
-						minutes = "0" + minutes;
-					}
-					var timeString = hours + ":" + minutes + period;
-					document.write('<p>' + month + ' ' + day + ' at ' + timeString + '</p>');
-				</script>
+				<p class = "date">
+					<script>
+						var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+		    			"Jul", "Aug", "Sept", "Oct", "Nov", "Dec" ];
+						var date = new Date('{{date}}');
+						date.toDateString();
+						var month = monthNames[date.getMonth()];
+						var day = date.getDate();
+						var hours = date.getHours() + 1;
+						var period = "am";
+						if (hours > 12) {
+							hours = hours - 12;
+							period = "pm";
+						}
+						var minutes = date.getMinutes();
+						if (minutes < 10) {
+							minutes = "0" + minutes;
+						}
+						var timeString = hours + ":" + minutes + period;
+						//document.write('<p>' + month + ' ' + day + ' at ' + timeString + '</p>');
+						document.write(month + ' ' + day + ' at ' + timeString);
+					</script>
+				</p>
 			</div>
 		{{/each}}
 		</div>
-	<!--</div>-->
+	</div>
 	
 
 
