@@ -42,7 +42,7 @@ exports.view = function(req, res) { 
 				"sellerName": sellerName,
 				"id": req.session.nextID	
 			};
-			var message = "Put " + desc + " up for sale";
+			var message = "You put " + desc + " up for sale.";
 
 
 			var newNotification = new models.Notification({
