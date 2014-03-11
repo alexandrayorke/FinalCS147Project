@@ -31,7 +31,6 @@ function notificationCallback(result) {
 
  function buyListener(e) {
     e.preventDefault();
-    ga('send', 'event', 'buy', 'click');
     var itemID = $(this).closest('.item').attr('id');
     var itemDescription = $('#' + itemID + ' .description').text();
     console.log("homepage.js in buyListener");
