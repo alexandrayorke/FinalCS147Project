@@ -1,5 +1,5 @@
 .notSeen {
-	background-color: #d3d3d3;
+	background-color: #D3D3D3;
 }
 
 .badge {
@@ -8,4 +8,22 @@
 
 .menu-badge {
 	/*font-size: 80px;*/
+}
+
+.notifications {
+	margin:0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	display:inline-block;
+	border-bottom: 1px solid #202020;
+}
+
+.notifications p {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+}
+
+.belowTopbarNotifications {
+	   margin-top: 60px; /*sets how much space is above the start of the items to prevent them from starting under the topbar*/
 }

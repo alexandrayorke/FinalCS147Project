@@ -61,10 +61,13 @@
 				<a href="/logout">Logout</a>
 			</nav>
 		</div>
+	</div>
 
-		<div class="belowTopbar">
+	<!--<div class = "notifications">-->
+		<div class="belowTopbarNotifications">
 		{{#each notifications}}
-			<div class = "{{seen}}">
+			<!--<div class = "{{seen}}"> CHANGE THIS BACK!!!!!!!!!!-->
+			<div class = "{{seen}} notifications">
 				<p>{{message}}</p>
 				<script>
 					var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -80,14 +83,17 @@
 						period = "pm";
 					}
 					var minutes = date.getMinutes();
+					if (minutes < 10) {
+						minutes = "0" + minutes;
+					}
 					var timeString = hours + ":" + minutes + period;
 					document.write('<p>' + month + ' ' + day + ' at ' + timeString + '</p>');
 				</script>
-				<hr>
 			</div>
 		{{/each}}
 		</div>
-	</div>
+	<!--</div>-->
+	
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
