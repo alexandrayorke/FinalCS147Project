@@ -4,6 +4,8 @@
     background: #202020;
     position: fixed;
     overflow-y: auto; 
+        opacity: .8;
+
 }
 
 
@@ -191,7 +193,9 @@
     position: fixed;        /*makes top bar also fixed during shift right for menu bar*/
     z-index:1;
 }
+
 .topbar {
+    opacity: .8;
     -webkit-transition: left 0.3s ease;
     -moz-transition: left 0.3s ease;
     transition: left 0.3s ease;
@@ -456,6 +460,20 @@
     font-size: 11px;
 }
 
+.yardDollarsPane2 {
+    display: inline;
+    line-height: 0px;
+    font-size: 11px;
+}
+
+.pricePane2 {
+    display:inline;
+}
+
+.aboutMe {
+    font-size: 11px;
+}
+
 body {
     background-color: #FAFAFA;
 }
@@ -485,6 +503,34 @@ h1{
 
 }
 
+.shadow {
+    -moz-box-shadow: 0 0 5px 1px #999;
+    -webkit-box-shadow: 0 0 5px 1px #999;
+}
+
+.field {
+    font-weight: bold;
+    font-size: 11px;
+    text-align: right !imporant;
+    line-height: 20px;
+}
+
+.curFieldVal {
+    text-align: left;
+    line-height: 20px;
+}
+
+.editBtn {
+    text-align: center;
+    line-height: 15px;
+    width: 60px;
+
+}
+
+/*    .btn-primary {
+  .buttonBackground(@yourColor, @yourColorDarker);
+}*/
+
 .searched{
     font-size:30px;
     font-weight: bold;
@@ -504,3 +550,4 @@ h1{
     padding-top: 0;
     padding-bottom: 0;
 }
+

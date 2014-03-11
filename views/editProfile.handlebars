@@ -65,9 +65,9 @@
 			<div class="form-group">
 				<div class="emailField">
 					<div class="row fields">
-						<div class="col-xs-3">Email: </div>
-						<div class="col-xs-6" id="curEmail">{{user.email}}</div>
-						<div class="col-xs-3"><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></div>
+						<div class="col-xs-3"><p class="field text-right">Email</p></div>
+						<div class="col-xs-6 curFieldVal" id="curEmail">{{user.email}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editEmailBtn" class="btn btn-default editBtn" value="Edit"></input></div>
 					</div>
 				</div>
 			</div>
@@ -75,11 +75,12 @@
 
 		<form id="editPasswordForm" role="form" method="get" action="/editProfile" >
 			<div class="form-group">
+				<br>
 				<div class="passwordField">
 					<div class="row fields">
-						<div class="col-xs-3">Password: </div>
-						<div class="col-xs-6" id="curPassword">{{#each passwordText}} &middot; {{/each}}</div>
-						<div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></div>
+						<div class="col-xs-3"><p class="field text-right">Password</p></div>
+						<div class="col-xs-6 curFieldVal" id="curPassword">{{#each passwordText}} &middot; {{/each}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default editBtn" value="Edit"></input></div>
 					</div>
 				</div>
 			</div>
@@ -89,11 +90,12 @@
 
 		<form id="editAddressForm" role="form" method="get" action="/editProfile">
 			<div class="form-group">
+				<br>
 				<div class="addressField">
 					<div class="row fields">
-						<div class="col-xs-3">Street Address: </div>
-						<div class="col-xs-6" id="curAddress">{{user.address}}</div>
-						<div class="col-xs-3"><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></div>
+						<div class="col-xs-3 field text-right"><p>Address</p></div>
+						<div class="col-xs-6 curFieldVal" id="curAddress">{{user.address}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editAddrBtn" class="btn btn-default editBtn" value="Edit"></input></div>
 					</div>
 				</div>
 			</div>
@@ -101,18 +103,19 @@
 
 		<form id="editZipForm" role="form" method="get" action="/editProfile">
 			<div class="form-group">
+				<br>
 				<div class="zipCodeField">
 					<div class="row fields">
-						<div class="col-xs-3">Zip Code: </div>
-						<div class="col-xs-6" id="curZipCode">{{user.zip}}</div>
-						<div class="col-xs-3"><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></div>
+						<div class="col-xs-3 field text-right">Zip</div>
+						<div class="col-xs-6 curFieldVal" id="curZipCode">{{user.zip}}</div>
+						<div class="col-xs-3"><input type ="submit" id="editZipBtn" class="btn btn-default editBtn" value="Edit"></input></div>
 					</div>
 				</div>
 			</div>
 		</form>
 
 		<hr>
-
+<!-- 
 		<form id="editAboutMeForm" role="form" method="post" action="/editProfile">
 			<div class="form-group">
 				<div class="aboutMeField">
@@ -123,7 +126,7 @@
 					</div>
 				</div>
 			</div>
-		</form>
+		</form> -->
 	</div>
 </div>
 
@@ -133,9 +136,7 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/editProfileFields.js"></script>
 	<script src="js/menubar.js"></script>
-	<script src="js/homepage.js"></script>
-
-
+	<!-- <script src="js/homepage.js"></script>  deleted to make edit profile work-->
 
 </body>
 </html>

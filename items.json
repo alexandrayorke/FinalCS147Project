@@ -7,18 +7,15 @@
 			"category": "Electronics",
 			"sellerEmail": "arielhp@stanford.edu",
 			"sellerName" : "Ariel Posner"
-			
 		},
 		{
 			"image": "http://images2.fanpop.com/images/photos/3300000/Game-Box-from-1949-Original-Candy-Land-candy-land-3327075-392-272.jpg",
-			"description": "CandyLand Board Game",
+			"description": "CandyLand Game",
 			"extendedDescription" : "One of the first made. All pieces included.",
 			"price": "10",
 			"category": "Entertainment",
 			"sellerEmail": "lilys@stanford.edu",
 			"sellerName" : "Lily Sierra"
-			
-
 		},
 		{
 			"image": "http://static.spoonful.com/sites/default/files/collections/snack-bag-bracelet-craft-photo-420-FF1007EFGA07.jpg",

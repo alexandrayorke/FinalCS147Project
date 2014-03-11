@@ -9,12 +9,12 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
  function initializePage() {
+  console.log("editProfileFields.js in initializePage");
  	$('#editEmailForm').submit(editEmailListener);
  	$('#editPasswordForm').submit(editPasswordListener);
  	$('#editAddressForm').submit(editAddressListener);
  	$('#editZipForm').submit(editZipListener);
  	$('#editAboutMeForm').submit(editAboutMeListener);
- 	'use strict';
 
 	var path = "/checkNotifications";
     $.get(path, notificationCallback);
@@ -39,7 +39,7 @@ function notificationCallback(result) {
  	if (document.getElementById("editEmailBtn").value === "Edit") {
  		var curEmail = $("#curEmail").text();
  		console.log("editProfileFields.js curEmail = " + curEmail);
- 		var fieldHTML = '<div class="row fields"><div class="col-xs-3">Email: </div><div class="col-xs-6" id="curEmail"><input size="16" id="accountEmail" placeholder="' + curEmail + '"></input></div><div class="col-xs-3"><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Save"></input></div></div>';
+ 		var fieldHTML = '<div class="row fields"><div class="col-xs-3"><p class="field text-right">Email</p></div><div class="col-xs-6" id="curEmail"><input size="18" id="accountEmail" placeholder="' + curEmail + '"></input></div><div class="col-xs-3"><input type ="submit" id="editEmailBtn" class="btn btn-default editBtn" value="Save"></input></div></div>';
  		//var fieldHTML = '<p id="emailField">Email: <input id="accountEmail" placeholder="' + curEmail + '"></input><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></p>';
  		$(" .emailField").html(fieldHTML);
  		//document.getElementById("editEmailBtn").value="Save";
@@ -59,7 +59,7 @@ function notificationCallback(result) {
  	if (document.getElementById("editPasswordBtn").value === "Edit") {
 		var curPassword = $("#curPassword").text();
  		console.log("editProfileFields.js curPassword = " + curPassword);
- 		var fieldHTML = '<div class="row fields"><div class="col-xs-3">Password: </div><div class="col-xs-6" id="curPassword"><input size="16" id="accountPassword" placeholder="' + curPassword + '"></input></div><div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Save"></input></div></div>';
+ 		var fieldHTML = '<div class="row fields"><div class="col-xs-3"><p class="field text-right">Password</p></div><div class="col-xs-6 curFieldVal" id="curPassword"><input size="18" id="accountPassword" placeholder="' + curPassword + '"></input></div><div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default editBtn" value="Save"></input></div></div>';
  		//var fieldHTML = '<p id="passwordField">Password: <input type="password" id="accountPassword" placeholder="' + curPassword + '"></input><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></p>';
  		$(" .passwordField").html(fieldHTML);
  		//document.getElementById("editPasswordBtn").value="Save";
@@ -79,7 +79,7 @@ function notificationCallback(result) {
  	if (document.getElementById("editAddrBtn").value === "Edit") {
 		var curAddress = $("#curAddress").text();
  		console.log("editProfileFields.js curAddress = " + curAddress);
- 		var fieldHTML = '<div class="row fields"><div class="col-xs-3">Street Address: </div><div class="col-xs-6" id="curAddress"><input size="16" id="accountAddress" placeholder="' + curAddress + '"></input></div><div class="col-xs-3"><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Save"></input></div></div>';
+ 		var fieldHTML = '<div class="row fields"><div class="col-xs-3"><p class="field text-right">Address</p></div><div class="col-xs-6 curFieldVal" id="curAddress"><input size="16" id="accountAddress" placeholder="' + curAddress + '"></input></div><div class="col-xs-3"><input type ="submit" id="editAddrBtn" class="btn btn-default editBtn" value="Save"></input></div></div>';
  		//var fieldHTML = '<p id="addressField">Street Address: <input id="accountAddress" placeholder="' + curAddress + '"></input><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></p>';
  		$(" .addressField").html(fieldHTML);
  	} else {
@@ -98,7 +98,7 @@ function notificationCallback(result) {
  	if (document.getElementById("editZipBtn").value === "Edit") {
  		var curZipCode = $("#curZipCode").text();
  		console.log("editProfileFields.js curZipCode = " + curZipCode);
- 		var fieldHTML = '<div class="row fields"><div class="col-xs-3">Zip Code: </div><div class="col-xs-6" id="curZipCode"><input size="16" id="accountZipCode" placeholder="' + curZipCode + '"></input></div><div class="col-xs-3"><input type ="submit" id="editZipBtn" class="btn btn-default" value="Save"></input></div></div>';
+ 		var fieldHTML = '<div class="row fields"><div class="col-xs-3"><p class="field text-right">Zip</p></div><div class="col-xs-6 curFieldVal" id="curZipCode"><input size="16" id="accountZipCode" placeholder="' + curZipCode + '"></input></div><div class="col-xs-3"><input type ="submit" id="editZipBtn" class="btn btn-default editBtn" value="Save"></input></div></div>';
  		//var fieldHTML = '<p id="zipCodeField">Zip Code: <input id="accountZipCode" placeholder="' + curZipCode + '"></input><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>';
  		$(" .zipCodeField").html(fieldHTML);
  	} else {
@@ -144,7 +144,7 @@ function notificationCallback(result) {
 
 
  function emailCallback(result) {
- 	var fieldHTML = '<div class="row fields"><div class="col-xs-3">Email: </div><div class="col-xs-6" id="curEmail">' + result["email"] + '</div><div class="col-xs-3"><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></div></div>';
+ 	var fieldHTML = '<div class="row fields"><div class="col-xs-3"><p class="field text-right">Email</p></div><div class="col-xs-6 curFieldVal" id="curEmail">' + result["email"] + '</div><div class="col-xs-3"><input type ="submit" id="editEmailBtn" class="btn btn-default editBtn" value="Edit"></input></div></div>';
  	//var fieldHTML = '<p style="display:inline" id="curEmail">Email: ' + result["email"] + '</p><p style="display:inline"><input type ="submit" id="editEmailBtn" class="btn btn-default" value="Edit"></input></p>';
  	$(" .emailField").html(fieldHTML);
  	console.log("editProfileFields.js in emailCallback");
@@ -160,7 +160,7 @@ function notificationCallback(result) {
  	for (var i = 0; i < newPassword.length; i++) {
  		passwordText += " &middot; ";
  	}
- 	var fieldHTML = '<div class="row fields"><div class="col-xs-3">Password: </div><div class="col-xs-6" id="curPassword">' + passwordText + '</div><div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></div></div>';
+ 	var fieldHTML = '<div class="row fields"><div class="col-xs-3"><p class="field text-right">Password</p></div><div class="col-xs-6 curFieldVal" id="curPassword">' + passwordText + '</div><div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default editBtn" value="Edit"></input></div></div>';
  	//var fieldHTML = '<div class="row-fluid"><div class="col-xs-3">Password: </div><div class="col-xs-6" id="curPassword">' + result["password"] + '</div><div class="col-xs-3"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></div></div>';
 	//var fieldHTML = '<p style="display:inline" id="curPassword">Password: ' + result["password"] + '</p><p style="display:inline"><input type ="submit" id="editPasswordBtn" class="btn btn-default" value="Edit"></input></p>';
  	$(" .passwordField").html(fieldHTML);
@@ -172,7 +172,7 @@ function notificationCallback(result) {
  }
 
  function addressCallback(result) {
- 	var fieldHTML = '<div class="row fields"><div class="col-xs-3">Street Address: </div><div class="col-xs-6" id="curAddress">' + result["address"] + '</div><div class="col-xs-3"><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></div></div>';
+ 	var fieldHTML = '<div class="row fields"><div class="col-xs-3"><p class="field text-right">Address</p></div><div class="col-xs-6 curFieldVal" id="curAddress">' + result["address"] + '</div><div class="col-xs-3"><input type ="submit" id="editAddrBtn" class="btn btn-default editBtn" value="Edit"></input></div></div>';
 	//var fieldHTML = '<p style="display:inline" id="curAddress">Street Address: ' + result["address"] + '</p><p style="display:inline"><input type ="submit" id="editAddrBtn" class="btn btn-default" value="Edit"></input></p>';
  	 $(" .addressField").html(fieldHTML);
  	console.log("editProfileFields.js in addressCallback");
@@ -183,7 +183,7 @@ function notificationCallback(result) {
  }
 
  function zipCallback(result) {
- 	var fieldHTML = '<div class="row fields"><div class="col-xs-3">Zip Code: </div><div class="col-xs-6" id="curZipCode">' + result["zip"] + '</div><div class="col-xs-3"><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></div></div>';
+ 	var fieldHTML = '<div class="row fields"><div class="col-xs-3"><p class="field text-right">Zip</p></div><div class="col-xs-6 curFieldVal" id="curZipCode">' + result["zip"] + '</div><div class="col-xs-3"><input type ="submit" id="editZipBtn" class="btn btn-default editBtn" value="Edit"></input></div></div>';
  	//var fieldHTML = '<p style="display:inline" id="curZipCode">Zip Code: ' + result["zip"] + '</p><p style="display:inline"><input type ="submit" id="editZipBtn" class="btn btn-default" value="Edit"></input></p>';
  	$(" .zipCodeField").html(fieldHTML);
  	console.log("editProfileFields.js in zipCallback");
