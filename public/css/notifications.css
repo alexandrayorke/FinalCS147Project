@@ -24,6 +24,11 @@
 	padding-top: 5px;
 }
 
+.date {
+	font-size: 10px;
+	font-weight: lighter;
+}
+
 .belowTopbarNotifications {
 	   margin-top: 60px; /*sets how much space is above the start of the items to prevent them from starting under the topbar*/
 }
