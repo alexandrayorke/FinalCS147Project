@@ -167,7 +167,7 @@
     background: transparent;
     border: 0;
     width: 50px; /*width: 150px;*/
-   height: 50px; /*height: 150px;*/
+    height: 50px; /*height: 150px;*/
     margin: 0 auto;
     float: left;
 }
@@ -270,6 +270,13 @@
     font-size: 1.5em; /*font-size: 5.0em;*/
     /*color: #fff;*/
     color: #E0E0E0;
+}
+
+.titleText2 {
+    font-weight: lighter;
+        font-size: 1em;
+    color: #E0E0E0;
+    padding-bottom: .5px;
 }
 
 .yardsaleText {
@@ -492,15 +499,19 @@ h1{
     margin:-115px 0 0 -150px;
 }
 
-.createpage {
+/*.createpage {
     background-color:#FAFAFA;
-}
+}*/
 
 
 #loginBtn {
     width:100%;
     text-align: center;   
 
+}
+
+.createBtn {
+    width: 100%;
 }
 
 .shadow {
@@ -550,4 +561,15 @@ h1{
     padding-top: 0;
     padding-bottom: 0;
 }
+
+.signUpText {
+    font-size: 12px;
+}
+
+.signUpText a {
+    color: black;
+    font-weight: bold;
+}
+
+
 

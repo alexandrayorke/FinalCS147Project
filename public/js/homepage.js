@@ -50,9 +50,7 @@ function notificationCallback(result) {
         console.log("homepage.js new user bal = " + result["user"]["credits"]);
         console.log("zeroNotifications: " + result["zeroNotifications"]);
         console.log("numNotifications: " + result["numNotifications"]);
-        //$('#balance').text("Balance: " + result["user"]["credits"]);
-        //$('#notificationIcon').text(result["numNotifications"]);
-        //$('#notificationMenu').text(result["numNotifications"]);
+        $('.balanceNum').text(result["user"]["credits"]);
         $('#notificationIcon').show();
         $('#notificationMenu').show();
         $('#notificationIcon').text(result["numNotifications"]);
