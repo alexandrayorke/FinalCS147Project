@@ -9,9 +9,9 @@
 			"sellerName" : "Ariel Posner"
 		},
 		{
-			"image": "http://images2.fanpop.com/images/photos/3300000/Game-Box-from-1949-Original-Candy-Land-candy-land-3327075-392-272.jpg",
+			"image": "http://i.walmartimages.com/i/p/00/65/35/69/44/0065356944124_500X500.jpg",
 			"description": "CandyLand Game",
-			"extendedDescription" : "One of the first made. All pieces included.",
+			"extendedDescription" : "All pieces included. Looks new.",
 			"price": "10",
 			"category": "Entertainment",
 			"sellerEmail": "lilys@stanford.edu",
@@ -82,7 +82,7 @@
 			
 		},
 		{
-			"image": "http://momitforward.com/wp-content/uploads/2012/07/yoga-pose-lululemon-athleti.jpg",
+			"image": "http://www.studioyoga.com.au/wp-content/uploads/warrior-pose-21.jpg",
 			"description": "One-on-One Yoga Hour",
 			"extendedDescription" : "I am a certified teacher. All levels.",
 			"price": "15",
@@ -90,5 +90,32 @@
 			"sellerEmail" : "arielhp@stanford.edu",
 			"sellerName" : "Ariel Posner"
 			
+		},
+		{
+			"image": "http://holidayscentral.com/sites/default/files/imagecache/no_size_change/wysiwyg_imageupload/2/babysitting.jpg",
+			"description": "One hour of babysitting",
+			"extendedDescription" : "I am a certified in CPR and first aid.",
+			"price": "15",
+			"category": "Services",
+			"sellerEmail" : "arielhp@stanford.edu",
+			"sellerName" : "Ariel Posner"
+		},
+		{
+			"image": "http://upload.wikimedia.org/wikipedia/commons/8/86/Cake_tootfarangi.jpg",
+			"description": "Cake",
+			"extendedDescription" : "This chocolate cake is to die for.",
+			"price": "7",
+			"category": "Other Goods",
+			"sellerEmail": "ayorke@stanford.edu",
+			"sellerName" : "Alex Yorke"
+		},
+		{
+			"image": "http://heavenlyhomemakers.com/wp-content/uploads/2011/04/kitchen_aid.jpg",
+			"description": "Old Food Processor",
+			"extendedDescription" : "One year old, but still works.",
+			"price": "7",
+			"category": "Home and Garden",
+			"sellerEmail": "ayorke@stanford.edu",
+			"sellerName" : "Alex Yorke"
 		}
 	]
